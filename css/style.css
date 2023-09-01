@@ -1,0 +1,256 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Sen:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Sen', sans-serif ;
+  /* font-family: 'Plus Jakarta Sans', sans-serif; */
+}
+
+html {
+  margin: 0;
+  width: 100%;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body > main.main {
+  /* border: 2px solid #404040; */
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+}
+
+body > main.main > header.header {
+  /* border: 2px solid #404040; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 50px;
+  padding: 30px 0 0 0;
+}
+
+body > main.main > header.header > ul.item-links {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+body > main.main > header.header > ul.item-links >li.item-link {
+  /* border: 1px solid black; */
+  margin: 0;
+  padding: 0;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #404040;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+body > main.main > header.header > ul.item-links >li.item-link:hover {
+  font-weight: 500;
+}
+
+body > main.main > header.header > ul.item-links >li.item-link > a.link {
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  color: inherit;
+}
+
+body > main.main > header.header > ul.item-links >li.item-link.active {
+  color: #404040;
+  position: relative;
+  font-weight: 600;
+  /* text-transform: uppercase; */
+}
+
+body > main.main > header.header > ul.item-links >li.item-link > a > span.dots {
+  display: none;
+}
+
+body > main.main > header.header > ul.item-links >li.item-link.active > a > span.dots {
+  position: absolute;
+  width: 30px;
+  bottom: -5px;
+  left: calc(50% - 15px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+body > main.main > header.header > ul.item-links >li.item-link.active > a > span.dots span.dot {
+  display: inline-block;
+  width: 8px;
+  height: 3px;
+  background-color: rgb(8, 180, 74);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+body > main.main > header.header > ul.item-links >li.item-link.active > a > span.dots span.dot:nth-of-type(even) {
+  background-color: rgb(255, 153, 0);
+}
+
+body > main.main > header.header > div.utility {
+  /* border: 1px solid #404040; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 5px 10px;
+}
+
+body > main.main > header.header > div.utility > span {
+  /* border: 1px solid #404040; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+body > main.main > header.header > div.utility > span.search > i {
+  font-size: 1.1rem;
+  display: inline-block;
+  margin: 2px 0 0 0;
+  color: rgb(185, 110, 12);
+}
+
+body > main.main > header.header > div.utility > span.cart {
+  width: 27px;
+  height: 27px;
+  color: #ffffff;
+  position: relative;
+  padding: 5px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  background-color: rgb(236, 151, 39);
+}
+
+body > main.main > header.header > div.utility > span.cart > i {
+  font-size: 0.9rem;
+  display: inline-block;
+  margin: 0 0 1px 0;
+}
+
+body > main.main > header.header > div.utility > span.cart > span.items {
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  display: none;
+}
+
+body > main.main > section.content {
+  /* border: 1px solid #404040; */
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  padding: 30px 0 0 0;
+}
+
+body > main.main > section.content div.head {
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 20px 0;
+}
+
+body > main.main > section.content div.head h2.title {
+  color: #404040;
+  margin: 0;
+  padding: 0;
+}
+
+body > main.main > section.content div.head > ul.collections {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 30px;
+}
+
+body > main.main > section.content div.head > ul.collections > li.collection {
+  position: relative;
+  color: #808080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 15px;
+  background-color: #f3f3f3;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+body > main.main > section.content div.head > ul.collections > li.collection:hover {
+  color: rgb(223, 121, 26);
+  background-color: rgb(253, 238, 222);
+  cursor: pointer;
+}
+
+body > main.main > section.content div.head > ul.collections > li.collection.active {
+  color: rgb(223, 121, 26);
+  background-color: rgb(253, 238, 222);
+}
+
+body > main.main > section.content div.head > ul.collections > li.collection > span.bar {
+  display: inline-block;
+  width: 25px;
+  height: 4px;
+  background-color: rgb(223, 121, 26);
+  position: absolute;
+  bottom: -22px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+
+body > main.main > section.content div.head > div.filter {
+  /* border: 1px solid #808080; */
+  display: flex;
+}
+
+body > main.main > section.content div.head > div.filter .choice {
+  /* border: 1px solid #ce3a3a; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #404040;
+  cursor: pointer;
+  width: 160px;
+  gap: 8px;
+  padding: 9px 12px 8px 15px;
+  background-color: #f3f3f3;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}

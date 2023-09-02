@@ -288,6 +288,29 @@ body > main.main > section.content > div.categories > div.banner.top-second {
   grid-column: 1/3;
   grid-row: 2/4;
   background:  rgb(255, 230, 120);
+  padding: 20px 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body > main.main > section.content > div.categories > div.banner.top-second > span.icon {
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
+body > main.main > section.content > div.categories > div.banner.top-second > div.text {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+
+body > main.main > section.content > div.categories > div.banner.top-second > div.text h2 {
+  margin: 0;
+  padding: 0;
 }
 
 body > main.main > section.content > div.categories > div.category.long {

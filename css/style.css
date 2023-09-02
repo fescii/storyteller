@@ -24,12 +24,109 @@ body {
   justify-content: center;
 }
 
+.wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background: #24C6DC;
+  background: -webkit-linear-gradient(to bottom, #514A9D, #24C6DC);
+  background: linear-gradient(to bottom, #514A9D, #24C6DC);
+}
+
+.box div {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 6px solid rgba(255,255,255,0.8);
+}
+
+.box div:nth-child(1) {
+  top: 12%;
+  left: 42%;
+  animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2) {
+  top: 70%;
+  left: 50%;
+  animation: animate 7s linear infinite;
+}
+.box div:nth-child(3) {
+  top: 17%;
+  left: 6%;
+  animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(4) {
+  top: 20%;
+  left: 60%;
+  animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(5) {
+  top: 67%;
+  left: 10%;
+  animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(6) {
+  top: 80%;
+  left: 70%;
+  animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(7) {
+  top: 60%;
+  left: 80%;
+  animation: animate 15s linear infinite;
+}
+
+.box div:nth-child(8) {
+  top: 32%;
+  left: 25%;
+  animation: animate 16s linear infinite;
+}
+
+.box div:nth-child(9) {
+  top: 90%;
+  left: 25%;
+  animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(10) {
+  top: 20%;
+  left: 80%;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(-90px) rotate(360deg);
+    opacity: 1;
+    -webkit-transform: scale(0) translateY(-90px) rotate(360deg);
+    -moz-transform: scale(0) translateY(-90px) rotate(360deg);
+    -ms-transform: scale(0) translateY(-90px) rotate(360deg);
+    -o-transform: scale(0) translateY(-90px) rotate(360deg);
+}
+
+  100% {
+    transform: scale(1.3) translateY(-90px) rotate(-180deg);
+    border-radius: 50%;
+    opacity: 0;
+  }
+}
+
 body > main.main {
   /* border: 2px solid #404040; */
   width: 80%;
   display: flex;
   flex-flow: column;
   gap: 20px;
+  z-index: 3;
 }
 
 body > main.main > header.header {
@@ -40,6 +137,10 @@ body > main.main > header.header {
   gap: 20px;
   min-height: 50px;
   padding: 30px 0 0 0;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(3px);
+  background: #24c7dc07;
 }
 
 body > main.main > header.header > ul.item-links {
@@ -280,10 +381,11 @@ body > main.main > section.content > div.categories > div {
 }
 
 body > main.main > section.content > div.categories > div.banner.top {
-  border: 1px solid #404040;
+  /* border: 1px solid #404040; */
   height: 120px;
   grid-column: 1/3;
   grid-row: 1/2;
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
 }
 
 body > main.main > section.content > div.categories > div.banner.top-second {
@@ -377,7 +479,7 @@ body > main.main > section.content > div.categories > div.banner.last {
 
 body > main.main > section.content > div.categories > div.category.long {
   border: none;
-  background: rgb(238, 238, 238);
+  background: rgba(255, 255, 255, 0.562);
   display: flex;
   flex-flow: column;
   align-items: stretch;
@@ -386,13 +488,6 @@ body > main.main > section.content > div.categories > div.category.long {
   position: relative;
 }
 
-body > main.main > section.content > div.categories > div.category.long.graduation {
-  background: rgb(238, 252, 239);
-}
-
-body > main.main > section.content > div.categories > div.category.long.wedding {
-  background: rgb(255, 244, 234);
-}
 
 body > main.main > section.content > div.categories > div.category.long > .top {
   /* border: 1px solid #404040; */
@@ -511,16 +606,10 @@ body > main.main > section.content > div.categories > div.category.long > .foote
   justify-content: space-between;
   z-index: 3;
   /* background-color: #29e7cd; */
+  background: linear-gradient(180deg, #ffffff29, #ffffffd1, #ffffffe8, #ffffff);
 
 }
 
-body > main.main > section.content > div.categories > div.category.long.graduation > .footer {
-  background: linear-gradient(180deg, rgba(232, 255, 233, 0.082), rgba(193, 252, 198, 0.781), rgb(193, 252, 198), rgb(188, 253, 194));
-}
-
-body > main.main > section.content > div.categories > div.category.long.wedding > .footer {
-  background: linear-gradient(180deg, rgba(245, 204, 165, 0.192), rgba(253, 199, 148, 0.774), rgb(253, 197, 145), rgb(250, 176, 107));
-}
 
 body > main.main > section.content > div.categories > div.category.long > .footer > .info {
   /* border: 1px solid #202020; */

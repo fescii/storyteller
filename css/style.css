@@ -370,3 +370,102 @@ body > main.main > section.content > div.categories > div.banner.last {
   grid-column: 3/5;
   grid-row: 5/7;
 }
+
+body > main.main > section.content > div.categories > div.category.long {
+  border: none;
+  background: rgb(238, 238, 238);
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 15px 20px;
+  position: relative;
+}
+
+body > main.main > section.content > div.categories > div.category.long.graduation {
+  background: rgb(238, 252, 239);
+}
+
+body > main.main > section.content > div.categories > div.category.long.traditional {
+  background: rgb(255, 244, 234);
+}
+
+body > main.main > section.content > div.categories > div.category.long > .top {
+  /* border: 1px solid #404040; */
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  /* height: 30px; */
+}
+
+body > main.main > section.content > div.categories > div.category.long > .top > .left-action {
+  /* border: 1px solid #404040; */
+  display: flex;
+  /* width: 50px; */
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+body > main.main > section.content > div.categories > div.category.long > .top > .left-action > span.dot {
+  border: 1px solid rgba(102,247,113,1);
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 19px;
+  width: 19px;
+  cursor: pointer;
+  /* padding: 2px; */
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+body > main.main > section.content > div.categories > div.category.long.traditional > .top > .left-action > span.dot {
+  border: 1px solid rgb(240, 156, 78);
+}
+
+body > main.main > section.content > div.categories > div.category.long > .top > .left-action > span.dot.last {
+  border: 1px solid rgb(223, 121, 26);
+  border: none;
+}
+
+body > main.main > section.content > div.categories > div.category.long > .top > .left-action > span.dot > span.pick {
+  display: inline-block;
+  box-shadow: -0.5em 0.5em 0.5em rgb(209, 209, 209);
+  border: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+}
+
+body > main.main > section.content > div.categories > div.category.long > .top > .left-action > span.dot.first > span.pick {
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  background-color: rgb(247, 145, 162);
+}
+
+body > main.main > section.content > div.categories > div.category.long > .top > .left-action > span.dot.last > span.pick {
+  background-image: linear-gradient(#464d55, #25292e);
+}
+
+body > main.main > section.content > div.categories > div.category.long.traditional > .top > .left-action > span.dot.first > span.pick {
+  background:  rgb(223, 121, 26);
+  background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
+  background-color: rgb(247, 145, 162);
+}
+
+body > main.main > section.content > div.categories > div.category.long.traditional > .top > .left-action > span.dot.last > span.pick {
+  background-image: linear-gradient(#464d55, #25292e);
+}
+

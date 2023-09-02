@@ -260,7 +260,7 @@ body > main.main > section.content div.head > div.filter .choice {
 
 body > main.main > section.content > div.categories {
   /* border: 1px solid #404040; */
-  width: 90%;
+  width: 96%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 30px;
@@ -268,6 +268,7 @@ body > main.main > section.content > div.categories {
 }
 
 body > main.main > section.content > div.categories > div {
+  box-shadow: -0.6em 0.5em 0.5em rgba(235, 235, 235, 0.288);
   border-radius: 25px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
@@ -469,3 +470,22 @@ body > main.main > section.content > div.categories > div.category.long.traditio
   background-image: linear-gradient(#464d55, #25292e);
 }
 
+body > main.main > section.content > div.categories > div.category.long > .top > .right-action {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #808080;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+body > main.main > section.content > div.categories > div.category.long > .top > .right-action > i {
+  display: inline-block;
+  margin: px 0 0 0;
+}

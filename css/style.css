@@ -284,33 +284,72 @@ body > main.main > section.content > div.categories > div.banner.top {
 
 body > main.main > section.content > div.categories > div.banner.top-second {
   /* border: 1px solid #404040; */
-  height: 120px;
+  min-height: 150px;
+  max-height: 150px;
   grid-column: 1/3;
   grid-row: 2/4;
   background:  rgb(255, 230, 120);
-  padding: 20px 30px;
+  padding: 0;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: end;
+  height: 100%;
   justify-content: space-between;
 }
 
-body > main.main > section.content > div.categories > div.banner.top-second > span.icon {
+body > main.main > section.content > div.categories > div.banner.top-second > a.icon {
   display: inline-block;
+  text-decoration: none;
+  color: #202020;
   position: absolute;
   right: 15px;
   top: 10px;
+  background-color: #ffffff;
+  height: 28px;
+  width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+}
+
+body > main.main > section.content > div.categories > div.banner.top-second > a.icon svg {
+  rotate: -40deg;
+  width: 24px;
+  height: 24px;
 }
 
 body > main.main > section.content > div.categories > div.banner.top-second > div.text {
+  /* border: 1px solid #404040; */
+  height: 100%;
   display: flex;
   flex-flow: column;
+  justify-content: center;
+  padding: 20px 20px 20px 30px;
   gap: 10px;
+  color: #404040;
 }
 
 body > main.main > section.content > div.categories > div.banner.top-second > div.text h2 {
   margin: 0;
   padding: 0;
+  color: inherit;
+}
+
+body > main.main > section.content > div.categories > div.banner.top-second > div.image {
+  /* border: 1px solid #404040; */
+  padding: 5px 0 0 0;
+  margin: 0 1px 0 0;
+  width: 200px;
+  height: 100%;
+}
+
+body > main.main > section.content > div.categories > div.banner.top-second > div.image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 body > main.main > section.content > div.categories > div.category.long {

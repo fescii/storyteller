@@ -390,7 +390,7 @@ body > main.main > section.content > div.categories > div.category.long.graduati
   background: rgb(238, 252, 239);
 }
 
-body > main.main > section.content > div.categories > div.category.long.traditional {
+body > main.main > section.content > div.categories > div.category.long.wedding {
   background: rgb(255, 244, 234);
 }
 
@@ -433,7 +433,7 @@ body > main.main > section.content > div.categories > div.category.long > .top >
   -o-border-radius: 50px;
 }
 
-body > main.main > section.content > div.categories > div.category.long.traditional > .top > .left-action > span.dot {
+body > main.main > section.content > div.categories > div.category.long.wedding > .top > .left-action > span.dot {
   border: 1px solid rgb(240, 156, 78);
 }
 
@@ -463,13 +463,13 @@ body > main.main > section.content > div.categories > div.category.long > .top >
   background-image: linear-gradient(#464d55, #25292e);
 }
 
-body > main.main > section.content > div.categories > div.category.long.traditional > .top > .left-action > span.dot.first > span.pick {
+body > main.main > section.content > div.categories > div.category.long.wedding > .top > .left-action > span.dot.first > span.pick {
   background:  rgb(223, 121, 26);
   background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
   background-color: rgb(247, 145, 162);
 }
 
-body > main.main > section.content > div.categories > div.category.long.traditional > .top > .left-action > span.dot.last > span.pick {
+body > main.main > section.content > div.categories > div.category.long.wedding > .top > .left-action > span.dot.last > span.pick {
   background-image: linear-gradient(#464d55, #25292e);
 }
 
@@ -511,8 +511,15 @@ body > main.main > section.content > div.categories > div.category.long > .foote
   justify-content: space-between;
   z-index: 3;
   /* background-color: #29e7cd; */
-  background: linear-gradient(180deg, #ffffff11, #ffffffbb, #ffffffe8, #ffffff);
 
+}
+
+body > main.main > section.content > div.categories > div.category.long.graduation > .footer {
+  background: linear-gradient(180deg, rgba(232, 255, 233, 0.082), rgba(193, 252, 198, 0.781), rgb(193, 252, 198), rgb(188, 253, 194));
+}
+
+body > main.main > section.content > div.categories > div.category.long.wedding > .footer {
+  background: linear-gradient(180deg, rgba(245, 204, 165, 0.192), rgba(253, 199, 148, 0.774), rgb(253, 197, 145), rgb(250, 176, 107));
 }
 
 body > main.main > section.content > div.categories > div.category.long > .footer > .info {
@@ -556,7 +563,7 @@ body > main.main > section.content > div.categories > div.category.long > .foote
 
 body > main.main > section.content > div.categories > div.category.long > .image {
   position: absolute;
-  top: 0;
+  /* top: 0; */
   left: 0;
   right: 0;
   bottom: 0;

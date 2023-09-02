@@ -471,6 +471,12 @@ body > main.main > section.content > div.categories > div.category.long.traditio
 }
 
 body > main.main > section.content > div.categories > div.category.long > .top > .right-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body > main.main > section.content > div.categories > div.category.long > .top > .right-action > span.icon {
   width: 25px;
   height: 25px;
   display: flex;
@@ -483,9 +489,4 @@ body > main.main > section.content > div.categories > div.category.long > .top >
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
-}
-
-body > main.main > section.content > div.categories > div.category.long > .top > .right-action > i {
-  display: inline-block;
-  margin: px 0 0 0;
 }

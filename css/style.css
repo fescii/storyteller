@@ -1,10 +1,13 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Sen:wght@400;500;600;700;800&display=swap');
 
+:root {
+  --font-alt: 'Plus Jakarta Sans', sans-serif;
+  --font-main: 'Sen', sans-serif;
+}
 * {
+  font-family: var(--font-main);
   box-sizing: border-box;
-  font-family: 'Sen', sans-serif ;
-  /* font-family: 'Plus Jakarta Sans', sans-serif; */
 }
 
 html {
@@ -379,7 +382,7 @@ body > main.main > section.content > div.categories > div.category.long {
   flex-flow: column;
   align-items: stretch;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 0;
   position: relative;
 }
 
@@ -398,7 +401,7 @@ body > main.main > section.content > div.categories > div.category.long > .top {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  /* height: 30px; */
+  padding: 15px 15px 0 15px;
 }
 
 body > main.main > section.content > div.categories > div.category.long > .top > .left-action {
@@ -477,16 +480,90 @@ body > main.main > section.content > div.categories > div.category.long > .top >
 }
 
 body > main.main > section.content > div.categories > div.category.long > .top > .right-action > span.icon {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
+  color: #404040;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+body > main.main > section.content > div.categories > div.category.long > .top > .right-action > span.icon > svg {
+  height: 12px;
+  width: 12px;
+}
+
+body > main.main > section.content > div.categories > div.category.long > .footer {
+  /* border: 1px solid #202020; */
+  padding: 20px 15px 15px 15px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+  /* background-color: #29e7cd; */
+  background: linear-gradient(180deg, #ffffff11, #ffffffbb, #ffffffe8, #ffffff);
+
+}
+
+body > main.main > section.content > div.categories > div.category.long > .footer > .info {
+  /* border: 1px solid #202020; */
+  display: flex;
+  flex-flow: column;
+  gap: 0;
+}
+
+body > main.main > section.content > div.categories > div.category.long > .footer > .info > p {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  color: #404040;
+}
+
+body > main.main > section.content > div.categories > div.category.long > .footer > .info > span {
+  margin: 0;
   color: #808080;
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
+  font-size: 0.8rem;
+}
+
+body > main.main > section.content > div.categories > div.category.long > .footer > .price {
+  /* border: 1px solid #202020; */
+  width: max-content;
+  font-family: var(--font-alt);
+  background-color: #0004ff;
+  color: #ffffff;
+  padding: 5px 12px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+body > main.main > section.content > div.categories > div.category.long > .footer > .price > span {
+  font-family: var(--font-alt);
+  font-weight: 500;
+}
+
+body > main.main > section.content > div.categories > div.category.long > .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+body > main.main > section.content > div.categories > div.category.long > .image > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }

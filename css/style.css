@@ -397,6 +397,7 @@ body > main.main > section.content > div.categories > div.banner.top {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 body > main.main > section.content > div.categories > div.banner.top > div.text {
@@ -429,6 +430,26 @@ body > main.main > section.content > div.categories > div.banner.top > div.text 
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
+}
+
+body > main.main > section.content > div.categories > div.banner.top > div.left-image {
+  /* border: 1px solid #404040; */
+  position: absolute;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+body > main.main > section.content > div.categories > div.banner.top > div.left-image > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 body > main.main > section.content > div.categories > div.banner.top-second {

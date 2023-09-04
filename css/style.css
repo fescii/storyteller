@@ -275,7 +275,7 @@ body > main.main > section.content {
   display: flex;
   flex-flow: column;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   padding: 30px 0 0 0;
   margin: 0 0 70px 0;
 }
@@ -372,7 +372,7 @@ body > main.main > section.content div.head > div.filter .choice {
 
 body > main.main > section.content > div.categories {
   /* border: 1px solid #404040; */
-  width: 96%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 30px;
@@ -572,7 +572,7 @@ body > main.main > section.content > div.categories > div.category.long > .top >
 
 body > main.main > section.content > div.categories > div.category.long > .top > .left-action > span.dot {
   border: 1px solid rgba(102,247,113,1);
-  display: flex;
+  display: none;
   flex-flow: row;
   flex-wrap: nowrap;
   align-items: center;
@@ -641,7 +641,9 @@ body > main.main > section.content > div.categories > div.category.long > .top >
   color: #ffffff;
   background-color: #ffffff;
   height: 28px;
-  width: 28px;
+  width: max-content;
+  padding: 3px 10px;
+  font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -651,27 +653,22 @@ body > main.main > section.content > div.categories > div.category.long > .top >
 }
 
 body > main.main > section.content > div.categories > div.category.long > .top > .right-action > a.icon {
-  background: #ad5389;
-  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
-  background-color: rgb(247, 145, 162);
+  background: rgba(102,247,113,1);
+  /* background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%); */
+  /* background-color: rgb(247, 145, 162); */
 }
 
 body > main.main > section.content > div.categories > div.category.wedding > .top > .right-action > a.icon {
-  background:  rgb(223, 121, 26);
-  background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
-  background-color: rgb(247, 145, 162);
+  background:  rgb(236, 150, 68);
+  /* background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%); */
+  /* background-color: rgb(247, 145, 162); */
 }
 
-body > main.main > section.content > div.categories > div.category.long > .top > .right-action > a.icon svg {
-  rotate: -40deg;
-  width: 24px;
-  height: 24px;
-}
 
 
 body > main.main > section.content > div.categories > div.category.long > .footer {
   /* border: 1px solid #202020; */
-  padding: 20px 15px 15px 15px;
+  padding: 50px 15px 20px 15px;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   display: flex;
@@ -679,7 +676,7 @@ body > main.main > section.content > div.categories > div.category.long > .foote
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  z-index: 3;
+  z-index: 2;
   /* background-color: #29e7cd; */
   background: linear-gradient(180deg, #f5f5f507, #f5f5f596, #f5f5f5e8, #f5f5f5);
 
@@ -690,13 +687,15 @@ body > main.main > section.content > div.categories > div.category.long > .foote
   /* border: 1px solid #202020; */
   display: flex;
   flex-flow: column;
-  gap: 0;
+  gap: 5px;
 }
 
 body > main.main > section.content > div.categories > div.category.long > .footer > .info > p {
   margin: 0;
   padding: 0;
   font-weight: 500;
+  font-family: 'visby_bold', sans-serif;
+  font-size: 1.2rem;
   color: #404040;
 }
 
@@ -708,7 +707,7 @@ body > main.main > section.content > div.categories > div.category.long > .foote
 }
 
 body > main.main > section.content > div.categories > div.category.long > .footer > .price {
-  /* border: 1px solid #202020; */
+  display: none;
   width: max-content;
   font-family: var(--font-alt);
   background-color: #0004ff;
@@ -862,7 +861,7 @@ body > main.main > section.content > div.categories > div.small.wild > a.icon sv
 
 body > main.main > section.content > div.categories > div.small.wild > a.avail {
   display: inline-block;
-  background-color: #afd6388a;
+  background-color: #ffffff2f;
   font-weight: 500;
   padding: 7px 15px;
   text-decoration: none;
@@ -897,4 +896,91 @@ body > main.main > section.content > div.categories > div.small.wild > div.image
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+
+/*
+Sections
+*/
+
+body > main.main > section.content > div.section {
+  /* border: 2px solid #404040; */
+  width: 100%;
+  padding: 0;
+  margin: 50px 0 0 0;
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+}
+
+body > main.main > section.content > div.section > div.section-head {
+  /* border: 2px solid #404040; */
+  display: flex;
+  flex-flow: column;
+  gap: 0px;
+}
+
+body > main.main > section.content > div.section > div.section-head > h2 {
+  margin: 0;
+  font-size: 1.9rem;
+  color: #202020;
+}
+
+body > main.main > section.content > div.section > div.section-head > span {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #404040;
+}
+
+body > main.main > section.content > div.section > div.content-items {
+  /* border: 1px solid #404040; */
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 30px;
+}
+
+body > main.main > section.content > div.section > div.content-items > div.shot {
+  border: 1px solid #404040;
+  min-width: 250px;
+  width: 250px;
+  min-height: 250px;
+  height: 250px;
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+  position: relative;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+body > main.main > section.content > div.section > div.content-items > div.shot a.author {
+  border: 1px solid #404040;
+  padding: 20px 10px 15px 10px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  background: linear-gradient(180deg, #9e9e9e07, #9e9e9e5d, #9e9e9e9a, #9e9e9ea9);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+  flex-wrap: nowrap;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+body > main.main > section.content > div.section > div.content-items > div.shot a.author > img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }

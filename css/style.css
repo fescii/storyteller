@@ -24,7 +24,7 @@ body {
   justify-content: center;
   /* background-color: #b8c6db;
   background-image: linear-gradient(-315deg, #b8c6db 0%, #f5f7fa 74%); */
-  background-color: #f0f3f8 ;
+  background-color: #f5f5ff;
 }
 
 
@@ -49,8 +49,7 @@ body > main.main > header.header {
   position: sticky;
   top: 0;
   backdrop-filter: blur(3px);
-  /* background-color: #ffffff; */
-  background-color: #f0f3f8 ;
+  background-color: #f5f5ff;
   z-index: 10;
 }
 
@@ -283,7 +282,7 @@ body > main.main > section.content > div.categories {
 }
 
 body > main.main > section.content > div.categories > div {
-  box-shadow: -0.6em 0.5em 0.5em rgba(235, 235, 235, 0.288);
+  /* box-shadow: -0.2em 0.5em 0.5em rgba(221, 221, 221, 0.288); */
   border-radius: 25px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
@@ -390,7 +389,7 @@ body > main.main > section.content > div.categories > div.banner.last {
 
 body > main.main > section.content > div.categories > div.category.long {
   border: none;
-  background: rgba(255, 255, 255, 0.918);
+  background: #ffffff;
   display: flex;
   flex-flow: column;
   align-items: stretch;
@@ -485,25 +484,40 @@ body > main.main > section.content > div.categories > div.category.long > .top >
   justify-content: center;
 }
 
-body > main.main > section.content > div.categories > div.category.long > .top > .right-action > span.icon {
-  width: 30px;
-  height: 30px;
+
+body > main.main > section.content > div.categories > div.category.long > .top > .right-action > a.icon {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #ffffff;
+  height: 28px;
+  width: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
-  color: #404040;
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
 }
 
-body > main.main > section.content > div.categories > div.category.long > .top > .right-action > span.icon > svg {
-  height: 12px;
-  width: 12px;
+body > main.main > section.content > div.categories > div.category.long > .top > .right-action > a.icon {
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  background-color: rgb(247, 145, 162);
 }
+
+body > main.main > section.content > div.categories > div.category.wedding > .top > .right-action > a.icon {
+  background:  rgb(223, 121, 26);
+  background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
+  background-color: rgb(247, 145, 162);
+}
+
+body > main.main > section.content > div.categories > div.category.long > .top > .right-action > a.icon svg {
+  rotate: -40deg;
+  width: 24px;
+  height: 24px;
+}
+
 
 body > main.main > section.content > div.categories > div.category.long > .footer {
   /* border: 1px solid #202020; */
@@ -517,7 +531,7 @@ body > main.main > section.content > div.categories > div.category.long > .foote
   justify-content: space-between;
   z-index: 3;
   /* background-color: #29e7cd; */
-  background: linear-gradient(180deg, #ffffff29, #ffffffd1, #ffffffe8, #ffffff);
+  background: linear-gradient(180deg, #ffffff07, #ffffff96, #ffffffe8, #ffffff);
 
 }
 
@@ -539,6 +553,7 @@ body > main.main > section.content > div.categories > div.category.long > .foote
 body > main.main > section.content > div.categories > div.category.long > .footer > .info > span {
   margin: 0;
   color: #808080;
+  font-weight: 500;
   font-size: 0.8rem;
 }
 
@@ -554,6 +569,18 @@ body > main.main > section.content > div.categories > div.category.long > .foote
   -moz-border-radius: 25px;
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
+}
+
+body > main.main > section.content > div.categories > div.category.long > .footer > .price  {
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  background-color: rgb(247, 145, 162);
+}
+
+body > main.main > section.content > div.categories > div.category.long.wedding > .footer > .price  {
+  background:  rgb(223, 121, 26);
+  background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
+  background-color: rgb(247, 145, 162);
 }
 
 body > main.main > section.content > div.categories > div.category.long > .footer > .price > span {

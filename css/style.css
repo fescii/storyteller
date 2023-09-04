@@ -422,7 +422,7 @@ body > main.main > section.content > div.categories > div.banner.top > div.text 
   background-color: #ffffffd5;
   padding: 7px 15px;
   text-decoration: none;
-  color: #ad5389;
+  color:  #0004ff;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 50px;
@@ -505,6 +505,8 @@ body > main.main > section.content > div.categories > div.banner.top-second > di
 body > main.main > section.content > div.categories > div.banner.top-second > div.text h2 {
   margin: 0;
   padding: 0;
+  font-family: 'visby_medium', sans-serif;
+  font-size: 1.5rem;
   color: inherit;
 }
 
@@ -534,16 +536,10 @@ body > main.main > section.content > div.categories > div.category.small {
   grid-row: 4/7;
 }
 
-body > main.main > section.content > div.categories > div.banner.last {
-  border: 1px solid #404040;
-  height: 120px;
-  grid-column: 3/5;
-  grid-row: 5/7;
-}
 
 body > main.main > section.content > div.categories > div.category.long {
   border: none;
-  background: #ffffff;
+  background-color: #f8f9f5;
   display: flex;
   flex-flow: column;
   align-items: stretch;
@@ -685,7 +681,7 @@ body > main.main > section.content > div.categories > div.category.long > .foote
   justify-content: space-between;
   z-index: 3;
   /* background-color: #29e7cd; */
-  background: linear-gradient(180deg, #ffffff07, #ffffff96, #ffffffe8, #ffffff);
+  background: linear-gradient(180deg, #f5f5f507, #f5f5f596, #f5f5f5e8, #f5f5f5);
 
 }
 
@@ -751,6 +747,153 @@ body > main.main > section.content > div.categories > div.category.long > .image
 }
 
 body > main.main > section.content > div.categories > div.category.long > .image > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+body > main.main > section.content > div.categories > div.banner.last {
+  /* border: 1px solid #404040; */
+  background-color: #f8f9f5;
+  height: 120px;
+  grid-column: 3/5;
+  grid-row: 5/7;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+body > main.main > section.content > div.categories > div.banner.last > div.text {
+  /* border: 1px solid black; */
+  padding: 0 0 0 20px;
+  display: flex;
+  flex-flow: column;
+  gap: 0px;
+}
+
+body > main.main > section.content > div.categories > div.banner.last > div.text > h2 {
+  margin: 0;
+  padding: 0;
+  font-family: 'visby_medium', sans-serif;
+  font-size: 1.5rem;
+  /* font-family: var(--font-alt); */
+  color: #404040;
+}
+
+body > main.main > section.content > div.categories > div.banner.last > div.text > span {
+  color: #808080;
+  font-size: 0.9rem;
+}
+
+body > main.main > section.content > div.categories > div.banner.last > a.icon {
+  display: inline-block;
+  text-decoration: none;
+  color: #202020;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  background-color: #ffffff;
+  height: 28px;
+  width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+}
+
+body > main.main > section.content > div.categories > div.banner.last > a.icon svg {
+  rotate: -40deg;
+  width: 24px;
+  height: 24px;
+}
+
+body > main.main > section.content > div.categories > div.banner.last > div.image {
+  /* border: 1px solid #404040; */
+  position: absolute;
+  right: 10px;
+  width: 250px;
+  height: 100%;
+  overflow: hidden;
+}
+
+body > main.main > section.content > div.categories > div.banner.last > div.image > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+body > main.main > section.content > div.categories > div.small.wild {
+  border: none;
+  background-color: #f8f9f5;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: relative;
+  padding: 0 0 30px 0;
+}
+
+body > main.main > section.content > div.categories > div.small.wild > a.icon {
+  display: inline-block;
+  z-index: 2;
+  text-decoration: none;
+  color: #404040;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  background-color: #ffffff;
+  height: 28px;
+  width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+}
+
+body > main.main > section.content > div.categories > div.small.wild > a.icon svg {
+  rotate: -40deg;
+  width: 24px;
+  height: 24px;
+}
+
+
+body > main.main > section.content > div.categories > div.small.wild > a.avail {
+  display: inline-block;
+  background-color: #afd6388a;
+  font-weight: 500;
+  padding: 7px 15px;
+  text-decoration: none;
+  color:  #ffffff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+body > main.main > section.content > div.categories > div.small.wild > div.image {
+  /*border: 1px solid #404040;
+  */position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+body > main.main > section.content > div.categories > div.small.wild > div.image > img {
   width: 100%;
   height: auto;
   object-fit: cover;

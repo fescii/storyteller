@@ -1057,7 +1057,7 @@ body > main.main > section.content > div.section.booking > div.image-side img {
 
 
 body > main.main > section.content > div.section.people {
-  border: 1px solid #404040;
+  /* border: 1px solid #404040; */
   margin: 50px 0 0 0;
   display: flex;
   flex-flow: column;
@@ -1094,7 +1094,7 @@ body > main.main > section.content > div.section.people > .people-head > p {
 }
 
 body > main.main > section.content > div.section.people > div.people {
-  border: 1px solid #404040;
+  /* border: 1px solid #404040; */
   display: flex;
   flex-flow: row;
   align-items: start;
@@ -1102,16 +1102,20 @@ body > main.main > section.content > div.section.people > div.people {
 }
 
 body > main.main > section.content > div.section.people > div.people > div.person {
-  border: 1px solid #404040;
+  /* border: 1px solid #404040; */
+  background-color: #f8f9f5;
+  /* box-shadow: 1px 1px 10px rgba(185, 185, 185, 0.3); */
   display: flex;
   flex-flow: column;
-  align-items: center;
+  padding: 15px 10px 15px 10px;
   justify-content: center;
-  width: 400px;
+  width: 350px;
+  gap: 15px;
+  border-radius: 25px;
 }
 
 body > main.main > section.content > div.section.people > div.people > div.person > .top {
-  border: 1px solid #ca1111;
+  /* border: 1px solid #ca1111; */
   display: flex;
   flex-flow: row;
   flex-wrap: nowrap;
@@ -1121,7 +1125,7 @@ body > main.main > section.content > div.section.people > div.people > div.perso
 }
 
 body > main.main > section.content > div.section.people > div.people > div.person > .top > .image {
-  border: 1px solid #11ca39;
+  /* border: 1px solid #11ca39; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1137,9 +1141,163 @@ body > main.main > section.content > div.section.people > div.people > div.perso
 }
 
 body > main.main > section.content > div.section.people > div.people > div.person > .top > .image > img {
-  border: 1px solid #11ca39;
+  /* border: 1px solid #11ca39; */
   width: 100%;
   height: 100%;
   border-radius: 100%;
   object-fit: cover;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .top > .info {
+  /* border: 1px solid #11ca39; */
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .top > .info > div.name {
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  justify-content: center;
+}
+
+
+body > main.main > section.content > div.section.people > div.people > div.person > .top > .info > div.name h3 {
+  margin: 0;
+  font-family: var(--font-alt);
+  color: #404040;
+  font-weight: 500;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .top > .info > div.name .pro {
+  margin: 0;
+  font-family: var(--font-main);
+  color: #808080;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .top > .info > div.about {
+  margin: 0;
+  font-family: var(--font-alt);
+  color: #404040;
+  font-size: 0.93rem;
+  font-weight: 400;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .footer {
+  /* border: 1px solid #11ca39; */
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 10px;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .footer > .social {
+  /* border: 1px solid #1133ca; */
+  width: 100px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .footer > .social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #808080;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .footer > .social a:hover {
+  color: #374bff;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .footer > .social a  svg{
+  width: 16px;
+  height: 16px;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .footer >  a {
+  display: flex;
+  background-color: #374bff;
+  padding: 5px 12px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+
+body > main.main > section.content > div.section.people > div.people > div.person > .footer > a  svg{
+  width: 17px;
+  height: 17px;
+  /* rotate: -40deg; */
+}
+
+
+body > main.main > section.content > div.section.people > div.more {
+  background-color: #f8f9f5;
+  /* background-color: #f8f7f4; */
+  align-self: center;
+  width: 60%;
+  margin: 20px 0;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+
+body > main.main > section.content > div.section.people > div.more >  span.looking {
+  display: flex;
+  background-color:  #ffffff;
+  padding: 5px 12px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #808080;
+  border-radius: 50px;
+}
+
+body > main.main > section.content > div.section.people > div.more >  h2 {
+  margin: 15px  0;
+  font-family: var(--font-alt);
+  color: #404040;
+  font-weight: 500;
+}
+
+body > main.main > section.content > div.section.people > div.more >  p {
+  margin: 0;
+  font-family: var(--font-alt);
+  color: #404040;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+body > main.main > section.content > div.section.people > div.more >  a.browse {
+  margin: 15px  0;
+  padding: 15px 20px;
+  background-color: rgb(13, 12, 34);
+  text-decoration: none;
+  font-family: var(--font-alt);
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 50px;
 }

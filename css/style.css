@@ -540,10 +540,86 @@ body > main.main > section.content > div.categories > div.category.long {
   padding: 0;
   position: relative;
   display: flex;
+  align-items: center;
+  /* justify-content: stretch; */
   overflow: hidden;
   /* animation: slide 10s linear infinite; */
   /* -webkit-animation: slide 10s linear infinite; */
 }
+
+body > main.main > section.content > div.categories > div.category.long > .dots  {
+  border: 1px solid #404040;
+  position: absolute;
+  bottom: 10px;
+  left: calc(50% - 25px);
+  display: flex;
+  width: 50px;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  z-index: 4;
+}
+
+body > main.main > section.content > div.categories > div.category.long > .dots > span.dot {
+  border: 1px solid rgba(102,247,113,1);
+  display: none;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 19px;
+  width: 19px;
+  cursor: pointer;
+  /* padding: 2px; */
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+body > main.main > section.content > div.categories > div.category.long > .dots > span.dot {
+  border: 1px solid rgb(240, 156, 78);
+}
+
+body > main.main > section.content > div.categories > div.category.long > .dots > span.dot.last {
+  border: 1px solid rgb(223, 121, 26);
+  border: none;
+}
+
+body > main.main > section.content > div.categories > div.category.long > .dots > span.dot > span.pick {
+  display: inline-block;
+  box-shadow: -0.5em 0.5em 0.5em rgb(209, 209, 209);
+  border: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+}
+
+body > main.main > section.content > div.categories > div.category.long > .dots > span.dot.first > span.pick {
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  background-color: rgb(247, 145, 162);
+}
+
+body > main.main > section.content > div.categories > div.category.long > .dots > span.dot.last > span.pick {
+  background-image: linear-gradient(#464d55, #25292e);
+}
+
+body > main.main > section.content > div.categories > div.category.long > .dots > span.dot.first > span.pick {
+  background:  rgb(223, 121, 26);
+  background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
+  background-color: rgb(247, 145, 162);
+}
+
+body > main.main > section.content > div.categories > div.category.long > .dots > span.dot.last > span.pick {
+  background-image: linear-gradient(#464d55, #25292e);
+}
+
 
 body > main.main > section.content > div.categories > div.category.long > .slide {
   width: 100%;
@@ -598,7 +674,7 @@ body > main.main > section.content > div.categories > div.category.long > .slide
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 20px 15px 20px 15px;
+  padding: 20px 15px 30px 15px;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   display: flex;
@@ -607,16 +683,21 @@ body > main.main > section.content > div.categories > div.category.long > .slide
   align-items: center;
   justify-content: space-between;
   z-index: 2;
-  background: linear-gradient(180deg, #5e5e5e05, #5e5e5e21, #5e5e5e48, #5e5e5e79);
+  /* backdrop-filter: blur(1px); */
+  background: linear-gradient(180deg, #5e5e5e02, #5e5e5e18, #5e5e5e48, #5e5e5e79);
 
 }
 
 
 body > main.main > section.content > div.categories > div.category.long > .slide > .footer > .info {
   /* border: 1px solid #202020; */
+  width: 100%;
   display: flex;
   flex-flow: column;
+  align-items: center;
+  justify-content: center;
   gap: 5px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 body > main.main > section.content > div.categories > div.category.long > .slide > .footer > .info > p {
@@ -630,10 +711,13 @@ body > main.main > section.content > div.categories > div.category.long > .slide
 
 body > main.main > section.content > div.categories > div.category.long > .slide > .footer > .info > span {
   margin: 0;
-  color: rgb(223, 121, 26);
+  color: rgb(255, 255, 255);
   font-weight: 500;
   font-size: 0.8rem;
 }
+
+
+
 
 
 body > main.main > section.content > div.categories > div.category.long > .top {

@@ -1141,7 +1141,8 @@ body > main.main > section.content > div.section.people > div.people > div.perso
 }
 
 body > main.main > section.content > div.section.people > div.people > div.person > .top > .image > img {
-  /* border: 1px solid #11ca39; */
+  /* border: 1px solid  rgb(238, 162, 92); */
+  background-color: #ffffff;
   width: 100%;
   height: 100%;
   border-radius: 100%;
@@ -1200,6 +1201,8 @@ body > main.main > section.content > div.section.people > div.people > div.perso
 
 body > main.main > section.content > div.section.people > div.people > div.person > .footer > .social {
   /* border: 1px solid #1133ca; */
+  height: max-content;
+  padding: 2px;
   width: 100px;
   display: flex;
   flex-flow: row;
@@ -1229,18 +1232,23 @@ body > main.main > section.content > div.section.people > div.people > div.perso
 body > main.main > section.content > div.section.people > div.people > div.person > .footer >  a {
   display: flex;
   background-color: #374bff;
+  /* background-color: rgb(255, 255, 255); */
   padding: 5px 12px;
   align-items: center;
   justify-content: center;
   gap: 5px;
   text-decoration: none;
   color: #ffffff;
+  /* color: #808080; */
   border-radius: 50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
 }
+/* body > main.main > section.content > div.section.people > div.people > div.person > .footer >  a:hover {
+  color: #374bff;
+} */
 
 
 body > main.main > section.content > div.section.people > div.people > div.person > .footer > a  svg{
@@ -1254,7 +1262,7 @@ body > main.main > section.content > div.section.people > div.more {
   background-color: #f8f9f5;
   /* background-color: #f8f7f4; */
   align-self: center;
-  width: 60%;
+  width: 70%;
   margin: 20px 0;
   padding: 20px;
   display: flex;
@@ -1281,6 +1289,7 @@ body > main.main > section.content > div.section.people > div.more >  h2 {
   font-family: var(--font-alt);
   color: #404040;
   font-weight: 500;
+  text-align: center;
 }
 
 body > main.main > section.content > div.section.people > div.more >  p {
@@ -1292,9 +1301,9 @@ body > main.main > section.content > div.section.people > div.more >  p {
 }
 
 body > main.main > section.content > div.section.people > div.more >  a.browse {
-  margin: 15px  0;
-  padding: 15px 20px;
-  background-color: rgb(13, 12, 34);
+  /* margin: 15px  0; */
+  padding: 10px 20px;
+  background-color: #374bff;
   text-decoration: none;
   font-family: var(--font-alt);
   color: #ffffff;

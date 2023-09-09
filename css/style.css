@@ -102,6 +102,7 @@
 * {
   font-family: var(--font-main);
   box-sizing: border-box;
+  transition: all 0.3s linear;
 }
 
 html {
@@ -347,8 +348,8 @@ body > main.main > section.landing > .content-one > .text  .actions {
   display: flex;
   flex-flow: row;
   align-items: center;
-  /* justify-content: center; */
-  gap: 50px;
+  justify-content: space-between;
+  gap: 0;
 }
 
 body > main.main > section.landing > .content-one > .text  .actions > a {
@@ -364,15 +365,25 @@ body > main.main > section.landing > .content-one > .text  .actions > a {
   justify-content: center;
   gap: 10px;
   border-radius: 50px;
+  transition: all 0.3s linear;
 }
 
 body > main.main > section.landing > .content-one > .text  .actions > a.explore { 
-  border: 1px solid #80808017;
+  border: 1px solid #8080805d;
   background-color: #ffffff;
   color: #404040;
 }
+
 body > main.main > section.landing > .content-one > .text  .actions > a.explore svg path {
   fill: #404040;
+}
+
+body > main.main > section.landing > .content-one > .text  .actions > a svg {
+  transition: all 0.3s linear;
+}
+
+body > main.main > section.landing > .content-one > .text  .actions > a:hover{
+  padding: 10px 20px;
 }
 
 body > main.main > section.landing > .content-one > .text  .actions > a.book { 
@@ -421,7 +432,7 @@ body > main.main > section.services {
   flex-flow: column;
   justify-content: space-between;
   align-items: center;
-  gap: 0;
+  gap: 30px;
   padding: 50px 10% 50px 10%;
 }
 
@@ -440,20 +451,116 @@ body > main.main > section.services > .services-head > h2.title {
   margin: 0;
   font-family: var(--font-alt);
   line-height: 1.2;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   font-weight: 500;
-  color: #25292e;
+  color: #404040;
 }
 
 body > main.main > section.services > .services-head > p {
   margin: 0;
   font-family: var(--font-alt);
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.5;
   color: #404040;
   text-align: center;
 }
+
+body > main.main > section.services > .guaranteed {
+  margin: 20px 0 0 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+body > main.main > section.services > .guaranteed > .service {
+  /* border: 1px solid blue; */
+  overflow: hidden;
+  position: relative;
+  padding: 25px 20px;
+  background: #fff;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-image: none;
+  box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.15);
+  border-radius: 15px;
+  transition: all 0.3s linear;
+}
+
+body > main.main > section.services > .guaranteed > .service:hover {
+  margin: -15px 0 0 0;
+}
+
+body > main.main > section.services > .guaranteed > .service.box1 {
+  background-image: url(/img/back/bg-service1-1.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+body > main.main > section.services > .guaranteed > .service.box2 {
+  background-image: url(/img/back/bg-service2-1.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+body > main.main > section.services > .guaranteed > .service.box3 {
+  background-image: url(/img/back/bg-service3-1.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+body > main.main > section.services > .guaranteed > .service .content-box {
+  padding-left: 75px;
+}
+
+body > main.main > section.services > .guaranteed > .service .content-box h5 {
+  font-weight: 700;
+  /* font-family: var(--font-alt); */
+  color: #25292e;
+  font-size: 1.2rem;
+  margin: 0 0 8px 0;
+}
+
+body > main.main > section.services > .guaranteed > .service .content-box p {
+  margin: 0;
+  color: #606060;
+  font-family: var(--font-alt);
+  font-size: 1rem;
+  line-height: 1.875;
+  font-weight: 400;
+}
+
+body > main.main > section.services > .guaranteed > .service .number-box {
+  float: left;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+body > main.main > section.services > .guaranteed > .service.box1 .number-box {
+  color: #00c3ff;
+  background: rgba(0, 195, 255, 0.15);
+}
+
+body > main.main > section.services > .guaranteed > .service.box2 .number-box {
+  color: #0160e7;
+  background-color: rgba(1,96,231,.152);
+}
+
+body > main.main > section.services > .guaranteed > .service.box3 .number-box {
+  color: #fe4c1c;
+  background-color: rgba(254,76,28,.154);
+}
+
+
 
 
 /* EXPLORE */
@@ -780,13 +887,6 @@ body > main.main > section.content > div.categories > div.category.long > .dots 
   -moz-border-radius: 50px;
 }
 
-/* body > main.main > section.content > div.categories > div.category.long > .dots > span.dot.active {
-  border: 1px solid rgba(102,247,113,1);
-}
-
-body > main.main > section.content > div.categories > div.category.long > .dots > span.dot.active:nth-of-type(even) {
-  border: 1px solid rgb(255, 163, 77);
-} */
 
 body > main.main > section.content > div.categories > div.category.long > .dots > span.dot > span.pick {
   background-image: linear-gradient(#53595f, #627ea0);

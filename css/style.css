@@ -620,7 +620,7 @@ body > main.main > section.services > .our-services {
 }
 
 body > main.main > section.services > .our-services > .service {
-  /* border: 1px solid blue; */
+  border: 1px solid #80808017;
   overflow: hidden;
   position: relative;
   padding: 25px 20px;

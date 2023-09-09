@@ -140,7 +140,7 @@ body > main.main {
 }
 
 body > main.main > header.header {
-  padding: 10px 10% 10px 10%;
+  padding: 0 10% 0 10%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -168,6 +168,8 @@ body > main.main > header.header > .logo > img {
 
 
 body > main.main > header.header > ul.item-links {
+  /* border: 1px solid black; */
+  height: 100%;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -178,14 +180,15 @@ body > main.main > header.header > ul.item-links {
 }
 
 body > main.main > header.header > ul.item-links >li.item-link {
-  /* border: 1px solid black; */
+  /* border: 1px solid rgb(218, 99, 99); */
   margin: 0;
   padding: 0;
+  height: 100%;
   width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #404040;
+  color: #5f5f5f;
   font-size: 1.1rem;
   font-weight: 400;
 }
@@ -195,46 +198,58 @@ body > main.main > header.header > ul.item-links >li.item-link:hover {
 }
 
 body > main.main > header.header > ul.item-links >li.item-link > a.link {
+  /* border: 1px solid rgb(99, 218, 129); */
   text-decoration: none;
+  height: 100%;
+  width: 100%;
   /* text-transform: uppercase; */
   color: inherit;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
+body > main.main > header.header > ul.item-links >li.item-link {
+  position: relative;
 }
 
 body > main.main > header.header > ul.item-links >li.item-link.active {
   color: #404040;
-  position: relative;
-  font-weight: 600;
-  /* text-transform: uppercase; */
+  font-weight: 500;
+  /* color:  rgb(223, 121, 26); */
+  /* background-clip: text; */
 }
 
-body > main.main > header.header > ul.item-links >li.item-link > a > span.dots {
-  display: none;
-}
 
-body > main.main > header.header > ul.item-links >li.item-link.active > a > span.dots {
-  position: absolute;
-  width: 30px;
-  bottom: -5px;
-  left: calc(50% - 15px);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-body > main.main > header.header > ul.item-links >li.item-link.active > a > span.dots span.dot {
+body > main.main > header.header > ul.item-links >li.item-link.active > a > span.bar {
   display: inline-block;
-  width: 8px;
-  height: 3px;
-  background-color: rgb(8, 180, 74);
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
 }
 
-body > main.main > header.header > ul.item-links >li.item-link.active > a > span.dots span.dot:nth-of-type(even) {
-  background-color: rgb(255, 153, 0);
+body > main.main > header.header > ul.item-links >li.item-link > a > span.bar {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  bottom: 10px;
+  left: calc(50% - 2px);
+  display: none;
+  border-radius: 20px;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  background-color: rgb(247, 145, 162);
+  
 }
+
+body > main.main > header.header > ul.item-links >li.item-link.active > a > span.bar {
+  background:  rgb(223, 121, 26);
+  background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
+  background-color: rgb(247, 145, 162);
+}
+
+body > main.main > header.header > ul.item-links >li.item-link:hover > a > span.bar {
+  display: inline-block;
+}
+
 
 body > main.main > header.header > div.utility {
   /* border: 1px solid #404040; */
@@ -269,7 +284,9 @@ body > main.main > header.header > div.utility > span.cart {
   border-radius: 50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
-  background-color: rgb(236, 151, 39);
+  background:  rgb(223, 121, 26);
+  background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
+  background-color: rgb(247, 145, 162);
 }
 
 body > main.main > header.header > div.utility > span.cart > i {
@@ -566,7 +583,7 @@ body > main.main > section.services > .guaranteed > .service.box3 .number-box {
 /* EXPLORE */
 
 body > main.main > section.content {
-  margin: 0 10% 70px 10%;
+  margin: 50px 10% 70px 10%;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -1314,8 +1331,8 @@ body > main.main > section.content > div.section.booking > div.image-side {
   background:  rgb(250, 199, 32);
   margin: 50px 0 0 0;
   position: relative;
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
   border-radius: 100%;
   overflow: hidden;
 }
@@ -1619,13 +1636,40 @@ footer.footer > section.content > .logo-section {
 
 footer.footer > section.content > .logo-section > .logo { 
   /* border: 2px solid rgb(175, 84, 84); */
-  max-height: 65px;
+  max-height: max-content;
+  position: relative;
+  padding: 0 20px;
 }
 
-footer.footer > section.content > .logo-section > .logo  img {
+footer.footer > section.content > .logo-section > .logo  span.bar{
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
   height: 100%;
-  width: auto;
-  object-fit: contain;
+  background:  rgb(223, 121, 26);
+  background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
+  background-color: rgb(247, 145, 162);
+  border-radius: 15px;
+}
+
+footer.footer > section.content > .logo-section > .logo  h2{
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  color: #404040;
+  font-family: var(--font-alt);
+}
+
+footer.footer > section.content > .logo-section > .logo  span.art{
+  margin: 0;
+  color: #808080;
+  line-height: 1.2;
+  font-family: var(--font-alt);
+  letter-spacing: 4px;
+  font-weight: 700;
 }
 
 footer.footer > section.content > .logo-section > p {

@@ -5,7 +5,7 @@ export default class ModalBook extends HTMLElement {
     super();
 
     // lets create our shadow root
-    this.shadowObj = this.attachShadow({mode: 'open'});
+    this.shadowObj = this.attachShadow({ mode: 'open' });
 
     this.render();
 
@@ -21,11 +21,219 @@ export default class ModalBook extends HTMLElement {
     // console.log('We are inside connectedCallback');
     this.disableScroll()
 
+    this.populateDate()
   }
 
   disconnectedCallback() {
     // console.log('We are inside disconnectedCallback');
     this.enableScroll()
+  }
+
+  populateDate() {
+    //Days-dates
+    let currentDate = new Date()
+    let daysDates = this.shadowObj.querySelectorAll(".schedules>.schedules-header>.days>#day-item");
+    let leftDayNav = this.shadowObj.querySelector(".schedules>.schedules-header>.title-wrapper>.navs>#left-day-nav");
+    let rightDayNav = this.shadowObj.querySelector(".schedules>.schedules-header>.title-wrapper>.navs>#right-day-nav");
+    let selectedDate = this.shadowObj.querySelector(".schedules>.schedules-header>.title-wrapper>#selected-date");
+    if (daysDates != null && leftDayNav != null && rightDayNav != null && selectedDate != null) {
+      let thisMonth = new Date()
+      let counter = new Date();
+      Date.prototype.getEnglishDate = function () {
+        let date = this.getDate()
+        if (date === 11) {
+          date = `${date}th`
+        }
+        else if (date == 12) {
+          date = `${date}th`
+        }
+        else if (date == 13) {
+          date = `${date}th`
+        }
+
+        else {
+          if ((date % 10) == 1) {
+            date = `${date}st`
+          }
+          else if ((date % 10) == 2) {
+            date = `${date}nd`
+          }
+          else if ((date % 10) == 3) {
+            date = `${date}rd`
+          }
+          else {
+            date = `${date}th`
+          }
+
+        }
+
+        let dateText = `${this.toLocaleString("default", { weekday: "long" })}, ${date} ${this.toLocaleString("default", { month: "long" })} ${this.getFullYear()}`
+        return dateText
+      }
+
+      Date.prototype.getMonthDays = function () {
+        return new Date(this.getFullYear(), this.getMonth() + 1, 0).getDate()
+      }
+
+      Date.prototype.setNextMonth = function () {
+        let year = (this.getFullYear() + 1)
+        let month = (this.getMonth() + 1)
+        if (this.getMonth() == 11) {
+          this.setFullYear(year)
+          this.setDate(1)
+          this.setMonth(0)
+        } else {
+          this.setDate(1)
+          this.setMonth(month)
+        }
+        return this
+      }
+
+      Date.prototype.setPreviousMonth = function () {
+        let year = (this.getFullYear() - 1)
+        let month = (this.getMonth() - 1)
+        if (this.getMonth() == 0) {
+          this.setFullYear(year)
+          this.setDate(1)
+          this.setMonth(11)
+          let lastDate = new Date(this.getFullYear(), this.getMonth() + 1, 0).getDate()
+          this.setDate(lastDate)
+        } else {
+          this.setDate(1)
+          this.setMonth(month)
+          let lastDate = new Date(this.getFullYear(), this.getMonth() + 1, 0).getDate()
+          this.setDate(lastDate)
+        }
+        return this
+      }
+
+      let active = null
+      function populateDays(dayItems, current) {
+        dayItems.forEach((day, index) => {
+          let dayDate = day.querySelector(".date")
+          let today = current.getDate()
+          let days = current.getMonthDays()
+          if (index === current.getDay() && today === currentDate.getDate()) {
+            if (current.getFullYear() === currentDate.getFullYear()) {
+              day.classList.add("selected")
+              active = day
+              dayDate.textContent = today
+              day.setAttribute("data-date", `${today}`)
+              day.setAttribute("data-month", `${current.getMonth() + 1}`)
+              day.setAttribute("data-year", `${current.getFullYear()}`)
+            }
+          }
+          else if (index > current.getDay()) {
+            let diff = (index - current.getDay())
+            let daysDiff = (days - today)
+            if (diff <= daysDiff) {
+              dayDate.textContent = (today + diff)
+              day.setAttribute("data-date", `${(today + diff)}`)
+              day.setAttribute("data-month", `${current.getMonth() + 1}`)
+              day.setAttribute("data-year", `${current.getFullYear()}`)
+            }
+            else if (diff >= daysDiff) {
+              let preDate = new Date(current.getFullYear(), current.getMonth() + 1, 0)
+              preDate.setNextMonth()
+              dayDate.textContent = preDate.getDate() + (diff - (daysDiff + 1))
+              day.setAttribute("data-date", `${preDate.getDate() + (diff - (daysDiff + 1))}`)
+              day.setAttribute("data-month", `${preDate.getMonth() + 1}`)
+              day.setAttribute("data-year", `${preDate.getFullYear()}`)
+            }
+          }
+          else if (index <= current.getDay()) {
+            let diff = (current.getDay() - index)
+            if (diff < today) {
+              dayDate.textContent = today - diff
+              day.setAttribute("data-date", `${(today - diff)}`)
+              day.setAttribute("data-month", `${current.getMonth() + 1}`)
+              day.setAttribute("data-year", `${current.getFullYear()}`)
+            }
+            else {
+              let preDate = new Date(current.getFullYear(), current.getMonth() + 1, 0)
+              preDate.setPreviousMonth()
+              dayDate.textContent = preDate.getDate() - (diff - today)
+              day.setAttribute("data-date", `${(preDate.getDate() - (diff - today))}`)
+              day.setAttribute("data-month", `${preDate.getMonth() + 1}`)
+              day.setAttribute("data-year", `${preDate.getFullYear()}`)
+            }
+          }
+        })
+      }
+
+      populateDays(daysDates, thisMonth)
+      selectedDate.textContent = counter.getEnglishDate()
+
+
+      function getThisSun(date) {
+        let days = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate()
+        let nextS = date.getDate() + (6 - date.getDay())
+        if (nextS >= days) {
+          let extra = (nextS - days)
+          // nextB = true
+          nextS = extra
+          date.setNextMonth()
+        }
+        return nextS
+      }
+
+      function getThisSat(date) {
+        let nextS = date.getDate() - date.getDay()
+        let extra = (date.getDay() - date.getDate())
+        if (nextS <= 0) {
+          let days = new Date(date.getFullYear(), date.getMonth(), 0).getDate()
+          nextS = (days - extra)
+          date.setPreviousMonth()
+        }
+        return nextS
+      }
+
+      //Right-Nav
+      rightDayNav.addEventListener("click", (e) => {
+        e.preventDefault()
+        daysDates.forEach(day => {
+          day.classList.remove("selected")
+        })
+
+        counter.setDate(getThisSun(counter) + 1)
+
+        populateDays(daysDates, counter)
+        // selectedDate.textContent = counter.getEnglishDate()
+      })
+
+      //Left-Nav
+      leftDayNav.addEventListener("click", (e) => {
+        e.preventDefault()
+        daysDates.forEach(day => {
+          day.classList.remove("selected")
+        })
+
+        counter.setDate(getThisSat(counter) - 1)
+        populateDays(daysDates, counter)
+        // selectedDate.textContent = counter.getEnglishDate()
+      })
+
+      daysDates.forEach(day => {
+        day.addEventListener("click", (e) => {
+          e.preventDefault()
+          let dayDate = new Date(`${day.dataset.year}-${day.dataset.month}-${day.dataset.date}`)
+          // console.log(dayDate)
+          try {
+            active.classList.remove("selected")
+          }
+          catch {
+            TypeError("not-assign")
+          }
+          finally {
+            active = day
+            // console.log(active)
+            day.classList.add("selected")
+            selectedDate.textContent = dayDate.getEnglishDate()
+          }
+        })
+      })
+    }
+
   }
 
 
@@ -36,14 +244,14 @@ export default class ModalBook extends HTMLElement {
     document.body.classList.add("stop-scrolling");
 
     // if any scroll is attempted, set this to the previous value
-    window.onscroll = function() {
+    window.onscroll = function () {
       window.scrollTo(scrollLeft, scrollTop);
     };
   }
 
   enableScroll() {
     document.body.classList.remove("stop-scrolling");
-    window.onscroll = function() {};
+    window.onscroll = function () { };
   }
 
   getTemplate() {
@@ -86,7 +294,7 @@ export default class ModalBook extends HTMLElement {
     ${this.getStyles()}`;
   }
 
-  getStepOne(){
+  getStepOne() {
     return `
       <div class="head">
         <h2 class="step-title">Make your reservation now</h2>
@@ -117,7 +325,7 @@ export default class ModalBook extends HTMLElement {
     `
   }
 
-  getStepTwo(){
+  getStepTwo() {
     return `
       <div class="head">
         <h2 class="step-title">Make your selections</h2>
@@ -178,7 +386,7 @@ export default class ModalBook extends HTMLElement {
     `
   }
 
-  getStepThree(){
+  getStepThree() {
     return `
       <div class="head">
         <h2 class="step-title">Chose the day</h2>
@@ -204,7 +412,7 @@ export default class ModalBook extends HTMLElement {
             </div>
           </div>
           <div class="days">
-            <div data-date="" data-month="" data-year="" class="day selected" id="day-item">
+            <div data-date="" data-month="" data-year="" class="day" id="day-item">
               <span class="name">Sun</span>
               <span class="date">15</span>
               <span class="dot"></span>
@@ -732,12 +940,8 @@ export default class ModalBook extends HTMLElement {
         background-color: #90909017;
       }
 
-      .schedules > .schedules-header > .days > .active:hover {
-        background-color: var(--accent-color);
-      }
-
       .schedules > .schedules-header > .days > .selected:hover {
-        background-color: var(--main-color);
+        background-color: #ffffff;
       }
 
       .schedules > .schedules-header > .days > .day > .name {

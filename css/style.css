@@ -746,19 +746,20 @@ body > main.main > section.services > .reserve > a.book svg path {
   fill: #ffffff;
 }
 
+
 body > main.main > section.featured {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   margin: 0;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-  padding: 50px 10% 50px 10%;
+  padding: 50px 10% 70px 10%;
 }
 
 body > main.main > section.featured > .featured-head {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   width: 100%;
   margin: 0;
   display: flex;
@@ -789,7 +790,7 @@ body > main.main > section.featured > .featured-head > p {
 }
 
 body > main.main > section.featured > div.photos {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   width: 80%;
   margin: 0;
   display: grid;
@@ -839,6 +840,81 @@ body > main.main > section.featured > div.photos > div.photo.forth{
   height: 300px;
 }
 
+body > main.main > section.featured > .reserve {
+  /* border: 1px solid rgb(156, 156, 156); */
+  margin: 25px 0 0 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+}
+
+body > main.main > section.featured > .reserve > p {
+  margin: 0;
+  font-family: var(--font-alt);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #404040;
+  text-align: center;
+}
+
+body > main.main > section.featured > .reserve .actions {
+  margin: 0;
+  width: 70%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+}
+
+body > main.main > section.featured > .reserve .actions > a {
+  /* border: 1px solid rgb(156, 156, 156); */
+  padding: 10px 15px;
+  text-decoration: none;
+  font-family: var(--font-alt);
+  font-size: 1.1rem;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 50px;
+  transition: all 0.3s linear;
+}
+
+body > main.main > section.featured > .reserve .actions > a.explore { 
+  border: 1px solid #8080805d;
+  background-color: #ffffff;
+  color: #404040;
+}
+
+body > main.main > section.featured > .reserve .actions > a.explore svg path {
+  fill: #404040;
+}
+
+body > main.main > section.featured > .reserve .actions > a svg {
+  transition: all 0.3s linear;
+}
+
+body > main.main > section.featured > .reserve .actions > a:hover{
+  padding: 10px 20px;
+  gap: 15px;
+}
+
+body > main.main > section.featured > .reserve .actions > a.book { 
+  background:  rgb(223, 121, 26);
+  background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
+  background-color: rgb(247, 145, 162);
+  color: #ffffff;
+}
+
+body > main.main > section.featured > .reserve .actions > a.book svg path {
+  fill: #ffffff;
+}
 
 
 

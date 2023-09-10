@@ -195,7 +195,7 @@ body > main.main > header.header > .logo  span.art{
   font-family: var(--font-alt);
   letter-spacing: 4px;
   font-weight: 700;
-  text-align: end;
+  text-align: center;
 }
 
 
@@ -678,6 +678,74 @@ body > main.main > section.services > .our-services > .service p.description {
   font-weight: 400;
   text-align: center;
 }
+
+
+body > main.main > section.services > .reserve {
+  /* border: 1px solid rgb(156, 156, 156); */
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  width: 40%;
+}
+
+
+body > main.main > section.services > .reserve > h2.title {
+  color: #404040;
+  font-family: var(--font-alt);
+  margin: 15px 0 10px 0;
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+body > main.main > section.services > .reserve > p {
+  color: #747474;
+  font-family: var(--font-alt);
+  margin: 0 0 20px 0;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+body > main.main > section.services > .reserve > a {
+  /* border: 1px solid rgb(156, 156, 156); */
+  padding: 10px 15px;
+  text-decoration: none;
+  font-family: var(--font-alt);
+  font-size: 1.1rem;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 50px;
+  transition: all 0.3s linear;
+}
+
+
+
+body > main.main > section.services > .reserve > a svg {
+  transition: all 0.3s linear;
+}
+
+body > main.main > section.services > .reserve > a:hover{
+  padding: 10px 25px;
+  gap: 15px;
+}
+
+body > main.main > section.services > .reserve > a.book { 
+  background:  rgb(223, 121, 26);
+  background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
+  background-color: rgb(247, 145, 162);
+  color: #ffffff;
+}
+
+body > main.main > section.services > .reserve > a.book svg path {
+  fill: #ffffff;
+}
+
 
 
 
@@ -1711,7 +1779,7 @@ body > main.main > section.content > div.section.people > div.more >  a.browse {
 
 footer.footer {
   /* border: 2px solid black; */
-  background-color: rgb(248, 249, 250);
+  background-color: #ffffff;
   margin: 0;
   padding: 50px 10% 30px 10%;
   width: 100%;

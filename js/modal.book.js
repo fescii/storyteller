@@ -872,21 +872,30 @@ export default class ModalBook extends HTMLElement {
 
       .schedules>.schedules-header>.title-wrapper>.navs {
         /*border: 1px solid #808080;*/
-        padding: 0 10px 0 0;
+        padding: 0 5px 0 0;
         display: flex;
         flex-wrap: nowrap;
         align-items: center;
         justify-content: center;
-        gap: 8px;
+        gap: 15px;
       }
 
       .schedules > .schedules-header > .title-wrapper > .navs > .nav {
+        background-color: #80808013;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
         color: #808080;
         cursor: pointer;
+        border-radius: 50px;
       }
 
       .schedules > .schedules-header > .title-wrapper > .navs > .nav:hover {
-        color: #08b86f;
+        background-color: #08b86f;
+        color: #ffffff;
       }
 
       .schedules > .schedules-header > .title-wrapper > .navs > .nav > svg {
@@ -923,16 +932,20 @@ export default class ModalBook extends HTMLElement {
       }
 
       .schedules > .schedules-header > .days > .day.selected {
-        background-color: #ffffff;
+        /*background-color: #ffffff;
         font-weight: bold;
-        color: #404040;
+        color: #404040;*/
+        background:  rgb(223, 121, 26);
+        background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
+        background-color: rgb(247, 145, 162);
+        color: #ffffff;
       }
 
       .schedules > .schedules-header > .days > .day.selected > span.dot {
         display: inline-block;
         width: 5px;
         height: 5px;
-        background-color: #404040;
+        background-color: #ffffff;
         border-radius: 25px;
       }
 

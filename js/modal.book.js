@@ -189,7 +189,7 @@ export default class ModalBook extends HTMLElement {
       <div class="schedules">
         <div class="schedules-header">
           <div class="title-wrapper">
-            <div id="selected-date"class="selected-date">Monday, 15th January 2022</div>
+            <div id="selected-date"class="selected-date">January 2023</div>
             <div class="navs">
               <div id="left-day-nav" class="nav">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
@@ -687,9 +687,8 @@ export default class ModalBook extends HTMLElement {
         stroke-width: 1.8;
       }
 
-      .schedules>.schedules-header>.title-wrapper>.selected-date{
-        /*border: 1px solid #808080;
-        font-weight: bold;*/
+      .schedules > .schedules-header > .title-wrapper > .selected-date {
+        font-size: 1.2rem;
         color: #666666;
       }
 

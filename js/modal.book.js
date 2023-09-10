@@ -98,7 +98,7 @@ export default class ModalBook extends HTMLElement {
           <span class="error">Email is required</span>
         </div>
         <div class="field other">
-          <textarea name="other" id="other" cols="30" rows="10" placeholder="Additional informatiom"></textarea>
+          <textarea name="other" id="other" cols="auto" rows="auto" placeholder="Additional informatiom"></textarea>
         </div>
       </div>
     `
@@ -422,6 +422,25 @@ export default class ModalBook extends HTMLElement {
       }
 
       section#content > .container > .fields > .field > input:focus {
+        border: 1px solid #08b86f60;
+      }
+
+      section#content > .container > .fields > .field > textarea {
+        border: 1px solid #80808037;
+        font-size: 1rem;
+        width: 100%;
+        outline: none;
+        padding: 10px 12px;
+        border-radius: 12px;
+        color: #404040;
+        max-width: 100%;
+        min-width: 100%;
+        width: 100%;
+        max-height: 70px;
+        min-height: 70px;
+        height: 70px;
+      }
+      section#content > .container > .fields > .field > textarea:fucus{
         border: 1px solid #08b86f60;
       }
 

@@ -118,82 +118,18 @@ export default class ModalBook extends HTMLElement {
     `
   }
 
-  getContent(){
-    return`
-      <div class="infos">
-        <div class="head">
-          <div class="name">Fredrick Ochieng</div>
-          <div class="user-info">
-            <span class="email">isfecii@gmail.com</span>
-            <span class="num">+254713253018</span>
-          </div>
-        </div>
-        <div class="description">
-          <p class="title">Due</p>
-          <span class="text">
-            23 AUG
-          </span>
-        </div>
-        <div class="description">
-          <p class="title">Paper Type</p>
-          <span class="text">
-            MLA Paper format
-          </span>
-        </div>
-        <div class="description">
-          <p class="title">Academic Level</p>
-          <span class="text">
-            Masters Degree
-          </span>
-        </div>
-        <div class="description">
-          <p class="title">Subject/Discipline</p>
-          <span class="text">
-            Computer Technology
-          </span>
-        </div>
-        <div class="description">
-          <p class="title">Topic</p>
-          <span class="text">
-            Computer Technology
-          </span>
-        </div>
-        <div class="description">
-          <p class="title">Description</p>
-          <span class="text">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In dolores maxime voluptates accusamus eos hic nisi accusantium voluptate dolore non! Debitis quam saepe deleniti nam expedita atque officiis vero tempore.
-          </span>
-        </div>
-        <div class="description">
-          <p class="title">Pages</p>
-          <span class="text">
-            4 Pages Double Spaced
-          </span>
-        </div>
-        <div class="description">
-          <p class="title">References</p>
-          <span class="text">
-            4 References
-          </span>
-        </div>
-        <div class="files">
-          <p class="title">Attached files</p>
-          <div class="links">
-            <a href="image_location.zip" download>
-              <i class="bi bi-cloud-download"></i>
-              <span class="file-name">File name</span>
-            </a>
-            <a href="image_location.zip" download>
-              <i class="bi bi-cloud-download"></i>
-              <span class="file-name">File name</span>
-            </a>
-            <a href="image_location.zip" download>
-              <i class="bi bi-cloud-download"></i>
-              <span class="file-name">File name</span>
-            </a>
-          </div>
-        </div>
-      </div>`
+  getStepTwo(){
+    return `
+      <div class="head">
+        <h2 class="step-title">Choose services you would like</h2>
+        <p class="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nostrum libero at rem maxime porro neque quae?
+        </p>
+      </div>
+      <div class="services">
+        
+      </div>
+    `
   }
 
   getLoader() {
@@ -271,6 +207,7 @@ export default class ModalBook extends HTMLElement {
 
       #content .content-head{
         margin: 0 20px;
+        width: 100%;
         padding: 5px 0 10px 0;
         display: flex;
         flex-flow: column;
@@ -337,12 +274,12 @@ export default class ModalBook extends HTMLElement {
       }
 
       section#content > .footer > .action {
-        border: 1px solid #808080;
+        /*border: 1px solid #808080;*/
         display: flex;
         flex-flow: row;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 5px;
         border-radius: 50px;
         font-family: var(--font-alt);
         line-height: 1.2;
@@ -354,10 +291,24 @@ export default class ModalBook extends HTMLElement {
 
       section#content > .footer > .action.prev {
         padding: 10px 20px 10px 15px;
+        background: rgba(57, 56, 56, 0.087);
+        background: linear-gradient(0deg, rgba(57, 56, 56, 0.087) 0%, rgba(57, 56, 56, 0.187) 100%);
+      }
+
+      section#content > .footer > .action.prev svg path {
+        fill: #404040;
       }
 
       section#content > .footer > .action.next {
         padding: 10px 15px 10px 20px;
+        color: #ffffff;
+        background: #ad5389;
+        background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+        background-color: rgb(247, 145, 162);
+      }
+
+      section#content > .footer > .action.next svg path {
+        fill: #ffffff;
       }
 
       section#content > .container {
@@ -392,10 +343,10 @@ export default class ModalBook extends HTMLElement {
        section#content > .container > .head > p.description {
         margin: 0;
         font-family: var(--font-alt);
-        font-size: 1rem;
+        font-size: 0.93rem;
         font-weight: 400;
         line-height: 1.5;
-        color: #404040;
+        color: #808080;
         text-align: center;
       }
 
@@ -488,7 +439,7 @@ export default class ModalBook extends HTMLElement {
         min-height: 70px;
         height: 70px;
       }
-      section#content > .container > .fields > .field > textarea:fucus{
+      section#content > .container > .fields > .field > textarea:focus{
         border: 1px solid #08b86f60;
       }
 

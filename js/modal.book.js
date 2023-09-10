@@ -25,7 +25,6 @@ export default class ModalBook extends HTMLElement {
 
   disconnectedCallback() {
     // console.log('We are inside disconnectedCallback');
-    // adding event handler to the button
     this.enableScroll()
   }
 
@@ -121,9 +120,9 @@ export default class ModalBook extends HTMLElement {
   getStepTwo(){
     return `
       <div class="head">
-        <h2 class="step-title">Select all that matches your need</h2>
+        <h2 class="step-title">Make your selections</h2>
         <p class="description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nostrum libero at rem maxime porro neque quae?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
       </div>
       <div class="services">
@@ -167,10 +166,13 @@ export default class ModalBook extends HTMLElement {
           <span class="option">
             <span class="text">Wildlife</span>
           </span>
+          <span class="option">
+            <span class="text">Traditional</span>
+          </span>
         </div>
         <div class="other">
-          <span class="text">Other, please specify</span>
-          <input type="text" name="other" id="other" placeholder="Other info">
+          <span class="text">Others, Please specify</span>
+          <input type="text" name="other" id="other" placeholder="Enter others">
         </div>
       </div>
     `
@@ -235,16 +237,16 @@ export default class ModalBook extends HTMLElement {
 
       section#content {
         background-color: #ffffff;
-        padding: 15px 20px 30px 20px;
+        padding: 15px 20px;
         display: flex;
         flex-flow: column;
         justify-content: start;
         align-items: center;
         gap: 0;
         width: 700px;
-        min-height: 80%;
         height: 80%;
-        max-height: 90%;
+        max-height: max-content;
+        min-height: 500px;
         height: max-content;
         border-radius: 25px;
         position: relative;
@@ -264,10 +266,13 @@ export default class ModalBook extends HTMLElement {
         display: flex;
         flex-flow: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
       }
 
       #content .content-head > .actions > .control{
+        position: absolute;
+        left: 20px;
+        top: 15px;
         display: flex;
         flex-flow: row;
         align-items: center;
@@ -309,9 +314,10 @@ export default class ModalBook extends HTMLElement {
       }
 
       section#content > .footer {
-        margin: 30px 0 0 0;
-        width: 80%;
-        padding: 5px 0 10px 0;
+       /* border: 1px solid #808080;*/
+        margin: 0;
+        width: 90%;
+        padding: 20px 0 10px 0;
         display: flex;
         flex-flow: row;
         justify-content: space-between;
@@ -320,7 +326,6 @@ export default class ModalBook extends HTMLElement {
       }
 
       section#content > .footer > .action {
-        /*border: 1px solid #808080;*/
         display: flex;
         flex-flow: row;
         justify-content: center;
@@ -359,7 +364,7 @@ export default class ModalBook extends HTMLElement {
 
       section#content > .container {
         /*border: 2px solid #808080;*/
-        padding: 5px 0 10px 0;
+        padding: 0;
         display: flex;
         flex-flow: column;
         justify-content: center;
@@ -491,7 +496,7 @@ export default class ModalBook extends HTMLElement {
 
       section#content > .container > .services {
         /*border: 1px solid #808080;*/
-        width: 80%;
+        width: 90%;
         display: flex;
         flex-flow: column;
         justify-content: center;
@@ -525,6 +530,38 @@ export default class ModalBook extends HTMLElement {
         border: none;
         background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
         color: #ffffff;
+      }
+
+
+      section#content > .container > .services > .other{
+        /*border-top: 1px solid #80808017;*/
+        width: 100%;
+        padding: 15px 0px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      section#content > .container > .services > .other span.text {
+        color: #666666;
+        /*text-transform: capitalize;*/
+        font-family: var(--font-alt);
+        line-height: 1.2;
+      }
+
+      section#content > .container > .services > .other > input {
+        border: 1px solid #80808037;
+        font-size: 1rem;
+        width: 100%;
+        outline: none;
+        padding: 10px 12px;
+        border-radius: 12px;
+        color: #404040;
+      }
+
+      section#content > .container > .services > .other > input:focus {
+        border: 1px solid #08b86f60;
       }
 
       }

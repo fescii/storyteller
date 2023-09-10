@@ -433,6 +433,7 @@ body > main.main > section.landing > .content-one > .text  .actions > a svg {
 
 body > main.main > section.landing > .content-one > .text  .actions > a:hover{
   padding: 10px 20px;
+  gap: 15px;
 }
 
 body > main.main > section.landing > .content-one > .text  .actions > a.book { 
@@ -682,11 +683,12 @@ body > main.main > section.services > .our-services > .service p.description {
 
 body > main.main > section.services > .reserve {
   /* border: 1px solid rgb(156, 156, 156); */
+  margin: 25px 0 0 0;
   display: flex;
   flex-flow: column;
   align-items: center;
   text-align: center;
-  width: 40%;
+  width: 50%;
 }
 
 
@@ -705,7 +707,7 @@ body > main.main > section.services > .reserve > p {
   margin: 0 0 20px 0;
   text-align: center;
   line-height: 1.5;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 body > main.main > section.services > .reserve > a {

@@ -66,11 +66,42 @@ export default class ModalBook extends HTMLElement {
             </span>
           </div>
         </div>
-        <div id="order-contents" class="order-contents">
-          ${this.getLoader()}
+        <div id="container" class="container">
+          ${this.getStepOne()}
         </div>
       </section>
     ${this.getStyles()}`;
+  }
+
+  getStepOne(){
+    return `
+      <div class="head">
+        <h2 class="step-title">Make your reservation now</h2>
+        <p class="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nostrum libero at rem maxime porro neque quae?
+        </p>
+      </div>
+      <div class="fields">
+        <div class="field name">
+          <input type="text" name="name" id="name" placeholder="Your name" required>
+          <span class="error">Name is required</span>
+        </div>
+        <div class="field phone">
+          <span class="wrapper">
+            <span class="country">+254</span>
+            <input type="text" name="number" id="number" placeholder="Phone number" required>
+          </span>
+          <span class="error">Phone is required</span>
+        </div>
+        <div class="field email">
+          <input type="text" name="email" id="email" placeholder="Your email" required>
+          <span class="error">Email is required</span>
+        </div>
+        <div class="field other">
+          <textarea name="other" id="other" cols="30" rows="10" placeholder="Additional informatiom"></textarea>
+        </div>
+      </div>
+    `
   }
 
   getContent(){
@@ -208,12 +239,12 @@ export default class ModalBook extends HTMLElement {
         -webkit-backdrop-filter: blur(3px);
       }
 
-      #content {
+      section#content {
         background-color: #ffffff;
-        padding: 15px 0 30px 0;
+        padding: 15px 20px 30px 20px;
         display: flex;
         flex-flow: column;
-        justify-content: space-between;
+        justify-content: start;
         gap: 0;
         width: 700px;
         min-height: 80%;
@@ -280,6 +311,118 @@ export default class ModalBook extends HTMLElement {
 
       #content .content-head > .actions > span.steps > .step{
         color: rgb(223, 121, 26);
+      }
+
+      section#content > .container {
+        /*border: 2px solid #808080;*/
+        padding: 5px 0 10px 0;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+       section#content > .container > .head {
+        /*border: 1px solid blue;*/
+        margin: 0 0 30px 0;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+      }
+      
+       section#content > .container > .head > h2.step-title {
+        margin: 0;
+        font-family: var(--font-alt);
+        line-height: 1.2;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #404040;
+      }
+      
+       section#content > .container > .head > p.description {
+        margin: 0;
+        font-family: var(--font-alt);
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #404040;
+        text-align: center;
+      }
+
+      section#content > .container > .fields {
+        /*margin: 0 0 30px 0;*/
+        width: 80%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: start;
+        gap: 15px;
+      }
+
+      section#content > .container > .fields > .field {
+        /*border: 1px solid black;*/
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: start;
+        gap: 2px;
+      }
+
+      section#content > .container > .fields > .field > span.error {
+        color: #ee7752;
+        font-size: 0.8rem;
+        display: none;
+      }
+
+      section#content > .container > .fields > .field > span.wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+      }
+      section#content > .container > .fields > .field > span.wrapper > span {
+        border: 1px solid #80808037;
+        border-right: none;
+        font-size: 1rem;
+        width: 60px;
+        padding: 10px 12px;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+        color: #08b86f;
+        display: flex;
+        align-items: center;
+      }
+
+      section#content > .container > .fields > .field > span.wrapper > input {
+        border: 1px solid #80808037;
+        font-size: 1rem;
+        width: calc(100% - 60px);
+        outline: none;
+        padding: 10px 12px;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+        color: #404040;
+      }
+
+      section#content > .container > .fields > .field >  span.wrapper > input:focus {
+        border: 1px solid #08b86f60;
+      }
+
+      section#content > .container > .fields > .field > input {
+        border: 1px solid #80808037;
+        font-size: 1rem;
+        width: 100%;
+        outline: none;
+        padding: 10px 12px;
+        border-radius: 12px;
+        color: #404040;
+      }
+
+      section#content > .container > .fields > .field > input:focus {
+        border: 1px solid #08b86f60;
       }
 
       }

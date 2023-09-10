@@ -67,7 +67,7 @@ export default class ModalBook extends HTMLElement {
           </div>
         </div>
         <div id="container" class="container">
-          ${this.getStepOne()}
+          ${this.getStepTwo()}
         </div>
         <div class="footer">
           <div class="action prev">
@@ -121,13 +121,57 @@ export default class ModalBook extends HTMLElement {
   getStepTwo(){
     return `
       <div class="head">
-        <h2 class="step-title">Choose services you would like</h2>
+        <h2 class="step-title">Select all that matches your need</h2>
         <p class="description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nostrum libero at rem maxime porro neque quae?
         </p>
       </div>
       <div class="services">
-        
+        <div class="options">
+          <span class="option">
+            <span class="text">Event</span>
+          </span>
+          <span class="option">
+            <span class="text">Hicking</span>
+          </span>
+          <span class="option">
+            <span class="text">Outdoor</span>
+          </span>
+          <span class="option">
+            <span class="text">Party</span>
+          </span>
+          <span class="option">
+            <span class="text">Advertising</span>
+          </span>
+          <span class="option selected">
+            <span class="text">Wedding</span>
+          </span>
+          <span class="option">
+            <span class="text">Videography</span>
+          </span>
+          <span class="option">
+            <span class="text">Editing</span>
+          </span>
+          <span class="option">
+            <span class="text">Product</span>
+          </span>
+          <span class="option">
+            <span class="text">Cultural</span>
+          </span>
+          <span class="option">
+            <span class="text">Professional</span>
+          </span>
+          <span class="option">
+            <span class="text">Graduation</span>
+          </span>
+          <span class="option">
+            <span class="text">Wildlife</span>
+          </span>
+        </div>
+        <div class="other">
+          <span class="text">Other, please specify</span>
+          <input type="text" name="other" id="other" placeholder="Other info">
+        </div>
       </div>
     `
   }
@@ -199,6 +243,7 @@ export default class ModalBook extends HTMLElement {
         gap: 0;
         width: 700px;
         min-height: 80%;
+        height: 80%;
         max-height: 90%;
         height: max-content;
         border-radius: 25px;
@@ -271,6 +316,7 @@ export default class ModalBook extends HTMLElement {
         flex-flow: row;
         justify-content: space-between;
         align-items: center;
+        justify-self: end;
       }
 
       section#content > .footer > .action {
@@ -441,6 +487,44 @@ export default class ModalBook extends HTMLElement {
       }
       section#content > .container > .fields > .field > textarea:focus{
         border: 1px solid #08b86f60;
+      }
+
+      section#content > .container > .services {
+        /*border: 1px solid #808080;*/
+        width: 80%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: start;
+        gap: 15px;
+      }
+
+      section#content > .container > .services > .options {
+        /*border: 1px solid #808080;*/
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+        gap: 15px;
+      }
+
+      section#content > .container > .services > .options > .option {
+        border: 1px solid #80808037;
+        font-size: 1rem;
+        padding: 8px 20px;
+        border-radius: 50px;
+        color: #666666;
+        cursor: pointer;
+        font-family: var(--font-alt);
+        line-height: 1.2;
+      }
+
+      section#content > .container > .services > .options > .option.selected {
+        border: none;
+        background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+        color: #ffffff;
       }
 
       }

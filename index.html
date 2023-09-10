@@ -12,9 +12,23 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<title>Storyteller Arts</title>
+
+	<script type="module">
+    //Apps-Modals
+    import ModalBook from "./js/modal.book.js";
+
+    //Apps-modals
+    customElements.define("modal-book", ModalBook);
+
+  </script>
 </head>
 
 <body>
+	<modal-book
+  	url="/good/"
+    id="1"
+    >
+  </modal-book>
 	<main class="main">
 		<header class="header">
 			<div class="logo">

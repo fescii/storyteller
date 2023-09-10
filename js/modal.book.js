@@ -66,7 +66,7 @@ export default class ModalBook extends HTMLElement {
           </div>
         </div>
         <div id="container" class="container">
-          ${this.getStepTwo()}
+          ${this.getStepThree()}
         </div>
         <div class="footer">
           <div class="action prev">
@@ -178,6 +178,73 @@ export default class ModalBook extends HTMLElement {
     `
   }
 
+  getStepThree(){
+    return `
+      <div class="head">
+        <h2 class="step-title">Chose the day</h2>
+        <p class="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
+      <div class="schedules">
+        <div class="schedules-header">
+          <div class="title-wrapper">
+            <div id="selected-date"class="selected-date">Monday, 15th January 2022</div>
+            <div class="navs">
+              <div id="left-day-nav" class="nav">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                </svg>
+              </div>
+              <div id="right-day-nav" class="nav">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="days">
+            <div data-date="" data-month="" data-year="" class="day selected" id="day-item">
+              <span class="name">Sun</span>
+              <span class="date">15</span>
+              <span class="dot"></span>
+            </div>
+            <div data-date="" data-month="" data-year="" class="day" id="day-item">
+              <span class="name">Mon</span>
+              <span class="date">16</span>
+              <span class="dot"></span>
+            </div>
+            <div data-date="" data-month="" data-year="" class="day" id="day-item">
+              <span class="name">Tue</span>
+              <span class="date">17</span>
+              <span class="dot"></span>
+            </div>
+            <div data-date="" data-month="" data-year="" class="day" id="day-item">
+              <span class="name">Wed</span>
+              <span class="date">18</span>
+              <span class="dot"></span>
+            </div>
+            <div data-date="" data-month="" data-year="" class="day" id="day-item">
+              <span class="name">Thu</span>
+              <span class="date">19</span>
+              <span class="dot"></span>
+            </div>
+            <div data-date="" data-month="" data-year="" class="day" id="day-item">
+              <span class="name">Fri</span>
+              <span class="date">20</span>
+              <span class="dot"></span>
+            </div>
+            <div data-date="" data-month="" data-year="" class="day" id="day-item">
+              <span class="name">Sat</span>
+              <span class="date">21</span>
+              <span class="dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
+  }
+
   getLoader() {
     return `
       <div id="loader" class="loader">
@@ -237,7 +304,7 @@ export default class ModalBook extends HTMLElement {
 
       section#content {
         background-color: #ffffff;
-        padding: 15px 20px;
+        padding: 15px 20px 40px 20px;
         display: flex;
         flex-flow: column;
         justify-content: start;
@@ -246,7 +313,7 @@ export default class ModalBook extends HTMLElement {
         width: 700px;
         height: 80%;
         max-height: max-content;
-        min-height: 500px;
+        min-height: 550px;
         height: max-content;
         border-radius: 25px;
         position: relative;
@@ -315,8 +382,10 @@ export default class ModalBook extends HTMLElement {
 
       section#content > .footer {
        /* border: 1px solid #808080;*/
+        position: absolute;
+        bottom: 15px;
         margin: 0;
-        width: 90%;
+        width: 80%;
         padding: 20px 0 10px 0;
         display: flex;
         flex-flow: row;
@@ -364,6 +433,7 @@ export default class ModalBook extends HTMLElement {
 
       section#content > .container {
         /*border: 2px solid #808080;*/
+        width: 90%;
         padding: 0;
         display: flex;
         flex-flow: column;
@@ -373,7 +443,7 @@ export default class ModalBook extends HTMLElement {
 
        section#content > .container > .head {
         /*border: 1px solid blue;*/
-        width: 80%;
+        width: 90%;
         margin: 0 0 30px 0;
         display: flex;
         flex-flow: column;
@@ -564,6 +634,120 @@ export default class ModalBook extends HTMLElement {
         border: 1px solid #08b86f60;
       }
 
+      /*Schedules*/
+
+      .schedules {
+        background-color: #80808010;
+        width: 100%;
+        min-width: 100%;
+        position: relative;
+        padding: 25px 25px 15px 25px;
+        display: flex;
+        gap: 15px;
+        flex-flow: column;
+        border-radius: 25px;
+      }
+
+      .schedules>.schedules-header{
+        /*border: 1px solid #808080;*/
+        display: flex;
+        flex-flow: column;
+        gap: 10px;
+        padding-bottom: 20px;
+      }
+
+      .schedules>.schedules-header>.title-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .schedules>.schedules-header>.title-wrapper>.navs {
+        /*border: 1px solid #808080;*/
+        padding: 0 10px 0 0;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .schedules > .schedules-header > .title-wrapper > .navs > .nav {
+        color: #808080;
+        cursor: pointer;
+      }
+
+      .schedules > .schedules-header > .title-wrapper > .navs > .nav:hover {
+        color: #08b86f;
+      }
+
+      .schedules > .schedules-header > .title-wrapper > .navs > .nav > svg {
+        width: 16px;
+        height: 16px;
+        stroke-width: 1.8;
+      }
+
+      .schedules>.schedules-header>.title-wrapper>.selected-date{
+        /*border: 1px solid #808080;
+        font-weight: bold;*/
+        color: #666666;
+      }
+
+      .schedules > .schedules-header > .days{
+        /*border: 1px solid #808080;*/
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 5px;
+      }
+
+      .schedules>.schedules-header>.days>.day {
+        padding: 8px 10px;
+        width: 65px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        border-radius: 15px;
+        color: #808080;
+        cursor: pointer;
+      }
+
+      .schedules > .schedules-header > .days > .day.selected {
+        background-color: #ffffff;
+        font-weight: bold;
+        color: #404040;
+      }
+
+      .schedules > .schedules-header > .days > .day.selected > span.dot {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background-color: #404040;
+        border-radius: 25px;
+      }
+
+      .schedules > .schedules-header > .days > .day:hover {
+        background-color: #90909017;
+      }
+
+      .schedules > .schedules-header > .days > .active:hover {
+        background-color: var(--accent-color);
+      }
+
+      .schedules > .schedules-header > .days > .selected:hover {
+        background-color: var(--main-color);
+      }
+
+      .schedules > .schedules-header > .days > .day > .name {
+        color: inherit;
+      }
+     
+      .schedules > .schedules-header > .days > .day > .date {
+        display: inline-block;
+        color: inherit;
       }
       </style>
     `;

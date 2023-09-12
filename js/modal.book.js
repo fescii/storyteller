@@ -198,7 +198,9 @@ export default class ModalBook extends HTMLElement {
         counter.setDate(getThisSun(counter) + 1)
 
         populateDays(daysDates, counter)
-        // selectedDate.textContent = counter.getEnglishDate()
+        daysDates[0].classList.add("selected")
+        active = daysDates[0]
+        selectedDate.textContent = counter.getEnglishDate()
       })
 
       //Left-Nav
@@ -210,7 +212,9 @@ export default class ModalBook extends HTMLElement {
 
         counter.setDate(getThisSat(counter) - 1)
         populateDays(daysDates, counter)
-        // selectedDate.textContent = counter.getEnglishDate()
+        daysDates[6].classList.add("selected")
+        active = daysDates[6]
+        selectedDate.textContent = counter.getEnglishDate()
       })
 
       daysDates.forEach(day => {
@@ -235,7 +239,6 @@ export default class ModalBook extends HTMLElement {
     }
 
   }
-
 
   disableScroll() {
     // Get the current page scroll position
@@ -274,7 +277,7 @@ export default class ModalBook extends HTMLElement {
           </div>
         </div>
         <div id="container" class="container">
-          ${this.getStepThree()}
+          ${this.getStepFour()}
         </div>
         <div class="footer">
           <div class="action prev">
@@ -483,6 +486,31 @@ export default class ModalBook extends HTMLElement {
             </div>
             <span class="select selected">Selected</span>
           </div>
+        </div>
+      </div>
+    `
+  }
+
+  getStepFour() {
+    return `
+      <div class="head">
+        <h2 class="step-title">Select a package</h2>
+        <p class="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
+      <div class="packages">
+        <div class="package">
+          <p class="name">Package I</p>
+          <div class="items">
+            <span class="item">63+ Photos</span>
+            <span class="item">Albums</span>
+            <span class="item">Frames</span>
+            <span class="item">Delivery</span>
+            <span class="item">Quality</span>
+          </div>
+          <div class="price">Ksh. 60,232.00</div>
+          <span class="select">Select</span>
         </div>
       </div>
     `
@@ -1125,6 +1153,59 @@ export default class ModalBook extends HTMLElement {
       .calendar-action > .results  > .photographer .selected {
         background-color: #08b86f;
         color: #ffffff;
+      }
+
+      section#content .packages {
+        /* border: 1px solid black; */
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        /* justify-content: center; */
+        align-items: start;
+        gap: 2px;
+      }
+
+      section#content .packages > .package {
+        border: 1px solid #80808027;
+        width: 200px;
+        max-width: 200px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: start;
+        gap: 10px;
+        padding: 15px 10px;
+        border-radius: 20px;
+      }
+
+      section#content .packages > .package p.name {
+        margin: 0;
+        font-family: var(--font-alt);
+        font-weight: 500px;
+        color: #404040;
+      }
+
+      section#content .packages > .package .items {
+        /* border: 1px solid #80808027; */
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: center;
+        gap: 5px;
+      }
+
+      section#content .packages > .package .items > .item{
+        border: 1px solid #80808027;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 3px 10px;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        color: #808080;
       }
 
       </style>

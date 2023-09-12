@@ -505,11 +505,11 @@ export default class ModalBook extends HTMLElement {
           <div class="items">
             <span class="item">63+ Photos</span>
             <span class="item">Albums</span>
+            <span class="item">HD</span>
+            <span class="item">Free editing</span>
             <span class="item">Frames</span>
-            <span class="item">Delivery</span>
-            <span class="item">Quality</span>
           </div>
-          <div class="price">Ksh. 60,232.00</div>
+          <div class="price"><span>Ksh.</span> 60,232.00</div>
           <span class="select">Select</span>
         </div>
       </div>
@@ -1199,13 +1199,46 @@ export default class ModalBook extends HTMLElement {
         border: 1px solid #80808027;
         display: flex;
         flex-flow: row;
-        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         padding: 3px 10px;
         border-radius: 50px;
         font-size: 0.8rem;
         color: #808080;
+      }
+
+      section#content .packages > .package .price{
+        border-top: 1px solid #80808027;
+        width: 100%;
+        font-family: var(--font-alt);
+        display: flex;
+        flex-flow: row;
+        justify-content: start;
+        align-items: start;
+        padding: 10px 0 0 0;
+        font-size: 1.1rem;
+        color: #808080;
+      }
+
+      section#content .packages > .package .price span {
+        display: inline-block;
+        padding: 0 5px 0 0;
+      }
+
+      section#content .packages > .package .select {
+        background-color: #099eef18;
+        font-family: var(--font-alt);
+        width: 100%;
+        text-align: center;
+        color: #08b86f;
+        padding: 8px 18px;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+
+      section#content .packages > .package .selected {
+        background-color: #08b86f;
+        color: #ffffff;
       }
 
       </style>

@@ -501,7 +501,10 @@ export default class ModalBook extends HTMLElement {
       </div>
       <div class="packages">
         <div class="package">
-          <p class="name">Package I</p>
+          <div class="name">
+            <p class="name">Package I</p>
+            <span>Lorem ipsum dolor.</span>
+          </div> 
           <div class="items">
             <span class="item">63+ Photos</span>
             <span class="item">Albums</span>
@@ -1178,11 +1181,27 @@ export default class ModalBook extends HTMLElement {
         border-radius: 20px;
       }
 
-      section#content .packages > .package p.name {
+      section#content .packages > .package >  .name {
+        /* border: 1px solid #80808027; */
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: start;
+        gap: 2px;
+      }
+
+      section#content .packages > .package .name >p.name {
         margin: 0;
         font-family: var(--font-alt);
         font-weight: 500px;
+        font-size: 1.2rem;
         color: #404040;
+      }
+
+      section#content .packages > .package .name > span {
+        margin: 0;
+        font-size: 0.8rem;
+        color: #808080;
       }
 
       section#content .packages > .package .items {

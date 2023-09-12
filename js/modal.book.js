@@ -449,22 +449,41 @@ export default class ModalBook extends HTMLElement {
             </div>
           </div>
         </div>
-        <div class="action">
-            <span class="look">
-              <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" >
-                  <g id="Iconly/Light/Search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                      <g id="Search" transform="translate(2.000000, 2.000000)" stroke="#000000" stroke-width="1.5">
-                          <circle id="Ellipse_739" cx="9.76659044" cy="9.76659044" r="8.9885584"></circle>
-                          <line x1="16.0183067" y1="16.4851259" x2="19.5423342" y2="20.0000001" id="Line_181"></line>
-                      </g>
-                  </g>
-              </svg>
-              <span class="text">Search for photographers </span>
-            </span>
-            <div class="results">
-              Results
+      </div>
+      <div class="calendar-action">
+        <span class="look">
+          <span class="text">Checking the availability...</span>
+        </span>
+        <span class="empty">
+          No photographers Available! Please choose another day to check.
+        </span>
+        <div class="results">
+          <span class="inform">*Select photographer(s) to continue</span>
+          <div class="photographer">
+            <div class="info">
+              <div class="image">
+                <img src="/img/explore/by/femar.jpg" alt="Photo" />
+              </div>
+              <div class="name">
+                <p> Photographer X </p>
+                <span>Available</span>
+              </div>
             </div>
+            <span class="select">Select</span>
           </div>
+          <div class="photographer">
+            <div class="info">
+              <div class="image">
+                <img src="/img/explore/by/femar.jpg" alt="Photo" />
+              </div>
+              <div class="name">
+                <p> Photographer Y </p>
+                <span>Available</span>
+              </div>
+            </div>
+            <span class="select selected">Selected</span>
+          </div>
+        </div>
       </div>
     `
   }
@@ -528,7 +547,7 @@ export default class ModalBook extends HTMLElement {
 
       section#content {
         background-color: #ffffff;
-        padding: 15px 20px 40px 20px;
+        padding: 15px 20px 10px 20px;
         display: flex;
         flex-flow: column;
         justify-content: start;
@@ -537,7 +556,7 @@ export default class ModalBook extends HTMLElement {
         width: 700px;
         height: 80%;
         max-height: max-content;
-        min-height: 550px;
+        min-height: min-content;
         height: max-content;
         border-radius: 25px;
         position: relative;
@@ -605,11 +624,9 @@ export default class ModalBook extends HTMLElement {
       }
 
       section#content > .footer {
-       /* border: 1px solid #808080;*/
-        position: absolute;
-        bottom: 15px;
+        border-top: 1px solid #80808027;
         margin: 0;
-        width: 80%;
+        width: 90%;
         padding: 20px 0 10px 0;
         display: flex;
         flex-flow: row;
@@ -865,9 +882,9 @@ export default class ModalBook extends HTMLElement {
         width: 100%;
         min-width: 100%;
         position: relative;
-        padding: 25px 25px 15px 25px;
+        padding: 20px 25px;
         display: flex;
-        gap: 15px;
+        gap: 0px;
         flex-flow: column;
         border-radius: 25px;
       }
@@ -877,7 +894,6 @@ export default class ModalBook extends HTMLElement {
         display: flex;
         flex-flow: column;
         gap: 10px;
-        padding-bottom: 20px;
       }
 
       .schedules>.schedules-header>.title-wrapper{
@@ -982,30 +998,133 @@ export default class ModalBook extends HTMLElement {
         color: inherit;
       }
       
-      .schedules > .action {
-        border: 1px solid #808080;
+      .calendar-action {
+       /* border: 1px solid #808080;*/
+        width: 100%;
+        padding: 20px 25px;
         display: flex;
         flex-flow: column;
         align-items: center;
         gap: 10px;
       }
 
-      .schedules > .action > span.look {
-        border: 1px solid #80808027;
+      .calendar-action > span.look {
+        background-color: #80808057;
         color: #808080;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
         gap: 10px;
         width: max-content;
-        padding: 5px 15px;
+        padding: 10px 20px;
+        border-radius: 50px;
+        animation: skeleton 1s linear infinite alternate;
+      }
+
+      @keyframes skeleton {
+          0%{
+            opacity: 1;
+          }
+          100%{
+            opacity: .25;
+          }
+        }
+
+      .calendar-action > .results {
+        width: 100%;
+        display: none;
+        flex-flow: column;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .calendar-action  span.inform {
+        color: #808080;
+      }
+
+      .calendar-action  span.empty {
+        color: #ff9500;
+        padding: 25px 20px;
+        font-family: var(--font-alt);
+        font-weight: 500px;
+        text-align: center;
+      }
+
+      .calendar-action > .results  > .photographer {
+        background-color: #80808010;
+        padding: 12px 18px;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        border-radius: 25px;
+      }
+
+      .calendar-action > .results  > .photographer .info {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .calendar-action > .results  > .photographer .info > .image {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
         border-radius: 50px;
       }
 
-      .schedules > .action > span.look svg {
-        stroke: #808080;
-        height: 16px;
-        width: 16px;
+      .calendar-action > .results  > .photographer .info > .image > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50px;
+      }
+
+
+      .calendar-action > .results  > .photographer .info > .name {
+        display: flex;
+        flex-flow: column;
+        align-items: start;
+        gap: 0;
+      }
+
+      .calendar-action > .results  > .photographer .info > .name  p {
+        margin: 0;
+        font-family: var(--font-alt);
+        font-weight: 500px;
+        color: #404040;
+      }
+
+      .calendar-action > .results  > .photographer .info > .name  span {
+        margin: 0;
+        color: #808080;
+        font-size: 0.9rem;
+        text-transform: lowercase;
+      }
+
+      .calendar-action > .results  > .photographer .select {
+        background-color: #099eef18;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        color: #08b86f;
+        padding: 8px 18px;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+
+      .calendar-action > .results  > .photographer .selected {
+        background-color: #08b86f;
+        color: #ffffff;
       }
 
       </style>

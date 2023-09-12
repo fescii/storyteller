@@ -509,12 +509,56 @@ export default class ModalBook extends HTMLElement {
             <span class="item">63+ Photos</span>
             <span class="item">Albums</span>
             <span class="item">HD</span>
-            <span class="item">Free editing</span>
             <span class="item">Frames</span>
           </div>
           <div class="price"><span>Ksh.</span> 60,232.00</div>
           <span class="select">Select</span>
         </div>
+        <div class="package selected">
+          <div class="name">
+            <p class="name">Package II</p>
+            <span>Lorem ipsum dolor.</span>
+          </div> 
+          <div class="items">
+            <span class="item">63+ Photos</span>
+            <span class="item">Albums</span>
+            <span class="item">HD</span>
+            <span class="item">Frames</span>
+          </div>
+          <div class="price"><span>Ksh.</span> 40,232.00</div>
+          <span class="select selected">Selected</span>
+        </div>
+        <div class="package">
+          <div class="name">
+            <p class="name">Package III</p>
+            <span>Lorem ipsum dolor.</span>
+          </div> 
+          <div class="items">
+            <span class="item">63+ Photos</span>
+            <span class="item">Albums</span>
+            <span class="item">HD</span>
+            <span class="item">Frames</span>
+          </div>
+          <div class="price"><span>Ksh.</span> 20,232.00</div>
+          <span class="select">Select</span>
+        </div>
+      </div>
+      <p class="manual-title">Or Choose No of Photos</p>
+      <div class="select-manually">
+        <div class="picker">
+          <div id="left-day-nav" class="nav">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+          </div>
+          <span class="no">1</span>
+          <div id="right-day-nav" class="nav">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="price"><span>Ksh.</span> <span class="ammount">400.00</span></div>
       </div>
     `
   }
@@ -578,14 +622,14 @@ export default class ModalBook extends HTMLElement {
 
       section#content {
         background-color: #ffffff;
-        padding: 15px 20px 10px 20px;
+        padding: 15px 0;
         display: flex;
         flex-flow: column;
         justify-content: start;
         align-items: center;
         gap: 0;
         width: 700px;
-        height: 80%;
+        height: 100%;
         max-height: max-content;
         min-height: min-content;
         height: max-content;
@@ -1163,9 +1207,9 @@ export default class ModalBook extends HTMLElement {
         width: 100%;
         display: flex;
         flex-flow: row;
-        /* justify-content: center; */
+        padding: 15px 0 25px 0;
         align-items: start;
-        gap: 2px;
+        gap: 15px;
       }
 
       section#content .packages > .package {
@@ -1177,8 +1221,13 @@ export default class ModalBook extends HTMLElement {
         justify-content: center;
         align-items: start;
         gap: 10px;
-        padding: 15px 10px;
+        padding: 15px 15px;
         border-radius: 20px;
+      }
+
+      section#content .packages > .package.selected {
+        background-color: #80808010;
+        border: none;
       }
 
       section#content .packages > .package >  .name {
@@ -1258,6 +1307,70 @@ export default class ModalBook extends HTMLElement {
       section#content .packages > .package .selected {
         background-color: #08b86f;
         color: #ffffff;
+      }
+
+      section#content  p.manual-title {
+        align-self: start;
+        margin: 0;
+        font-family: var(--font-alt);
+        font-weight: 500px;
+        font-size: 1.2rem;
+        color: #404040;
+      }
+
+      section#content .select-manually {
+        /* border: 1px solid black; */
+        align-self: start;
+        display: flex;
+        flex-flow: row;
+        padding: 15px 0 25px 0;
+        align-items: start;
+        gap: 15px;
+      }
+
+      section#content .select-manually > .picker {
+        /* border: 1px solid black; */
+        background-color: #80808010;
+        align-self: start;
+        display: flex;
+        flex-flow: row;
+        padding: 15px 15px;
+        border-radius: 15px;
+        align-items: start;
+        gap: 15px;
+      }
+
+      section#content .select-manually > .picker span.no {
+        /* border: 1px solid black; */
+        background-color: #ffffff;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 5px;
+        border-radius: 50px;
+        color:  #099eef;
+      }
+
+      section#content .select-manually > .picker > .nav {
+        width: 28px;
+        height: 28px;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        cursor: pointer;
+        border-radius: 50px;
+        background:  rgb(223, 121, 26);
+        background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
+        background-color: rgb(247, 145, 162);
+      }
+
+      section#content .select-manually > .picker > .nav > svg {
+        rotate: -90deg;
+        width: 16px;
+        height: 16px;
+        stroke-width: 1.8;
       }
 
       </style>

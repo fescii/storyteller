@@ -489,6 +489,11 @@ body > main.main > section.services {
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+  padding: 50px 10% 70px 10%;
+}
+body > main.main > section.services.last {
+  background-color: transparent;
+  margin: 0 0 70px 0;
   padding: 50px 10% 50px 10%;
 }
 
@@ -503,10 +508,17 @@ body > main.main > section.services > .services-head {
   gap: 10px;
 }
 
+body > main.main > section.services.last > .services-head {
+  /* border: 1px solid blue; */
+  width: 70%;
+  gap: 30px;
+}
+
 body > main.main > section.services > .services-head > h2.title {
   margin: 0;
   font-family: var(--font-alt);
   line-height: 1.2;
+  text-align: center;
   font-size: 2.3rem;
   font-weight: 500;
   color: #404040;

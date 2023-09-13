@@ -124,7 +124,7 @@ body > main.main > section.sidebar > .menu.second {
 
 body > main.main > section.sidebar > .menu > span.title {
   /* border: 2px solid rgb(175, 84, 84); */
-  padding: 0 0 8px 0;
+  padding: 0 0 8px 10px;
   color: #808080;
   font-size: 0.93rem;
 }

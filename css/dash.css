@@ -536,8 +536,8 @@ body > main.main > section.content > .content-container > .activities > .body > 
   /* border: 1px solid #808080; */
   margin: 0;
   font-family: var(--font-alt);
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 0.93rem;
+  /* font-weight: 500; */
   color: #808080;
 }
 

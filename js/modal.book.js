@@ -543,7 +543,7 @@ export default class ModalBook extends HTMLElement {
           <span class="select">Select</span>
         </div>
       </div>
-      <p class="manual-title">Or Choose No of Photos</p>
+      <p class="manual-title">Or choose no of Photos<span>(@Ksh. 400 each)</span></p>
       <div class="select-manually">
         <div class="picker">
           <div id="left-day-nav" class="nav">
@@ -551,14 +551,14 @@ export default class ModalBook extends HTMLElement {
               <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
             </svg>
           </div>
-          <span class="no">1</span>
+          <span class="no">0</span>
           <div id="right-day-nav" class="nav">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
             </svg>
           </div>
         </div>
-        <div class="price"><span>Ksh.</span> <span class="ammount">400.00</span></div>
+        <!-- <div class="price"><span>Ksh.</span> <span class="ammount">400.00</span></div> -->
       </div>
     `
   }
@@ -1310,7 +1310,7 @@ export default class ModalBook extends HTMLElement {
       }
 
       section#content  p.manual-title {
-        align-self: start;
+        /* align-self: start; */
         margin: 0;
         font-family: var(--font-alt);
         font-weight: 500px;
@@ -1318,9 +1318,18 @@ export default class ModalBook extends HTMLElement {
         color: #404040;
       }
 
+      section#content  p.manual-title span {
+        /* align-self: start; */
+        padding: 0 5px;
+        font-family: var(--font-alt);
+        /* font-weight: 500px; */
+        font-size:0.93rem;
+        color: #404040;
+      }
+
       section#content .select-manually {
         /* border: 1px solid black; */
-        align-self: start;
+        /* align-self: start; */
         display: flex;
         flex-flow: row;
         padding: 15px 0 25px 0;

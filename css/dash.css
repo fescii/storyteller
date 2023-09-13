@@ -563,3 +563,32 @@ body > main.main > section.content > .content-container > .activities > .body > 
   align-items: center;
   justify-content: center;
 }
+
+body > main.main > section.content > .content-container > .activities > .body > .left .cards > .card .logo > svg {
+  width: 30px;
+  height: 30px;
+}
+
+body > main.main > section.content > .content-container > .activities > .body > .left .cards > .card.completed .logo { 
+  background-color: #099eef18;
+}
+
+body > main.main > section.content > .content-container > .activities > .body > .left .cards > .card.completed .logo svg path { 
+  fill: #08b86f;
+}
+
+body > main.main > section.content > .content-container > .activities > .body > .left .cards > .card.upcoming .logo { 
+  background-color: #ffcc004c;
+}
+
+body > main.main > section.content > .content-container > .activities > .body > .left .cards > .card.upcoming .logo svg path { 
+  fill: #ff9500;
+}
+
+body > main.main > section.content > .content-container > .activities > .body > .left .cards > .card.cancelled .logo { 
+  background-color: #fb482c19;
+}
+
+body > main.main > section.content > .content-container > .activities > .body > .left .cards > .card.cancelled .logo svg path { 
+  fill: #f84125;
+}

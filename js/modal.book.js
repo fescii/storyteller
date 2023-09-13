@@ -441,15 +441,15 @@ export default class ModalBook extends HTMLElement {
           </div>
         </div>
         <div id="container" class="container">
-          ${this.getStepOne()}
+          ${this.getStepFour()}
         </div>
         <div class="footer">
-          <div class="action prev">
+          <!-- <div class="action prev">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4992 19.7504C15.3692 19.7504 15.2382 19.7174 15.1182 19.6464C14.3642 19.1994 7.75024 15.1914 7.75024 12.0004C7.75024 8.81043 14.3632 4.80143 15.1182 4.35443C15.4732 4.14343 15.9352 4.26143 16.1452 4.61843C16.3562 4.97543 16.2382 5.43543 15.8822 5.64643C13.3182 7.16543 9.25024 10.2334 9.25024 12.0004C9.25024 13.7704 13.3182 16.8374 15.8822 18.3544C16.2382 18.5654 16.3562 19.0254 16.1452 19.3824C16.0052 19.6184 15.7562 19.7504 15.4992 19.7504Z" fill="black"/>
             </svg>
             <span class="text">Previous</span>
-          </div>
+          </div> -->
           <div class="action next">
             <span class="text">Next</span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -706,7 +706,7 @@ export default class ModalBook extends HTMLElement {
             <span class="item">Frames</span>
           </div>
           <div class="price"><span>Ksh.</span> 40,232.00</div>
-          <span class="select selected">Selected</span>
+          <span class="select">Selected</span>
         </div>
         <div class="package">
           <div class="name">
@@ -875,8 +875,9 @@ export default class ModalBook extends HTMLElement {
         padding: 20px 0 10px 0;
         display: flex;
         flex-flow: row;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         align-items: center;
+        justify-content: center; 
         justify-self: end;
       }
 
@@ -1480,7 +1481,7 @@ export default class ModalBook extends HTMLElement {
         cursor: pointer;
       }
 
-      section#content .packages > .package .selected {
+      section#content .packages > .package.selected .select {
         background-color: #08b86f;
         color: #ffffff;
       }

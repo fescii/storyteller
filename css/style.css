@@ -99,10 +99,11 @@
   --font-alt: 'Plus Jakarta Sans', sans-serif;
   --font-main: 'Sen', sans-serif;
 }
+
 * {
   font-family: var(--font-main);
   box-sizing: border-box;
-  transition: all 0.3s linear;
+  /* transition: all 0.3s linear; */
 }
 
 html {

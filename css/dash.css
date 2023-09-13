@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Sen:wght@400;500;600;700;800&display=swap');
+
+
+:root {
+  --font-alt: 'Plus Jakarta Sans', sans-serif;
+  --font-main: 'Sen', sans-serif;
+}
+
+* {
+  font-family: var(--font-main);
+  box-sizing: border-box;
+  /* transition: all 0.3s linear; */
+}
+
+html {
+  margin: 0;
+  width: 100%;
+  font-size: 16px;
+  background-position: 100%;
+  background-size: cover;
+  background-size: 1rem 1rem;
+  background-color: rgb(248, 249, 250);
+  background-image: radial-gradient(circle, rgb(222, 226, 230) 1px, rgba(0, 0, 0, 0) 1px);
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: transparent; */
+  background-color: #ffffff7e;
+}
+
+
+
+body > main.main {
+  /* border: 2px solid #404040; */
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  gap: 0;
+  z-index: 3;
+}

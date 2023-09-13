@@ -39,10 +39,9 @@ body {
 
 
 body > main.main {
-  /* border: 2px solid #404040; */
-  width: 100%;
+  border: 1px solid #404040;
+  width: 80%;
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
   gap: 0;
-  z-index: 3;
 }

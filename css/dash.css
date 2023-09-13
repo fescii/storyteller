@@ -122,6 +122,13 @@ body > main.main > section.sidebar > .menu.second {
   padding: 10px 0 10px 0;
 }
 
+body > main.main > section.sidebar > .menu > span.title {
+  /* border: 2px solid rgb(175, 84, 84); */
+  padding: 0 0 8px 0;
+  color: #808080;
+  font-size: 0.93rem;
+}
+
 body > main.main > section.sidebar > .menu > ul.menu-items {
  margin: 0;
  padding: 0;
@@ -129,4 +136,8 @@ body > main.main > section.sidebar > .menu > ul.menu-items {
  display: flex;
  flex-flow: column;
  gap: 5px;
+}
+
+body > main.main > section.sidebar > .menu > ul.menu-items > li.item {
+  border: 1px solid rgb(175, 84, 84);
 }

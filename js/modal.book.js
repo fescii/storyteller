@@ -61,8 +61,16 @@ export default class ModalBook extends HTMLElement {
     })
 
     const exitModal = this.shadowObj.querySelector('#content .content-head > .actions > .control')
+    const overlay = this.shadowObj.querySelector('div.overlay')
     if (exitModal) {
       exitModal.addEventListener('click', (e) => {
+        e.preventDefault()
+        this.remove()
+      })
+    }
+
+    if (overlay) {
+      overlay.addEventListener('click', (e) => {
         e.preventDefault()
         this.remove()
       })
@@ -458,6 +466,7 @@ export default class ModalBook extends HTMLElement {
   getTemplate() {
     // Show HTML Here
     return `
+      <div class="overlay"></div>
       <section id="content" class="content">
         <div class="content-head">
           <div class="actions">
@@ -857,7 +866,7 @@ export default class ModalBook extends HTMLElement {
         align-items: center;
         justify-content: center;
         gap: 10px;
-        z-index: 20;
+        z-index: 12;
         position: fixed;
         right: 0;
         top: 0;
@@ -867,9 +876,20 @@ export default class ModalBook extends HTMLElement {
         -webkit-backdrop-filter: blur(3px);
       }
 
+      div.overlay {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 12;
+        /* background-color: #000; */
+      }
+
       section#content {
         background-color: #ffffff;
         padding: 15px 0;
+        z-index: 20;
         display: flex;
         flex-flow: column;
         justify-content: start;

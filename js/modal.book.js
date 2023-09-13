@@ -21,10 +21,10 @@ export default class ModalBook extends HTMLElement {
     // console.log('We are inside connectedCallback');
     this.disableScroll()
 
-    let stepCounter = 1;
+    let stepCounter = 2;
     const stepValue = this.shadowObj.querySelector("#content .content-head > .actions > span.steps > .step")
 
-    const container = this.shadowObj.querySelector("section#content > #container");
+    const contentContainer = this.shadowObj.querySelector("section#content > #container");
     const prevBtn = this.shadowObj.querySelector("section#content > .footer > .action.prev");
     const nextBtn = this.shadowObj.querySelector("section#content > .footer > .action.next");
 
@@ -36,13 +36,20 @@ export default class ModalBook extends HTMLElement {
 
       switch (stepCounter) {
         case 1:
-          this.validateInputs()
+          this.validateInputs(data, stepCounter, stepValue, contentContainer)
+          // console.log(data)
           break;
+        case 2:
+          this.validateStepTwo(data)
+          console.log(data)
+          break
         default:
           break;
       }
 
     })
+
+    this.activateStepTwo()
 
     this.populateDate()
   }
@@ -280,7 +287,7 @@ export default class ModalBook extends HTMLElement {
     window.onscroll = function () { };
   }
 
-  validateInputs(){
+  validateInputs(data, stepCounter, stepValue, contentContainer){
 
     const hideError = (element) => {
       setTimeout(() => {
@@ -292,26 +299,57 @@ export default class ModalBook extends HTMLElement {
     
     const name = container.querySelector('.field.name>input'),
     phone = container.querySelector('.field.phone input'),
-    email = container.querySelector('.field.email>input');
+    email = container.querySelector('.field.email>input'),
+    other = container.querySelector('.field.other textarea');
 
     if (name.value.length > 5) {
       if (phone.value.length > 7 ) {
         if (email.value.length > 5) {
-          return true;
+          data.Client = {'name': name.value, 'phone': phone.value, 'email': email.value, 'other': other.value}
+          stepCounter += 1
+          stepValue.textContent = stepCounter;
+          contentContainer.innerHTML = this.getStepTwo()
         }
         else {
-          container.querySelector('.field.email .error').style.display = 'flex'
-          return false
+          const errSpan = container.querySelector('.field.email .error')
+          errSpan.style.display = 'flex'
+          hideError(errSpan)
         }
       }
       else {
-        container.querySelector('.field.phone .error').style.display = 'flex'
-        return false
+        const errSpan = container.querySelector('.field.phone .error')
+        errSpan.style.display = 'flex'
+        hideError(errSpan)
       }
     }
     else{
-      container.querySelector('.field.name .error').style.display = 'flex'
-      return false
+      const errSpan = container.querySelector('.field.name .error')
+      errSpan.style.display = 'flex'
+      hideError(errSpan)
+    }
+  }
+
+  activateStepTwo(){
+    const options = this.shadowObj.querySelectorAll("section#content > .container > .services > .options > .option")
+    options.forEach(option => {
+      option.addEventListener('click', (e) => {
+        e.preventDefault()
+        option.classList.toggle('selected')
+      })
+    });
+  }
+
+  validateStepTwo(data){
+    const options = this.shadowObj.querySelectorAll("section#content > .container > .services > .options > .option.selected")
+    const other = this.shadowObj.querySelector("section#content > .container > .services > .other > input")
+    let services  = []
+    if (options) {
+      options.forEach(option => {
+        services.push(option.dataset.value)
+      });
+
+      data.Services = services
+      data.OtherServices = other.value
     }
   }
 
@@ -335,7 +373,7 @@ export default class ModalBook extends HTMLElement {
           </div>
         </div>
         <div id="container" class="container">
-          ${this.getStepOne()}
+          ${this.getStepTwo()}
         </div>
         <div class="footer">
           <div class="action prev">
@@ -396,46 +434,46 @@ export default class ModalBook extends HTMLElement {
       </div>
       <div class="services">
         <div class="options">
-          <span class="option">
+          <span class="option" data-value="event">
             <span class="text">Event</span>
           </span>
-          <span class="option">
+          <span class="option" data-value="hicking">
             <span class="text">Hicking</span>
           </span>
-          <span class="option">
+          <span class="option" data-value="outdoor">
             <span class="text">Outdoor</span>
           </span>
-          <span class="option">
+          <span class="option" data-value="party">
             <span class="text">Party</span>
           </span>
-          <span class="option">
+          <span class="option" data-value="advertising">
             <span class="text">Advertising</span>
           </span>
-          <span class="option selected">
+          <span class="option" data-value="wedding">
             <span class="text">Wedding</span>
           </span>
-          <span class="option">
+          <span class="option" data-value="videography">
             <span class="text">Videography</span>
           </span>
-          <span class="option">
+          <span class="option" data-value="editing">
             <span class="text">Editing</span>
           </span>
-          <span class="option">
+          <span class="option" data-value="product">
             <span class="text">Product</span>
           </span>
-          <span class="option">
+          <span class="option" data-value="cultural">
             <span class="text">Cultural</span>
           </span>
-          <span class="option">
+          <span class="option" data-value="professional">
             <span class="text">Professional</span>
           </span>
-          <span class="option">
+          <span class="option" data-value="graduation">
             <span class="text">Graduation</span>
           </span>
-          <span class="option">
+          <span class="option" data-value="wildlife">
             <span class="text">Wildlife</span>
           </span>
-          <span class="option">
+          <span class="option" data-value="traditional">
             <span class="text">Traditional</span>
           </span>
         </div>

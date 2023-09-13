@@ -44,12 +44,16 @@ export default class ModalBook extends HTMLElement {
           this.validateStepTwo(data, stepValue, contentContainer)
           console.log(data)
           console.log(stepValue.textContent)
-          break
+          break;
+        case 3:
+          break;
         default:
           break;
       }
 
     })
+
+    this.populateDate()
 
   }
 
@@ -227,9 +231,12 @@ export default class ModalBook extends HTMLElement {
         counter.setDate(getThisSun(counter) + 1)
 
         populateDays(daysDates, counter)
-        daysDates[0].classList.add("selected")
-        active = daysDates[0]
-        selectedDate.textContent = counter.getEnglishDate()
+        if (currentDate <= counter) {
+          daysDates[0].classList.add("selected")
+          active = daysDates[0]
+          selectedDate.textContent = counter.getEnglishDate()
+        }
+      
       })
 
       //Left-Nav
@@ -241,28 +248,35 @@ export default class ModalBook extends HTMLElement {
 
         counter.setDate(getThisSat(counter) - 1)
         populateDays(daysDates, counter)
-        daysDates[6].classList.add("selected")
-        active = daysDates[6]
-        selectedDate.textContent = counter.getEnglishDate()
+        if (currentDate <= counter) {
+          daysDates[6].classList.add("selected")
+          active = daysDates[6]
+          selectedDate.textContent = counter.getEnglishDate()
+        }
       })
 
       daysDates.forEach(day => {
         day.addEventListener("click", (e) => {
           e.preventDefault()
           let dayDate = new Date(`${day.dataset.year}-${day.dataset.month}-${day.dataset.date}`)
-          // console.log(dayDate)
-          try {
-            active.classList.remove("selected")
+          if (currentDate <= dayDate) {
+            try {
+              active.classList.remove("selected")
+            }
+            catch {
+              TypeError("not-assign")
+            }
+            finally {
+              active = day
+              // console.log(active)
+              day.classList.add("selected")
+              selectedDate.textContent = dayDate.getEnglishDate()
+            }
           }
-          catch {
-            TypeError("not-assign")
+          else {
+            console.log('privious-date')
           }
-          finally {
-            active = day
-            // console.log(active)
-            day.classList.add("selected")
-            selectedDate.textContent = dayDate.getEnglishDate()
-          }
+          
         })
       })
     }
@@ -376,7 +390,7 @@ export default class ModalBook extends HTMLElement {
           </div>
         </div>
         <div id="container" class="container">
-          ${this.getStepOne()}
+          ${this.getStepThree()}
         </div>
         <div class="footer">
           <div class="action prev">
@@ -553,12 +567,29 @@ export default class ModalBook extends HTMLElement {
         </div>
       </div>
       <div class="calendar-action">
-        <span class="look">
-          <span class="text">Checking the availability...</span>
-        </span>
-        <span class="empty">
-          No photographers Available! Please choose another day to check.
-        </span>
+        ${this.calendarWaiting()}
+      </div>
+    `
+  }
+
+  calendarWaiting(){
+    return `
+      <span class="look">
+        <span class="text">Checking the availability...</span>
+      </span>
+    `
+  }
+
+  calendarEmpty(){
+    return `
+      <span class="empty">
+        No photographers Available! Please choose another day to check.
+      </span>
+    `
+  }
+
+  calendarResults(){
+    return `
         <div class="results">
           <span class="inform">*Select photographer(s) to continue</span>
           <div class="photographer">
@@ -586,7 +617,6 @@ export default class ModalBook extends HTMLElement {
             <span class="select selected">Selected</span>
           </div>
         </div>
-      </div>
     `
   }
 
@@ -1175,7 +1205,7 @@ export default class ModalBook extends HTMLElement {
       .calendar-action > span.look {
         background-color: #80808057;
         color: #808080;
-        display: none;
+        display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
@@ -1196,7 +1226,7 @@ export default class ModalBook extends HTMLElement {
 
       .calendar-action > .results {
         width: 100%;
-        display: none;
+        display: flex;
         flex-flow: column;
         align-items: center;
         gap: 18px;

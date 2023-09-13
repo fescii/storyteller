@@ -171,7 +171,7 @@ body > main.main > section.sidebar > .menu > ul.menu-items > li.item svg path {
 
 body > main.main > section.sidebar > .menu > ul.menu-items > li.item.active {
   color: #ffffff;
-  font-size: 0.9rem;
+  /* font-size: 0.9rem; */
   padding: 7px 10px;
   background: #ad5389;
   background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);

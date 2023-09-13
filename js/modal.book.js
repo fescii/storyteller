@@ -422,10 +422,11 @@ export default class ModalBook extends HTMLElement {
 
       stepValue.textContent = 4;
       contentContainer.innerHTML = this.getStepFour()
+      this.activatePackages()
     }
   }
 
-  validateStepFour(){
+  validateStepFour(data, stepValue, contentContainer){
     const packageItem = this.shadowObj.querySelector('section#content .packages > .package.selected')
 
     const no = this.shadowObj.querySelector('section#content .select-manually > .picker span.no');

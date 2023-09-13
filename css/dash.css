@@ -213,7 +213,7 @@ body > main.main > section.content {
 }
 
 body > main.main > section.content > .head {
-  border: 1px solid #404040;
+  /* border: 1px solid #404040; */
   margin: 0;
   display: flex;
   align-items: center;
@@ -222,7 +222,7 @@ body > main.main > section.content > .head {
 }
 
 body > main.main > section.content > .head > .bookings {
-  border: 1px solid #404040;
+  /* border: 1px solid #404040; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -284,7 +284,7 @@ body > main.main > section.content > .head > .platform > p {
 }
 
 body > main.main > section.content > .head > .profile {
-  border: 1px solid #404040;
+  /* border: 1px solid #404040; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -308,7 +308,7 @@ body > main.main > section.content > .head > .profile > span.theme > svg {
 }
 
 body > main.main > section.content > .head > .profile > .photo {
-  border: 1px solid #404040;
+  /* border: 1px solid #404040; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -316,9 +316,9 @@ body > main.main > section.content > .head > .profile > .photo {
 }
 
 body > main.main > section.content > .head > .profile > .photo > .image {
-  border: 1px solid #404040;
-  width: 32px;
-  height: 32px;
+  /* border: 1px solid #404040; */
+  width: 40px;
+  height: 40px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -332,4 +332,26 @@ body > main.main > section.content > .head > .profile > .photo > .image > img {
   height: 100%;
   border-radius: 50px;
   object-fit: cover;
+}
+
+body > main.main > section.content > .head > .profile > .photo span.name {
+  /* border: 1px solid #404040; */
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  justify-content: center;
+  gap: 0;
+}
+
+body > main.main > section.content > .head > .profile > .photo span.name > span.username {
+  /* border: 1px solid #404040; */
+  color: #404040;
+  font-family: var(--font-alt);
+}
+
+body > main.main > section.content > .head > .profile > .photo span.name > span.status {
+  /* border: 1px solid #808080; */
+  color: #808080;
+  font-family: var(--font-alt);
+  font-size: 0.8rem;
 }

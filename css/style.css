@@ -308,7 +308,7 @@ body > main.main > header.header > div.utility > span.theme {
 body > main.main > header.header > div.utility > span.theme > svg {
   width: 18px;
   height: 18px;
-  color: rgb(185, 110, 12);
+  color: #808080;
 }
 
 body > main.main > header.header > div.utility > span.book {

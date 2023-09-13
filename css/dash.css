@@ -148,3 +148,13 @@ body > main.main > section.sidebar > .menu > ul.menu-items > li.item {
   color: #404040;
   border-radius: 20px;
 }
+
+body > main.main > section.sidebar > .menu > ul.menu-items > li.item svg {
+  width: 22px;
+  width: 22px;
+  fill: #404040;
+}
+
+body > main.main > section.sidebar > .menu > ul.menu-items > li.item svg path {
+  fill: #404040;
+}

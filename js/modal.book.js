@@ -37,10 +37,10 @@ export default class ModalBook extends HTMLElement {
       switch (stepCounter) {
         case 1:
           this.validateInputs(data, stepCounter, stepValue, contentContainer)
-          // console.log(data)
+          console.log(data)
           break;
         case 2:
-          this.validateStepTwo(data)
+          this.validateStepTwo(data, stepCounter, stepValue, contentContainer)
           console.log(data)
           break
         default:
@@ -49,7 +49,7 @@ export default class ModalBook extends HTMLElement {
 
     })
 
-    this.activateStepTwo()
+    // this.activateStepTwo()
 
     this.populateDate()
   }
@@ -309,6 +309,7 @@ export default class ModalBook extends HTMLElement {
           stepCounter += 1
           stepValue.textContent = stepCounter;
           contentContainer.innerHTML = this.getStepTwo()
+          this.activateStepTwo()
         }
         else {
           const errSpan = container.querySelector('.field.email .error')
@@ -339,7 +340,7 @@ export default class ModalBook extends HTMLElement {
     });
   }
 
-  validateStepTwo(data){
+  validateStepTwo(data, stepCounter, stepValue, contentContainer){
     const options = this.shadowObj.querySelectorAll("section#content > .container > .services > .options > .option.selected")
     const other = this.shadowObj.querySelector("section#content > .container > .services > .other > input")
     let services  = []
@@ -350,6 +351,10 @@ export default class ModalBook extends HTMLElement {
 
       data.Services = services
       data.OtherServices = other.value
+
+      stepCounter += 1
+      stepValue.textContent = stepCounter;
+      contentContainer.innerHTML = this.getStepThree()
     }
   }
 
@@ -373,7 +378,7 @@ export default class ModalBook extends HTMLElement {
           </div>
         </div>
         <div id="container" class="container">
-          ${this.getStepTwo()}
+          ${this.getStepOne()}
         </div>
         <div class="footer">
           <div class="action prev">

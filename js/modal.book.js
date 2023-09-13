@@ -272,12 +272,12 @@ export default class ModalBook extends HTMLElement {
               <span class="text">Step</span>
               <span class="step">1</span>
               <span class="slash">/</span>
-              <span class="all">4</span>
+              <span class="all">5</span>
             </span>
           </div>
         </div>
         <div id="container" class="container">
-          ${this.getStepFour()}
+          ${this.getStepFive()}
         </div>
         <div class="footer">
           <div class="action prev">
@@ -563,36 +563,26 @@ export default class ModalBook extends HTMLElement {
     `
   }
 
-  getLoader() {
+  getStepFive() {
     return `
-      <div id="loader" class="loader">
-        <div class="post">
-          <div class="top">
-            <div class="info">
-              <p class="name"></p>
-              <span class="time"></span>
-            </div>
-          </div>
-        </div>
-        <div class="post">
-          <div class="top">
-            <div class="info">
-              <p class="name"></p>
-              <span class="time"></span>
-            </div>
-          </div>
-        </div>
-        <div class="post">
-          <div class="top">
-            <div class="info">
-              <p class="name"></p>
-              <span class="time"></span>
-            </div>
-          </div>
+      <div class="head">
+        <h2 class="step-title">Make your deposit</h2>
+        <p class="description">
+          Based on your selection you need to make a deposit of Ksh. 5,300.
+        </p>
+      </div>
+      <div class="pay">
+        <div class="field phone">
+          <p class="confirm">Confirm Your Number </p>
+          <span class="wrapper">
+            <span class="country">+254</span>
+            <input type="text" value="0713253018" name="number" id="number" placeholder="Phone number" required readonly>
+          </span>
         </div>
       </div>
     `
   }
+
 
   getStyles() {
     return `
@@ -1380,6 +1370,59 @@ export default class ModalBook extends HTMLElement {
         width: 16px;
         height: 16px;
         stroke-width: 1.8;
+      }
+
+      section#content .pay {
+        /* border: 1px solid black; */
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        padding: 15px 0 25px 0;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      section#content .pay > .field  p {
+        margin: 0 0 10px 0;
+        font-family: var(--font-alt);
+        font-weight: 500px;
+        color: #404040;
+      }
+
+      section#content .pay > .field > span.wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+      }
+
+      section#content .pay > .field > span.wrapper > span {
+        border: 1px solid #80808037;
+        border-right: none;
+        font-size: 1rem;
+        width: 60px;
+        padding: 10px 12px;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+        color: #08b86f;
+        display: flex;
+        align-items: center;
+      }
+
+      section#content .pay > .field > span.wrapper > input {
+        border: 1px solid #80808037;
+        font-size: 1rem;
+        width: calc(100% - 60px);
+        outline: none;
+        padding: 10px 12px;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+        color: #505050;
+      }
+
+      section#content .pay > .field >  span.wrapper > input:focus {
+        border: 1px solid #08b86f60;
       }
 
       </style>

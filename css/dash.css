@@ -279,6 +279,13 @@ body > main.main > section.content > .head > .platform > p {
   margin: 0;
   color: #404040;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.4;
   font-family: var(--font-alt);
+}
+
+body > main.main > section.content > .head > .bookings {
+  border: 1px solid #404040;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

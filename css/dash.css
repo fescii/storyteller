@@ -109,17 +109,24 @@ body > main.main > section.sidebar > .head > .logo  span.art{
 
 body > main.main > section.sidebar > .menu {
   width: 80%;
-  border-bottom: 1px solid #80808017;
-  padding: 0 0 20px 0;
+  padding: 0 0 10px 0;
   display: flex;
   flex-flow: column;
   /* align-items: center; */
   justify-content: start;
-  gap: 0;
+  gap: 5px;
+}
+
+body > main.main > section.sidebar > .menu.second {
+  border-top: 1px solid #80808017;
+  padding: 10px 0 10px 0;
 }
 
 body > main.main > section.sidebar > .menu > ul.menu-items {
  margin: 0;
  padding: 0;
  list-style-type: none;
+ display: flex;
+ flex-flow: column;
+ gap: 5px;
 }

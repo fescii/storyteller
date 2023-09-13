@@ -229,7 +229,38 @@ body > main.main > section.content > .head > .bookings {
 }
 
 body > main.main > section.content > .head > .bookings > span.no {
-  font-size: 1.9rem;
+  padding: 0 8px 0 0;
+  font-size: 2.3rem;
   font-family: var(--font-alt);
   color: #404040;
+}
+
+body > main.main > section.content > .head > .bookings > .text-side {
+  padding: 0 0 0 15px;
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  justify-content: center;
+  position: relative;
+}
+
+body > main.main > section.content > .head > .bookings > .text-side > span.bar {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 3px;
+  height: 15px;
+  background-color: #80808088;
+  border-radius: 5px;
+}
+
+body > main.main > section.content > .head > .bookings > .text-side span.text {
+  color: #404040;
+  font-family: var(--font-alt);
+}
+
+body > main.main > section.content > .head > .bookings > .text-side span.days {
+  color: #808080;
+  font-family: var(--font-alt);
+  font-size: 0.8rem;
 }

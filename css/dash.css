@@ -140,13 +140,17 @@ body > main.main > section.sidebar > .menu > ul.menu-items {
 
 body > main.main > section.sidebar > .menu > ul.menu-items > li.item {
   /* border: 1px solid rgb(175, 84, 84); */
-  padding: 5px 10px;
+  padding: 0 10px;
   display: flex;
   align-items: center;
   /* justify-content: center; */
-  gap: 8px;
+  gap: 12px;
   color: #404040;
-  border-radius: 20px;
+  border-radius: 13px;
+}
+
+body > main.main > section.sidebar > .menu > ul.menu-items > li.item > span.text {
+  font-family: var(--font-alt);
 }
 
 body > main.main > section.sidebar > .menu > ul.menu-items > li.item svg {
@@ -157,4 +161,21 @@ body > main.main > section.sidebar > .menu > ul.menu-items > li.item svg {
 
 body > main.main > section.sidebar > .menu > ul.menu-items > li.item svg path {
   fill: #404040;
+}
+
+body > main.main > section.sidebar > .menu > ul.menu-items > li.item.active {
+  color: #ffffff;
+  font-size: 0.9rem;
+  padding: 7px 10px;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  background-color: rgb(247, 145, 162);
+}
+
+body > main.main > section.sidebar > .menu > ul.menu-items > li.item.active svg {
+  fill: #ffffff;
+}
+
+body > main.main > section.sidebar > .menu > ul.menu-items > li.item.active svg path {
+  fill: #ffffff;
 }

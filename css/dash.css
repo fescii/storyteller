@@ -415,7 +415,7 @@ body > main.main > section.content > .content-container > .activities {
   flex-flow: column;
   /* align-items: center; */
   justify-content: start;
-  gap: 0;
+  gap: 20px;
 }
 
 body > main.main > section.content > .content-container > .activities > .top {
@@ -485,7 +485,7 @@ body > main.main > section.content > .content-container > .activities > .top .ot
 }
 
 body > main.main > section.content > .content-container > .activities > .body {
-  border: 1px solid #808080;
+  /* border: 1px solid #808080; */
   margin: 0;
   padding: 0;
   display: flex;
@@ -495,17 +495,25 @@ body > main.main > section.content > .content-container > .activities > .body {
 }
 
 body > main.main > section.content > .content-container > .activities > .body > .left {
-  border: 1px solid #c72828;
-  padding: 0;
+  border: 1px solid #80808017;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
   gap: 0;
+  border-radius: 20px;
+  padding: 20px 25px;
+  background: #fff;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-image: none;
+  box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.034);
+  /* border-radius: 15px; */
 }
 
 body > main.main > section.content > .content-container > .activities > .body > .left .head {
-  border: 1px solid #c72828;
+  /* border: 1px solid #c72828; */
   padding: 0;
   width: 100%;
   display: flex;
@@ -534,7 +542,7 @@ body > main.main > section.content > .content-container > .activities > .body > 
 }
 
 body > main.main > section.content > .content-container > .activities > .body > .left .cards {
-  border: 1px solid #c72828;
+  /* border: 1px solid #c72828; */
   padding: 25px 0 0 0;
   display: flex;
   flex-flow: row;
@@ -545,17 +553,20 @@ body > main.main > section.content > .content-container > .activities > .body > 
 
 
 body > main.main > section.content > .content-container > .activities > .body > .left .cards > .card {
-  border: 1px solid #80e280;
-  padding: 15px;
+  border: 1px solid #e7e7e7;
+  padding: 15px 20px;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  gap: 0;
+  gap: 5px;
+  border-radius: 20px;
 }
 
 body > main.main > section.content > .content-container > .activities > .body > .left .cards > .card .logo { 
-  border: 1px solid #80e280;
+  /* border: 1px solid #80e280; */
+  padding: 0;
+  margin: 0 0 8px;
   width: 50px;
   height: 50px;
   display: flex;
@@ -592,4 +603,38 @@ body > main.main > section.content > .content-container > .activities > .body > 
 
 body > main.main > section.content > .content-container > .activities > .body > .left .cards > .card.cancelled .logo svg path { 
   fill: #f84125;
+}
+
+body > main.main > section.content > .content-container > .activities > .body > .left .cards > .card p.title {
+  margin: 0;
+  font-family: var(--font-alt);
+  font-size: 1rem;
+  font-weight: 500;
+  color: #404040;
+}
+
+body > main.main > section.content > .content-container > .activities > .body > .left .cards > .card > .date {
+  margin: 3px 0 0 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body > main.main > section.content > .content-container > .activities > .body > .left .cards > .card > .date .no {
+  border-right: 1px solid #80808087;
+  font-family: var(--font-alt);
+  line-height: 1;
+  font-size: 0.9rem;
+  padding: 0 8px 0 0;
+  /* font-weight: 500; */
+  color: #808080;
+}
+
+body > main.main > section.content > .content-container > .activities > .body > .left .cards > .card > .date .date {
+  font-family: var(--font-alt);
+  font-size: 0.9rem;
+  padding: 0 0 0 8px;
+  /* font-weight: 500; */
+  color: #808080;
 }

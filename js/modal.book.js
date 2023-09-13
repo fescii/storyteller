@@ -46,6 +46,9 @@ export default class ModalBook extends HTMLElement {
           console.log(stepValue.textContent)
           break;
         case 3:
+          this.validateStepThree(data, stepValue,contentContainer)
+          console.log(data)
+          console.log(stepValue.textContent)
           break;
         default:
           break;
@@ -917,7 +920,7 @@ export default class ModalBook extends HTMLElement {
       section#content > .footer > .action.disabled {
         background: #80808023;
         pointer-events: none;
-        opacity: .5;
+        opacity: .9;
       }
 
       section#content > .container {

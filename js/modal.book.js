@@ -21,7 +21,7 @@ export default class ModalBook extends HTMLElement {
     // console.log('We are inside connectedCallback');
     this.disableScroll()
 
-    let stepCounter = 2;
+    // let stepCounter = 1;
     const stepValue = this.shadowObj.querySelector("#content .content-head > .actions > span.steps > .step")
 
     const contentContainer = this.shadowObj.querySelector("section#content > #container");
@@ -34,14 +34,16 @@ export default class ModalBook extends HTMLElement {
     nextBtn.addEventListener('click', (e)=> {
       e.preventDefault()
 
-      switch (stepCounter) {
+      switch (parseInt(stepValue.textContent)) {
         case 1:
-          this.validateInputs(data, stepCounter, stepValue, contentContainer)
+          this.validateInputs(data, stepValue, contentContainer)
           console.log(data)
+          console.log(stepValue.textContent)
           break;
         case 2:
-          this.validateStepTwo(data, stepCounter, stepValue, contentContainer)
+          this.validateStepTwo(data, stepValue, contentContainer)
           console.log(data)
+          console.log(stepValue.textContent)
           break
         default:
           break;
@@ -49,9 +51,6 @@ export default class ModalBook extends HTMLElement {
 
     })
 
-    // this.activateStepTwo()
-
-    this.populateDate()
   }
 
   disconnectedCallback() {
@@ -287,7 +286,7 @@ export default class ModalBook extends HTMLElement {
     window.onscroll = function () { };
   }
 
-  validateInputs(data, stepCounter, stepValue, contentContainer){
+  validateInputs(data, stepValue, contentContainer){
 
     const hideError = (element) => {
       setTimeout(() => {
@@ -306,8 +305,7 @@ export default class ModalBook extends HTMLElement {
       if (phone.value.length > 7 ) {
         if (email.value.length > 5) {
           data.Client = {'name': name.value, 'phone': phone.value, 'email': email.value, 'other': other.value}
-          stepCounter += 1
-          stepValue.textContent = stepCounter;
+          stepValue.textContent = 2;
           contentContainer.innerHTML = this.getStepTwo()
           this.activateStepTwo()
         }
@@ -340,7 +338,7 @@ export default class ModalBook extends HTMLElement {
     });
   }
 
-  validateStepTwo(data, stepCounter, stepValue, contentContainer){
+  validateStepTwo(data, stepValue, contentContainer){
     const options = this.shadowObj.querySelectorAll("section#content > .container > .services > .options > .option.selected")
     const other = this.shadowObj.querySelector("section#content > .container > .services > .other > input")
     let services  = []
@@ -352,9 +350,9 @@ export default class ModalBook extends HTMLElement {
       data.Services = services
       data.OtherServices = other.value
 
-      stepCounter += 1
-      stepValue.textContent = stepCounter;
+      stepValue.textContent = 3;
       contentContainer.innerHTML = this.getStepThree()
+      this.populateDate()
     }
   }
 

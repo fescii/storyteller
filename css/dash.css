@@ -283,9 +283,10 @@ body > main.main > section.content > .head > .platform > p {
   font-family: var(--font-alt);
 }
 
-body > main.main > section.content > .head > .bookings {
+body > main.main > section.content > .head > .profile {
   border: 1px solid #404040;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 30px;
 }

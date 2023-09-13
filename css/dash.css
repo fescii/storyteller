@@ -297,19 +297,26 @@ body > main.main > section.content > .head > .profile {
 }
 
 body > main.main > section.content > .head > .profile > span.theme {
-  /* border: 1px solid #404040; */
-  /* width: 27px; */
-  /* height: 27px; */
+  border: 1px solid #80808027;
+  padding: 5px 15px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 7px;
   cursor: pointer;
+  border-radius: 50px;
+}
+
+body > main.main > section.content > .head > .profile > span.theme > span.text {
+  font-family: var(--font-alt);
+  color: #404040;
 }
 
 body > main.main > section.content > .head > .profile > span.theme > svg {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   color: #808080;
+  /* rotate: 15deg; */
 }
 
 body > main.main > section.content > .head > .profile > .photo {

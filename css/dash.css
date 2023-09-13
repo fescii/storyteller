@@ -62,7 +62,7 @@ body > main.main > section.sidebar {
 body > main.main > section.sidebar > .head {
   /* border: 1px solid #404040; */
   margin: 0 0 30px 0;
-  display: flex;
+  display: flex; 
   /* align-items: center; */
   justify-content: start;
   gap: 0;

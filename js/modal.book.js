@@ -21,6 +21,29 @@ export default class ModalBook extends HTMLElement {
     // console.log('We are inside connectedCallback');
     this.disableScroll()
 
+    let stepCounter = 1;
+    const stepValue = this.shadowObj.querySelector("#content .content-head > .actions > span.steps > .step")
+
+    const container = this.shadowObj.querySelector("section#content > #container");
+    const prevBtn = this.shadowObj.querySelector("section#content > .footer > .action.prev");
+    const nextBtn = this.shadowObj.querySelector("section#content > .footer > .action.next");
+
+    //Creating the data object
+    const data = {};
+
+    nextBtn.addEventListener('click', (e)=> {
+      e.preventDefault()
+
+      switch (stepCounter) {
+        case 1:
+          this.validateInputs()
+          break;
+        default:
+          break;
+      }
+
+    })
+
     this.populateDate()
   }
 
@@ -257,6 +280,41 @@ export default class ModalBook extends HTMLElement {
     window.onscroll = function () { };
   }
 
+  validateInputs(){
+
+    const hideError = (element) => {
+      setTimeout(() => {
+        element.style.display = 'none'
+      }, 2000);
+    }
+
+    const container = this.shadowObj.querySelector("section#content > .container > .fields")
+    
+    const name = container.querySelector('.field.name>input'),
+    phone = container.querySelector('.field.phone input'),
+    email = container.querySelector('.field.email>input');
+
+    if (name.value.length > 5) {
+      if (phone.value.length > 7 ) {
+        if (email.value.length > 5) {
+          return true;
+        }
+        else {
+          container.querySelector('.field.email .error').style.display = 'flex'
+          return false
+        }
+      }
+      else {
+        container.querySelector('.field.phone .error').style.display = 'flex'
+        return false
+      }
+    }
+    else{
+      container.querySelector('.field.name .error').style.display = 'flex'
+      return false
+    }
+  }
+
   getTemplate() {
     // Show HTML Here
     return `
@@ -277,7 +335,7 @@ export default class ModalBook extends HTMLElement {
           </div>
         </div>
         <div id="container" class="container">
-          ${this.getStepFive()}
+          ${this.getStepOne()}
         </div>
         <div class="footer">
           <div class="action prev">
@@ -684,7 +742,7 @@ export default class ModalBook extends HTMLElement {
         padding: 0 5px 0 0;
       }
 
-      #content .content-head > .actions > span.steps > .step{
+      #content .content-head > .actions > span.steps > .step {
         color: rgb(223, 121, 26);
       }
 
@@ -778,8 +836,8 @@ export default class ModalBook extends HTMLElement {
       }
 
       section#content > .container > .fields {
-        /*margin: 0 0 30px 0;*/
-        width: 80%;
+        margin: 0 0 20px 0;
+        width: 90%;
         display: flex;
         flex-flow: column;
         justify-content: center;

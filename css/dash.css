@@ -562,6 +562,7 @@ body > main.main > section.content > .content-container > .activities > .body > 
   flex-flow: column;
   align-items: center;
   justify-content: center;
+  border-radius: 15px;
 }
 
 body > main.main > section.content > .content-container > .activities > .body > .left .cards > .card .logo > svg {

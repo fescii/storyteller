@@ -681,6 +681,26 @@
 	</footer>
 	<script>
 		document.addEventListener('DOMContentLoaded', () => {
+			const bookBtns = document.querySelectorAll('#book-now')
+			const modalContainer = document.querySelector('div#modal-container')
+			const modal = `
+				<modal-book
+					url="/good/"
+					id="1"
+				>
+				</modal-book>
+			`
+			if (bookBtns) {
+				bookBtns.forEach(bookBtn => {
+					bookBtn.addEventListener('click', (e) => {
+						e.preventDefault()
+						modalContainer.innerHTML = modal
+						// body.insertAdjacentElement('beforeend', modal)
+					})
+				});				
+			}
+
+			// Slider
 			const dots = document.querySelectorAll('div.categories > div.category.long > .dots > span.dot');
 		  let activeDot = document.querySelector('div.categories > div.category.long > .dots > span.dot.active');
 			const slides = document.querySelectorAll('div.categories > div.category.long > .slide');

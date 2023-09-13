@@ -25,7 +25,7 @@ export default class ModalBook extends HTMLElement {
     const stepValue = this.shadowObj.querySelector("#content .content-head > .actions > span.steps > .step")
 
     const contentContainer = this.shadowObj.querySelector("section#content > #container");
-    const prevBtn = this.shadowObj.querySelector("section#content > .footer > .action.prev");
+    // const prevBtn = this.shadowObj.querySelector("section#content > .footer > .action.prev");
     const nextBtn = this.shadowObj.querySelector("section#content > .footer > .action.next");
 
     //Creating the data object
@@ -59,6 +59,14 @@ export default class ModalBook extends HTMLElement {
       }
 
     })
+
+    const exitModal = this.shadowObj.querySelector('#content .content-head > .actions > .control')
+    if (exitModal) {
+      exitModal.addEventListener('click', (e) => {
+        e.preventDefault()
+        this.remove()
+      })
+    }
 
     // this.activatePackages()
 

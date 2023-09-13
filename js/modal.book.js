@@ -51,7 +51,7 @@ export default class ModalBook extends HTMLElement {
           console.log(stepValue.textContent)
           break;
         case 4:
-          this.validateStepFour(data, stepValue,contentContainer)
+          this.validateStepFour(data, stepValue,contentContainer, nextBtn)
           console.log(data)
           console.log(stepValue.textContent)
         default:
@@ -60,7 +60,7 @@ export default class ModalBook extends HTMLElement {
 
     })
 
-    this.activatePackages()
+    // this.activatePackages()
 
   }
 
@@ -426,7 +426,7 @@ export default class ModalBook extends HTMLElement {
     }
   }
 
-  validateStepFour(data, stepValue, contentContainer){
+  validateStepFour(data, stepValue, contentContainer, nextBtn){
     const packageItem = this.shadowObj.querySelector('section#content .packages > .package.selected')
 
     const no = this.shadowObj.querySelector('section#content .select-manually > .picker span.no');
@@ -442,6 +442,8 @@ export default class ModalBook extends HTMLElement {
 
       stepValue.textContent = 5;
       contentContainer.innerHTML = this.getStepFive()
+      const text = nextBtn.querySelector('.text')
+      text.textContent = 'Deposit'
     }
   }
 

@@ -321,10 +321,13 @@ body > main.main > header.header > div.utility > span.cart {
   background-color: rgb(247, 145, 162);
 }
 
-body > main.main > header.header > div.utility > span.cart > i {
-  font-size: 0.9rem;
-  display: inline-block;
-  margin: 0 0 1px 0;
+body > main.main > header.header > div.utility > span.cart > svg {
+  width: 16px;
+  height: 16px;
+}
+
+body > main.main > header.header > div.utility > span.cart > svg path {
+  fill: #ffffff;
 }
 
 body > main.main > header.header > div.utility > span.cart > span.items {

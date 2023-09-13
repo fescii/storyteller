@@ -49,6 +49,9 @@ body > main.main {
 body > main.main > section.sidebar {
   border-right: 1px solid #80808027;
   padding: 20px 0 0 0;
+  min-width: 150px;
+  max-width: 150px;
+  width: 150px;
   min-height: 100vh;
   width: max-content;
   display: flex;
@@ -196,4 +199,37 @@ body > main.main > section.sidebar > .menu > ul.menu-items > li.item.active svg 
 
 body > main.main > section.sidebar > .menu > ul.menu-items > li.item.active svg path {
   fill: #ffffff;
+}
+
+body > main.main > section.content {
+  /* border-right: 1px solid #80808027; */
+  min-width: calc(100% - 150px);
+  padding: 20px 20px;
+  min-height: 100vh;
+  width: max-content;
+  display: flex;
+  flex-flow: column;
+  gap: 0;
+}
+
+body > main.main > section.content > .head {
+  border: 1px solid #404040;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+}
+
+body > main.main > section.content > .head > .bookings {
+  border: 1px solid #404040;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body > main.main > section.content > .head > .bookings > span.no {
+  font-size: 1.9rem;
+  font-family: var(--font-alt);
+  color: #404040;
 }

@@ -290,3 +290,19 @@ body > main.main > section.content > .head > .profile {
   justify-content: center;
   gap: 30px;
 }
+
+body > main.main > section.content > .head > .profile > span.theme {
+  /* border: 1px solid #404040; */
+  /* width: 27px; */
+  /* height: 27px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+body > main.main > section.content > .head > .profile > span.theme > svg {
+  width: 18px;
+  height: 18px;
+  color: #808080;
+}

@@ -324,13 +324,40 @@ body > main.main > section.content > .head > .profile > .photo > .image {
   /* border: 1px solid #404040; */
   width: 40px;
   height: 40px;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0;
   border-radius: 50px;
+  position: relative;
 }
+
+body > main.main > section.content > .head > .profile > .photo > .image > span.dot {
+  /* border: 1px solid #404040; */
+  background-color: #ffffff;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 2px;
+}
+
+body > main.main > section.content > .head > .profile > .photo > .image > span.dot span {
+  /* border: 1px solid #404040; */
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  background-color: rgb(247, 145, 162);
+}
+
 
 body > main.main > section.content > .head > .profile > .photo > .image > img {
   width: 100%;

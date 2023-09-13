@@ -493,3 +493,41 @@ body > main.main > section.content > .content-container > .activities > .body {
   justify-content: space-between;
   gap: 0;
 }
+
+body > main.main > section.content > .content-container > .activities > .body > .left {
+  border: 1px solid #c72828;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+body > main.main > section.content > .content-container > .activities > .body > .left .head {
+  border: 1px solid #c72828;
+  padding: 0;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+body > main.main > section.content > .content-container > .activities > .body > .left .head h3 {
+  /* border: 1px solid #808080; */
+  margin: 0;
+  font-family: var(--font-alt);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #404040;
+}
+
+body > main.main > section.content > .content-container > .activities > .body > .left .head span.total {
+  /* border: 1px solid #808080; */
+  margin: 0;
+  font-family: var(--font-alt);
+  font-size: 1rem;
+  font-weight: 500;
+  color: #808080;
+}

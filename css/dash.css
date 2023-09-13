@@ -131,7 +131,7 @@ body > main.main > section.sidebar > .menu > span.title {
 
 body > main.main > section.sidebar > .menu > ul.menu-items {
  margin: 0;
- width: max-content;
+ width: 150px;
  padding: 0;
  list-style-type: none;
  display: flex;
@@ -143,9 +143,10 @@ body > main.main > section.sidebar > .menu > ul.menu-items > li.item {
   /* border: 1px solid rgb(175, 84, 84); */
   /* width: max-content; */
   padding: 0 10px;
+  width: 130px;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
+  cursor: pointer;
   gap: 12px;
   color: #404040;
   border-radius: 13px;

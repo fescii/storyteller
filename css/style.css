@@ -288,28 +288,30 @@ body > main.main > header.header > div.utility {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 25px;
   padding: 5px 10px;
 }
 
 body > main.main > header.header > div.utility > span {
   /* border: 1px solid #404040; */
+  width: 27px;
+  height: 27px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
 
-body > main.main > header.header > div.utility > span.search > i {
-  font-size: 1.1rem;
-  display: inline-block;
-  margin: 2px 0 0 0;
+body > main.main > header.header > div.utility > span.theme {
+  margin-top: 5px;
+}
+body > main.main > header.header > div.utility > span.theme > svg {
+  width: 18px;
+  height: 18px;
   color: rgb(185, 110, 12);
 }
 
-body > main.main > header.header > div.utility > span.cart {
-  width: 27px;
-  height: 27px;
+body > main.main > header.header > div.utility > span.book {
   color: #ffffff;
   position: relative;
   padding: 5px;
@@ -321,16 +323,16 @@ body > main.main > header.header > div.utility > span.cart {
   background-color: rgb(247, 145, 162);
 }
 
-body > main.main > header.header > div.utility > span.cart > svg {
+body > main.main > header.header > div.utility > span.book > svg {
   width: 16px;
   height: 16px;
 }
 
-body > main.main > header.header > div.utility > span.cart > svg path {
+body > main.main > header.header > div.utility > span.book > svg path {
   fill: #ffffff;
 }
 
-body > main.main > header.header > div.utility > span.cart > span.items {
+body > main.main > header.header > div.utility > span.book > span.items {
   display: inline-block;
   position: absolute;
   top: -10px;
@@ -404,7 +406,7 @@ body > main.main > section.landing > .content-one > .text  .actions {
   gap: 0;
 }
 
-body > main.main > section.landing > .content-one > .text  .actions > a {
+body > main.main > section.landing > .content-one > .text  .actions > .action {
   /* border: 1px solid rgb(156, 156, 156); */
   padding: 10px 15px;
   text-decoration: none;
@@ -417,36 +419,37 @@ body > main.main > section.landing > .content-one > .text  .actions > a {
   justify-content: center;
   gap: 10px;
   border-radius: 50px;
+  cursor: pointer;
   transition: all 0.3s linear;
 }
 
-body > main.main > section.landing > .content-one > .text  .actions > a.explore { 
+body > main.main > section.landing > .content-one > .text  .actions > .explore { 
   border: 1px solid #8080805d;
   background-color: #ffffff;
   color: #404040;
 }
 
-body > main.main > section.landing > .content-one > .text  .actions > a.explore svg path {
+body > main.main > section.landing > .content-one > .text  .actions > .explore svg path {
   fill: #404040;
 }
 
-body > main.main > section.landing > .content-one > .text  .actions > a svg {
+body > main.main > section.landing > .content-one > .text  .actions > .action svg {
   transition: all 0.3s linear;
 }
 
-body > main.main > section.landing > .content-one > .text  .actions > a:hover{
+body > main.main > section.landing > .content-one > .text  .actions > .action:hover{
   padding: 10px 20px;
   gap: 15px;
 }
 
-body > main.main > section.landing > .content-one > .text  .actions > a.book { 
+body > main.main > section.landing > .content-one > .text  .actions > .action.book { 
   background:  rgb(223, 121, 26);
   background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
   background-color: rgb(247, 145, 162);
   color: #ffffff;
 }
 
-body > main.main > section.landing > .content-one > .text  .actions > a.book svg path {
+body > main.main > section.landing > .content-one > .text  .actions > .action.book svg path {
   fill: #ffffff;
 }
 
@@ -713,7 +716,7 @@ body > main.main > section.services > .reserve > p {
   font-size: 1rem;
 }
 
-body > main.main > section.services > .reserve > a {
+body > main.main > section.services > .reserve > .book {
   /* border: 1px solid rgb(156, 156, 156); */
   padding: 10px 15px;
   text-decoration: none;
@@ -726,26 +729,27 @@ body > main.main > section.services > .reserve > a {
   justify-content: center;
   gap: 10px;
   border-radius: 50px;
+  cursor: pointer;
   transition: all 0.3s linear;
 }
 
-body > main.main > section.services > .reserve > a svg {
+body > main.main > section.services > .reserve > .book svg {
   transition: all 0.3s linear;
 }
 
-body > main.main > section.services > .reserve > a:hover{
+body > main.main > section.services > .reserve > .book:hover{
   padding: 10px 25px;
   gap: 15px;
 }
 
-body > main.main > section.services > .reserve > a.book { 
+body > main.main > section.services > .reserve > .book { 
   background:  rgb(223, 121, 26);
   background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
   background-color: rgb(247, 145, 162);
   color: #ffffff;
 }
 
-body > main.main > section.services > .reserve > a.book svg path {
+body > main.main > section.services > .reserve > .book svg path {
   fill: #ffffff;
 }
 
@@ -873,7 +877,7 @@ body > main.main > section.featured > .reserve .actions {
   gap: 0;
 }
 
-body > main.main > section.featured > .reserve .actions > a {
+body > main.main > section.featured > .reserve .actions > .action {
   /* border: 1px solid rgb(156, 156, 156); */
   padding: 10px 15px;
   text-decoration: none;
@@ -886,36 +890,37 @@ body > main.main > section.featured > .reserve .actions > a {
   justify-content: center;
   gap: 10px;
   border-radius: 50px;
+  cursor: pointer;
   transition: all 0.3s linear;
 }
 
-body > main.main > section.featured > .reserve .actions > a.explore { 
+body > main.main > section.featured > .reserve .actions > .action.explore { 
   border: 1px solid #8080805d;
   background-color: #ffffff;
   color: #404040;
 }
 
-body > main.main > section.featured > .reserve .actions > a.explore svg path {
+body > main.main > section.featured > .reserve .actions > .action.explore svg path {
   fill: #404040;
 }
 
-body > main.main > section.featured > .reserve .actions > a svg {
+body > main.main > section.featured > .reserve .actions > .action svg {
   transition: all 0.3s linear;
 }
 
-body > main.main > section.featured > .reserve .actions > a:hover{
+body > main.main > section.featured > .reserve .actions > .action:hover{
   padding: 10px 20px;
   gap: 15px;
 }
 
-body > main.main > section.featured > .reserve .actions > a.book { 
+body > main.main > section.featured > .reserve .actions > .action.book { 
   background:  rgb(223, 121, 26);
   background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
   background-color: rgb(247, 145, 162);
   color: #ffffff;
 }
 
-body > main.main > section.featured > .reserve .actions > a.book svg path {
+body > main.main > section.featured > .reserve .actions > .action.book svg path {
   fill: #ffffff;
 }
 

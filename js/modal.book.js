@@ -50,13 +50,17 @@ export default class ModalBook extends HTMLElement {
           console.log(data)
           console.log(stepValue.textContent)
           break;
+        case 4:
+          this.validateStepFour(data, stepValue,contentContainer)
+          console.log(data)
+          console.log(stepValue.textContent)
         default:
           break;
       }
 
     })
 
-    // this.populateDate(nextBtn)
+    this.activatePackages()
 
   }
 
@@ -421,6 +425,25 @@ export default class ModalBook extends HTMLElement {
     }
   }
 
+  validateStepFour(){
+    const packageItem = this.shadowObj.querySelector('section#content .packages > .package.selected')
+
+    const no = this.shadowObj.querySelector('section#content .select-manually > .picker span.no');
+
+    if (packageItem) {
+      data.Package = packageItem.dataset.value
+
+      stepValue.textContent = 5;
+      contentContainer.innerHTML = this.getStepFive()
+    }
+    else if(parseInt(no.textContent) > 0){
+      data.Photos = no.textContent
+
+      stepValue.textContent = 5;
+      contentContainer.innerHTML = this.getStepFive()
+    }
+  }
+
   getTemplate() {
     // Show HTML Here
     return `
@@ -441,7 +464,7 @@ export default class ModalBook extends HTMLElement {
           </div>
         </div>
         <div id="container" class="container">
-          ${this.getStepFour()}
+          ${this.getStepOne()}
         </div>
         <div class="footer">
           <!-- <div class="action prev">
@@ -680,7 +703,7 @@ export default class ModalBook extends HTMLElement {
         </p>
       </div>
       <div class="packages">
-        <div class="package">
+        <div class="package" data-value="Package I">
           <div class="name">
             <p class="name">Package I</p>
             <span>Lorem ipsum dolor.</span>
@@ -694,7 +717,7 @@ export default class ModalBook extends HTMLElement {
           <div class="price"><span>Ksh.</span> 60,232.00</div>
           <span class="select">Select</span>
         </div>
-        <div class="package selected">
+        <div class="package" data-value="Package II">
           <div class="name">
             <p class="name">Package II</p>
             <span>Lorem ipsum dolor.</span>
@@ -708,7 +731,7 @@ export default class ModalBook extends HTMLElement {
           <div class="price"><span>Ksh.</span> 40,232.00</div>
           <span class="select">Selected</span>
         </div>
-        <div class="package">
+        <div class="package"  data-value="Package III">
           <div class="name">
             <p class="name">Package III</p>
             <span>Lorem ipsum dolor.</span>
@@ -726,13 +749,13 @@ export default class ModalBook extends HTMLElement {
       <p class="manual-title">Or choose no of Photos<span>(@Ksh. 400 each)</span></p>
       <div class="select-manually">
         <div class="picker">
-          <div id="left-day-nav" class="nav">
+          <div id="left-nav" class="nav">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
             </svg>
           </div>
           <span class="no">0</span>
-          <div id="right-day-nav" class="nav">
+          <div id="right-nav" class="nav">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
             </svg>
@@ -741,6 +764,49 @@ export default class ModalBook extends HTMLElement {
         <!-- <div class="price"><span>Ksh.</span> <span class="ammount">400.00</span></div> -->
       </div>
     `
+  }
+
+  activatePackages(){
+    const packages = this.shadowObj.querySelectorAll('section#content .packages > .package')
+    const selectBtns = this.shadowObj.querySelectorAll('section#content .packages > .package .select')
+
+    const no = this.shadowObj.querySelector('section#content .select-manually > .picker span.no'),
+    leftNav = this.shadowObj.querySelector('section#content .select-manually > .picker #left-nav'),
+    rightNav = this.shadowObj.querySelector('section#content .select-manually > .picker #right-nav');
+
+    if (selectBtns) {
+      selectBtns.forEach(selectBtn => {
+        selectBtn.addEventListener('click', (e) => {
+          e.preventDefault()
+          packages.forEach(packageItem => {
+            packageItem.classList.remove('selected')
+          });
+          selectBtn.parentElement.classList.toggle('selected')
+          no.textContent = 0
+        })
+      });
+
+      rightNav.addEventListener('click', (e) => {
+        e.preventDefault()
+        no.textContent = parseInt(no.textContent) + 1
+        packages.forEach(packageItem => {
+          packageItem.classList.remove('selected')
+        });
+      })
+
+      leftNav.addEventListener('click', (e) => {
+        if (parseInt(no.textContent) === 0) {
+          no.textContent = 0
+        }
+        else{
+          no.textContent = parseInt(no.textContent) - 1
+        }
+        packages.forEach(packageItem => {
+          packageItem.classList.remove('selected')
+        });
+      })
+
+    }
   }
 
   getStepFive() {

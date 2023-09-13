@@ -41,7 +41,7 @@ export default class ModalBook extends HTMLElement {
           console.log(stepValue.textContent)
           break;
         case 2:
-          this.validateStepTwo(data, stepValue, contentContainer)
+          this.validateStepTwo(data, stepValue, contentContainer, nextBtn)
           console.log(data)
           console.log(stepValue.textContent)
           break;
@@ -53,7 +53,7 @@ export default class ModalBook extends HTMLElement {
 
     })
 
-    this.populateDate(nextBtn)
+    // this.populateDate(nextBtn)
 
   }
 
@@ -351,7 +351,7 @@ export default class ModalBook extends HTMLElement {
     });
   }
 
-  validateStepTwo(data, stepValue, contentContainer){
+  validateStepTwo(data, stepValue, contentContainer, nextBtn){
     const options = this.shadowObj.querySelectorAll("section#content > .container > .services > .options > .option.selected")
     const other = this.shadowObj.querySelector("section#content > .container > .services > .other > input")
     let services  = []
@@ -365,7 +365,7 @@ export default class ModalBook extends HTMLElement {
 
       stepValue.textContent = 3;
       contentContainer.innerHTML = this.getStepThree()
-      this.populateDate()
+      this.populateDate(nextBtn)
     }
   }
 
@@ -409,6 +409,11 @@ export default class ModalBook extends HTMLElement {
       people.forEach(person => {
         photographers.push(person.dataset.value)
       });
+
+      data.Photographers = photographers
+
+      stepValue.textContent = 4;
+      contentContainer.innerHTML = this.getStepFour()
     }
   }
 
@@ -432,7 +437,7 @@ export default class ModalBook extends HTMLElement {
           </div>
         </div>
         <div id="container" class="container">
-          ${this.getStepThree()}
+          ${this.getStepOne()}
         </div>
         <div class="footer">
           <div class="action prev">

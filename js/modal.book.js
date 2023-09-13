@@ -883,6 +883,7 @@ export default class ModalBook extends HTMLElement {
         bottom: 0;
         left: 0;
         z-index: 12;
+        cursor: pointer;
         /* background-color: #000; */
       }
 

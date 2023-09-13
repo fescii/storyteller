@@ -165,6 +165,10 @@ body > main.main > section.sidebar > .menu > ul.menu-items > li.item svg {
   fill: #404040;
 }
 
+body > main.main > section.sidebar > .menu > ul.menu-items > li.item.other svg {
+  margin-top: 2px;
+}
+
 body > main.main > section.sidebar > .menu > ul.menu-items > li.item svg path {
   fill: #404040;
 }

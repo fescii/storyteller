@@ -531,3 +531,24 @@ body > main.main > section.content > .content-container > .activities > .body > 
   font-weight: 500;
   color: #808080;
 }
+
+body > main.main > section.content > .content-container > .activities > .body > .left .cards {
+  border: 1px solid #c72828;
+  padding: 25px 0 0 0;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+body > main.main > section.content > .content-container > .activities > .body > .left .cards > .card {
+  border: 1px solid #80e280;
+  padding: 15px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}

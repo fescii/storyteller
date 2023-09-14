@@ -870,3 +870,28 @@ body > main.main > section.content > .content-container > .coming-soon  p {
   font-weight: 500;
   font-size: 1.rem;
 }
+
+
+body > main.main > section.content > .content-container > .bookings {
+  border: 1px solid #808080;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+body > main.main > section.content > .content-container > .bookings .booking {
+  border: 1px solid #808080;
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}

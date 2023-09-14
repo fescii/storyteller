@@ -1030,7 +1030,7 @@ body > main.main > section.content > .content-container > .bookings .booking > .
   margin: 16px 0 0 0;
   padding: 10px 0 0 0;
   width: 100%;
-  display: flex;
+  display: none;
   flex-flow: column;
   align-items: center;
   justify-content: space-between;

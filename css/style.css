@@ -820,6 +820,8 @@ body > main.main > section.featured > div.photos {
 }
 body > main.main > section.featured > div.photos > div.photo {
   border-radius: 25px;
+  height: 100%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -831,6 +833,7 @@ body > main.main > section.featured > div.photos > div.photo > img {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 25px;
 }
 
 body > main.main > section.featured > div.photos > div.photo.first {
@@ -841,9 +844,10 @@ body > main.main > section.featured > div.photos > div.photo.first {
 }
 
 body > main.main > section.featured > div.photos > div.photo.second{
-  border: 1px solid rgb(192, 101, 40);
+  /* border: 1px solid rgb(192, 101, 40); */
   grid-column: 2/3;
   grid-row: 1/4;
+  height: 450px;
 }
 
 body > main.main > section.featured > div.photos > div.photo.third{

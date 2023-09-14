@@ -422,7 +422,7 @@ body > main.main > section.content > .content-container > .activities {
   width: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: none;
   flex-flow: column;
   /* align-items: center; */
   justify-content: start;
@@ -823,4 +823,50 @@ body > main.main > section.content > .content-container > .activities > .upcomin
   font-family: var(--font-alt);
   font-size: 1rem;
   line-height: 1;
+}
+
+
+body > main.main > section.content > .content-container > .coming-soon {
+  border: 1px solid #80808027;
+  margin-top: 100px;
+  position: relative;
+  padding: 20px;
+  width: 90%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #fff;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-image: none;
+  box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.034);
+  border-radius: 15px;
+}
+
+body > main.main > section.content > .content-container > .coming-soon > .icon {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+body > main.main > section.content > .content-container > .coming-soon > .icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+body > main.main > section.content > .content-container > .coming-soon > .icon svg path {
+ fill: #fb482c;
+}
+
+body > main.main > section.content > .content-container > .coming-soon  p {
+  margin: 0;
+  color: #525252;
+  font-family: var(--font-alt);
+  font-weight: 500;
+  font-size: 1.rem;
 }

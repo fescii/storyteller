@@ -1024,3 +1024,13 @@ body > main.main > section.content > .content-container > .bookings .booking > .
   color: #08b86f;
   fill: #08b86f;
 }
+
+body > main.main > section.content > .content-container > .bookings .booking > .content {
+  border-top: 1px solid #80808017;
+  margin: 15px 0 0 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}

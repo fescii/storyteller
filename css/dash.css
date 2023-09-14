@@ -1027,10 +1027,25 @@ body > main.main > section.content > .content-container > .bookings .booking > .
 
 body > main.main > section.content > .content-container > .bookings .booking > .content {
   border-top: 1px solid #80808017;
-  margin: 15px 0 0 0;
+  margin: 16px 0 0 0;
+  padding: 10px 0 0 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
+}
+
+body > main.main > section.content > .content-container > .bookings .booking > .content > .section {
+  /* border-top: 1px solid #80808017; */
+  display: flex;
+  flex-flow: column;
+  gap: 8px;
+}
+
+body > main.main > section.content > .content-container > .bookings .booking > .content > .section > .title {
+  margin: 0;
+  color: #404040;
+  font-family: var(--font-alt);
+  font-weight: 500;
 }

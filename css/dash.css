@@ -888,7 +888,7 @@ body > main.main > section.content > .content-container > .bookings .booking {
   /* border: 1px solid #ce0404; */
   border: 1px solid #80808027;
   position: relative;
-  padding: 10px 15px;
+  padding: 10px 15px 20px 15px;
   width: 100%;
   display: flex;
   flex-flow: column;

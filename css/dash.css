@@ -1031,6 +1031,7 @@ body > main.main > section.content > .content-container > .bookings .booking > .
   padding: 10px 0 0 0;
   width: 100%;
   display: flex;
+  flex-flow: column;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
@@ -1041,6 +1042,7 @@ body > main.main > section.content > .content-container > .bookings .booking > .
   display: flex;
   flex-flow: column;
   gap: 8px;
+  width: 100%;
 }
 
 body > main.main > section.content > .content-container > .bookings .booking > .content > .section.bio > .infos {

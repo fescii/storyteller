@@ -313,10 +313,11 @@ body > main.main > section.content > .head > .profile > span.theme > span.text {
 }
 
 body > main.main > section.content > .head > .profile > span.theme > svg {
-  width: 16px;
-  height: 16px;
-  color: #808080;
-  /* rotate: 15deg; */
+  width: 20px;
+  height: 20px;
+  fill: #808080;
+  margin: 3px 0 0 0;
+  /* rotate: 7.5deg; */
 }
 
 body > main.main > section.content > .head > .profile > .photo {

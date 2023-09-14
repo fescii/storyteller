@@ -211,7 +211,7 @@ body > main.main > section.sidebar > .menu > ul.menu-items > li.item.active svg 
 body > main.main > section.content {
   /* border-right: 1px solid #80808027; */
   min-width: calc(100% - 150px);
-  padding: 0 20px;
+  padding: 0;
   min-height: 100vh;
   width: max-content;
   display: flex;
@@ -222,7 +222,7 @@ body > main.main > section.content {
 body > main.main > section.content > .head {
   border-bottom: 1px solid #80808017;
   margin: 0;
-  padding: 20px 15px 15px 15px;
+  padding: 20px 20px 15px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -409,7 +409,7 @@ body > main.main > section.content > .head > .profile > .photo span.name > span.
 body > main.main > section.content > .content-container {
   /* border: 1px solid #808080; */
   margin: 0;
-  padding: 15px;
+  padding: 20px 20px 50px 20px;
   display: flex;
   flex-flow: column;
   align-items: start;
@@ -716,4 +716,68 @@ body > main.main > section.content > .content-container > .activities > .body > 
 
 body > main.main > section.content > .content-container > .activities > .body > .right .analytic > .icon svg path {
  fill: #404040;
+}
+
+body > main.main > section.content > .content-container > .activities > .upcoming {
+  /* border: 1px solid #808080; */
+  /* border: 1px solid #80808017; */
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+body > main.main > section.content > .content-container > .activities > .upcoming > .head {
+  /* border: 1px solid rgb(241, 3, 95); */
+  width: max-content;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+body > main.main > section.content > .content-container > .activities > .upcoming > .head > h2.title {
+  margin: 0;
+  font-family: var(--font-alt);
+  color: #404040;
+  line-height: 1.2;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+body > main.main > section.content > .content-container > .activities > .upcoming > .head  span {
+  margin: 0;
+  font-family: var(--font-alt);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #404040;
+  /* text-align: center; */
+}
+
+body > main.main > section.content > .content-container > .activities > .upcoming > .bookings {
+  border: 1px solid #808080;
+  margin: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0;
+}
+
+
+body > main.main > section.content > .content-container > .activities > .upcoming > .bookings .booking {
+  border: 1px solid #808080;
+  padding: 15px 20px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
 }

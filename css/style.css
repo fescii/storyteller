@@ -843,7 +843,7 @@ body > main.main > section.featured > div.photos > div.photo > img {
 }
 
 body > main.main > section.featured > div.photos > div.photo.first {
-  border: 1px solid rgb(192, 101, 40);
+  /* border: 1px solid rgb(192, 101, 40); */
   grid-column: 1/2;
   grid-row: 1/3;
   height: 250px;

@@ -21,7 +21,7 @@ html {
   background-size: cover;
   background-size: 1rem 1rem;
   background-color: rgb(248, 249, 250);
-  background-image: radial-gradient(circle, rgb(222, 226, 230) 1px, rgba(0, 0, 0, 0) 1px);
+  /* background-image: radial-gradient(circle, rgb(222, 226, 230) 1px, rgba(0, 0, 0, 0) 1px); */
 }
 
 body {
@@ -211,7 +211,7 @@ body > main.main > section.sidebar > .menu > ul.menu-items > li.item.active svg 
 body > main.main > section.content {
   /* border-right: 1px solid #80808027; */
   min-width: calc(100% - 150px);
-  padding: 0;
+  padding: 20px;
   min-height: 100vh;
   width: max-content;
   display: flex;
@@ -222,14 +222,14 @@ body > main.main > section.content {
 body > main.main > section.content > .head {
   border-bottom: 1px solid #80808017;
   margin: 0;
-  padding: 20px 20px 15px 20px;
+  padding: 0 20px 15px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0;
   z-index: 10;
   backdrop-filter: blur(3px);
-  background-color: #ffffffa4;
+  /* background-color: #ffffffa4; */
   -webkit-backdrop-filter: blur(84px);
   backdrop-filter: blur(84px);
   position: sticky;

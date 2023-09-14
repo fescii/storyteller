@@ -804,3 +804,33 @@ body > main.main > section.content > .content-container > .activities > .upcomin
   font-family: var(--font-alt);
   font-size: 0.9rem;
 }
+
+.content-container > .activities > .upcoming > .bookings .booking > .date {
+  /* border: 1px solid #808080; */
+  background-color: #099eef18;
+  padding: 10px 15px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border-radius: 15px;
+}
+
+.content-container > .activities > .upcoming > .bookings .booking > .date > span.day {
+  margin: 0;
+  color: #808080;
+  font-family: var(--font-alt);
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+body > main.main > section.content > .content-container > .activities > .upcoming > .bookings .booking > .date >  span.no {
+  margin: 0;
+  display: inline-block;
+  color: #404040;
+  font-family: var(--font-alt);
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+}

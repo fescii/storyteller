@@ -408,7 +408,7 @@ body > main.main > section.content > .content-container {
 }
 
 body > main.main > section.content > .content-container > .activities {
-  /* border: 1px solid #808080; */
+  border: 1px solid #808080;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -611,7 +611,7 @@ body > main.main > section.content > .content-container > .activities > .body > 
   font-family: var(--font-alt);
   font-size: 1rem;
   letter-spacing: 2px;
-  /* font-weight: 500; */
+  font-weight: 500;
   color: #404040;
 }
 

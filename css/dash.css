@@ -832,7 +832,7 @@ body > main.main > section.content > .content-container > .coming-soon {
   position: relative;
   padding: 20px;
   width: 90%;
-  display: flex;
+  display: none;
   flex-flow: column;
   align-items: center;
   justify-content: center;

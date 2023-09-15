@@ -319,8 +319,8 @@ body > main.main > section.landing > .content-one {
   transition: transform 1s ease-in-out;
 }
 
-@keyframes switch {
-  0%, 115% {
+/* @keyframes switch {
+  0%, 135% {
     transform: translateX(0);
   }
   10% {
@@ -353,7 +353,10 @@ body > main.main > section.landing > .content-one {
   115% {
     transform: translateX(-500%);
   }
-}
+  135% {
+    transform: translateX(-500%);
+  }
+} */
 
 body > main.main > section.landing > .content-one > .text {
   /* border: 1px solid rgb(241, 3, 95); */

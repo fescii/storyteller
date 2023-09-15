@@ -63,4 +63,43 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(nextSlide, 2500); // Adjust the interval (in milliseconds) for automatic sliding
   }
 
+    // Switcher
+    const switches = document.querySelectorAll('body > main.main > section.landing > .content-one');
+    let switchIndex = 0;
+    let flow = 1; // 1 for forward, -1 for backward
+  
+    if (switches) {
+      function showSwitch(index) {
+        switches.forEach((switchItem, i) => {
+          if(!index === i) {
+            const offset = -(i - index)  * 100 * direction;
+            switchItem.style.transform = `translateX(${offset}%)`;
+          }
+          else{
+            const offset = -index  * 100;
+            switchItem.style.transform = `translateX(${offset}%)`;
+          }
+        });
+     }
+    
+      function nextSwitch() {
+        if (switchIndex >= 4){
+          flow = -1 // Reverse direction at the start or end
+          //currentIndex += reverse
+        }
+        else if(switchIndex <= 0) {
+          flow = 1; // Reverse direction at the start or end
+          //currentIndex += reverse
+        }
+    
+        switchIndex += flow;
+    
+    
+        showSwitch(switchIndex);
+      }
+    
+      setInterval(nextSwitch, 4000); // Adjust the interval (in milliseconds) for automatic sliding
+    }
+
 })
+

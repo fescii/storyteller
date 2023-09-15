@@ -73,10 +73,12 @@ document.addEventListener('DOMContentLoaded', () => {
         switches.forEach((switchItem, i) => {
           if(!index === i) {
             const offset = -(i - index)  * 100 * direction;
+            switchItem.style.display = 'none'
             switchItem.style.transform = `translateX(${offset}%)`;
           }
           else{
             const offset = -index  * 100;
+            switchItem.style.display = 'flex'
             switchItem.style.transform = `translateX(${offset}%)`;
           }
         });

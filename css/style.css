@@ -291,7 +291,7 @@ body > main.main > header.header > div.utility > span.book > span.items {
 
 /* HOME */
 body > main.main > section.landing {
-  border: 5px solid rgb(199, 21, 199);
+  /* border: 5px solid rgb(199, 21, 199); */
   height: 100vh;
   width: 100%;
   min-width: 100%;
@@ -305,7 +305,7 @@ body > main.main > section.landing {
 }
 
 body > main.main > section.landing > .content-one {
-  border: 1px solid rgb(55, 201, 11);
+  /* border: 1px solid rgb(55, 201, 11); */
   padding: 0 10% 0 10%;
   width: 100%;
   min-width: 100%;

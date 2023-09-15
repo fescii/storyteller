@@ -317,16 +317,52 @@ body > main.main > section.landing > .numbers {
 }
 
 body > main.main > section.landing > .numbers > span.no {
-  border: 1px solid #b1ca22;
-  background-color: #ffffff;
-  width: 30px;
-  height: 30px;
+  /* border: 1px solid #b1ca22; */
+  /* background-color: #ffffff; */
+  width: 32px;
+  height: 32px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50px;
 }
+
+body > main.main > section.landing > .numbers > span.no > span.pick {
+  display: inline-block;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  border: none;
+  color: #ffffff;
+  font-family: var(--font-alt);
+  font-size: 0.9rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+}
+
+
+body > main.main > section.landing > .numbers > span.no > span.pick {
+  background-image: linear-gradient(#53595f, #627ea0);
+}
+
+body > main.main > section.landing > .numbers > span.no.active > span.pick {
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  background-color: rgb(247, 145, 162);
+}
+
+body > main.main > section.landing > .numbers > span.no.active:nth-of-type(even)  > span.pick {
+  background:  rgb(223, 121, 26);
+  background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
+  background-color: rgb(247, 145, 162);
+}
+
 
 body > main.main > section.landing > .content-one {
   /* border: 1px solid rgb(55, 201, 11); */
@@ -343,44 +379,6 @@ body > main.main > section.landing > .content-one {
   transition: transform 1s ease-in-out;
 }
 
-/* @keyframes switch {
-  0%, 135% {
-    transform: translateX(0);
-  }
-  10% {
-    transform: translateX(0);
-  }
-  15% {
-    transform: translateX(-100%);
-  }
-  35% {
-    transform: translateX(-100%);
-  }
-  40% {
-    transform: translateX(-200%);
-  }
-  60% {
-    transform: translateX(-200%);
-  }
-  65% {
-    transform: translateX(-300%);
-  }
-  85% {
-    transform: translateX(-300%);
-  }
-  90% {
-    transform: translateX(-400%);
-  }
-  110% {
-    transform: translateX(-400%);
-  }
-  115% {
-    transform: translateX(-500%);
-  }
-  135% {
-    transform: translateX(-500%);
-  }
-} */
 
 body > main.main > section.landing > .content-one > .text {
   /* border: 1px solid rgb(241, 3, 95); */

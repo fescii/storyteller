@@ -64,12 +64,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Switcher
+  const numbers = document.querySelectorAll('body > main.main > section.landing > .numbers > span.no');
+  let activeNo = document.querySelector('body > main.main > section.landing > .numbers > span.no.active');
   const switches = document.querySelectorAll('body > main.main > section.landing > .content-one');
   let switchIndex = 0;
   let flow = 1; // 1 for forward, -1 for backward
   
   if (switches) {
     function showSwitch(index) {
+      if (numbers && activeNo){
+        activeNo.classList.remove('active')
+        numbers[index].classList.add('active')
+        activeNo = numbers[index]
+      }
       switches.forEach((switchItem, i) => {
         if(!index === i) {
           console.log(`Running\n Index: ${index} --- i:${i}`)

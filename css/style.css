@@ -2171,3 +2171,21 @@ footer.footer > .links > .right > span {
   color: #808080;
   font-size: 0.9rem;
 }
+
+
+/* About */
+.about-top {
+  margin: 50px 0 0 0;
+  display: grid;
+  max-width: 1000px;
+  justify-items: center;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 8px;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  color: #404040;
+  text-align: center;
+}

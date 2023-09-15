@@ -1553,21 +1553,20 @@ body > main.main > section.content > div.section > div.content-items > div.shot 
   flex-flow: column;
   justify-content: end;
   position: relative;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-image: none;
+  box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.027);
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
 }
 
 body > main.main > section.content > div.section > div.content-items > div.shot:hover {
     /*box-shadow: 0.1em 0.1em 0.1em rgb(221, 221, 221);
-    */transform: scale(1.02);
-    transition: 600ms ease-out;
-    -webkit-transition: 600ms ease-out;
-    -moz-transition: 600ms ease-out;
-    -ms-transition: 600ms ease-out;
-    -o-transition: 600ms ease-out;
+    */transform: scale(1.005);
+    transition: 100ms ease-out;
 }
 
 
@@ -1579,7 +1578,7 @@ body > main.main > section.content > div.section > div.content-items > div.shot 
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   font-weight: 500;
   background: linear-gradient(180deg, #00000002, #00000018, #00000048, #000000a6);
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: start;
   gap: 5px;
@@ -1775,7 +1774,7 @@ body > main.main > section.content > div.section.people > div.people > div.perso
   background-position-y: 0%;
   background-repeat: repeat;
   background-image: none;
-  box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.082);
+  box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.027);
 }
 
 body > main.main > section.content > div.section.people > div.people > div.person > .top {

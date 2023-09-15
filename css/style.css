@@ -291,27 +291,68 @@ body > main.main > header.header > div.utility > span.book > span.items {
 
 /* HOME */
 body > main.main > section.landing {
-  /* border: 1px solid rgb(55, 201, 11); */
+  border: 5px solid rgb(199, 21, 199);
   height: 100vh;
+  width: 100%;
+  min-width: 100%;
   margin: -70px 0 0 0;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
   gap: 0;
-  padding: 70px 10% 0 10%;
-  /* background-image: url("/img/back/dark.png");
-  background-position: 100%;
-  background-size: cover; */
+  padding: 70px 0 0 0;
+  overflow: hidden;
 }
 
 body > main.main > section.landing > .content-one {
-  /* border: 1px solid rgb(55, 201, 11); */
+  border: 1px solid rgb(55, 201, 11);
+  padding: 0 10% 0 10%;
   width: 100%;
   min-width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  flex: 0 0 100%;
+  animation: switch 10s linear infinite;
+  -webkit-animation: switch 10s linear infinite;
+  transition: transform 1s ease-in-out;
+}
+
+@keyframes switch {
+  0%, 115% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  15% {
+    transform: translateX(-100%);
+  }
+  35% {
+    transform: translateX(-100%);
+  }
+  40% {
+    transform: translateX(-200%);
+  }
+  60% {
+    transform: translateX(-200%);
+  }
+  65% {
+    transform: translateX(-300%);
+  }
+  85% {
+    transform: translateX(-300%);
+  }
+  90% {
+    transform: translateX(-400%);
+  }
+  110% {
+    transform: translateX(-400%);
+  }
+  115% {
+    transform: translateX(-500%);
+  }
 }
 
 body > main.main > section.landing > .content-one > .text {

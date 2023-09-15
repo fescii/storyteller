@@ -1771,6 +1771,11 @@ body > main.main > section.content > div.section.people > div.people > div.perso
   width: 350px;
   gap: 15px;
   border-radius: 25px;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-image: none;
+  box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.082);
 }
 
 body > main.main > section.content > div.section.people > div.people > div.person > .top {

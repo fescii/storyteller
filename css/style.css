@@ -307,6 +307,7 @@ body > main.main > section.landing {
 body > main.main > section.landing > .content-one {
   /* border: 1px solid rgb(55, 201, 11); */
   width: 100%;
+  min-width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -333,6 +334,7 @@ body > main.main > section.landing > .content-one > .text h2.title {
   /* color: #25292e; */
   color: transparent;
   background-clip: text;
+  -webkit-background-clip: text;
   -moz-background-clip: text;
 }
 

@@ -2190,7 +2190,7 @@ footer.footer > .links > .right > span {
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.116);
   margin-top: 0;
   margin-bottom: 16px;
-  font-size: 48px;
+  font-size: 3rem;
   font-family: var(--font-alt);
   line-height: 62px;
   font-weight: 700;

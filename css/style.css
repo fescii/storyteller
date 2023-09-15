@@ -2131,7 +2131,7 @@ footer.footer > .links > .right > span {
   flex-flow: column;
   color: #404040;
   text-align: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .about-top  > h1.title {
@@ -2142,7 +2142,7 @@ footer.footer > .links > .right > span {
   /* font-family: var(--font-alt); */
   font-family: 'Inter Custom', sans-serif;
   line-height: 1.3;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .about-top  > p.text {

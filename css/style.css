@@ -1134,7 +1134,8 @@ body > main.main > section.content > div.categories > div.banner.top-second > di
 body > main.main > section.content > div.categories > div.banner.top-second > div.text h2 {
   margin: 0;
   padding: 0;
-  font-family: 'visby_medium', sans-serif;
+  font-family: var(--font-alt);
+  font-weight: 500;
   font-size: 1.5rem;
   color: inherit;
 }
@@ -2061,10 +2062,15 @@ footer.footer > section.content > .footer-links > ul > li {
   color: #404040;
 }
 
-footer.footer > section.content > .footer-links > ul > li > a{
+footer.footer > section.content > .footer-links > ul > li > a {
   text-decoration: none;
   color: #404040;
   /* font-family: var(--font-alt); */
+}
+
+footer.footer > section.content > .footer-links > ul > li > a:hover {
+  color: rgb(0, 122, 255);
+  text-decoration: underline;
 }
 
 footer.footer > .links {

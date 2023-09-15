@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       slides.forEach((slide, i) => {
         if( !index === i) {
-          const offset = -(i - index)  * 100 * direction;
+          const offset = -(i - index)  * 100 * reverse;
           slide.style.transform = `translateX(${offset}%)`;
         }
         else{
@@ -63,45 +63,44 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(nextSlide, 2500); // Adjust the interval (in milliseconds) for automatic sliding
   }
 
-    // Switcher
-    const switches = document.querySelectorAll('body > main.main > section.landing > .content-one');
-    let switchIndex = 0;
-    let flow = 1; // 1 for forward, -1 for backward
+  // Switcher
+  const switches = document.querySelectorAll('body > main.main > section.landing > .content-one');
+  let switchIndex = 0;
+  let flow = 1; // 1 for forward, -1 for backward
   
-    if (switches) {
-      function showSwitch(index) {
-        switches.forEach((switchItem, i) => {
-          if(!index === i) {
-            const offset = -(i - index)  * 100 * direction;
-            switchItem.style.display = 'none'
-            switchItem.style.transform = `translateX(${offset}%)`;
-          }
-          else{
-            const offset = -index  * 100;
-            switchItem.style.display = 'flex'
-            switchItem.style.transform = `translateX(${offset}%)`;
-          }
-        });
-     }
-    
-      function nextSwitch() {
-        if (switchIndex >= 4){
-          flow = -1 // Reverse direction at the start or end
-          //currentIndex += reverse
+  if (switches) {
+    function showSwitch(index) {
+      switches.forEach((switchItem, i) => {
+        if(!index === i) {
+          console.log(`Running\n Index: ${index} --- i:${i}`)
+          const offset = -(i - index)  * 100 * flow;
+          switchItem.style.transform = `translateX(${offset}%)`;
         }
-        else if(switchIndex <= 0) {
-          flow = 1; // Reverse direction at the start or end
-          //currentIndex += reverse
+        else{
+          const offset = -index  * 100;
+          switchItem.style.transform = `translateX(${offset}%)`;
         }
+      });
+    }
     
-        switchIndex += flow;
-    
-    
-        showSwitch(switchIndex);
+    function nextSwitch() {
+      if (switchIndex >= 4){
+        flow = -1 // Reverse direction at the start or end
+        //currentIndex += reverse
+      }
+      else if(switchIndex <= 0) {
+        flow = 1; // Reverse direction at the start or end
+        //currentIndex += reverse
       }
     
-      setInterval(nextSwitch, 4000); // Adjust the interval (in milliseconds) for automatic sliding
+      switchIndex += flow;
+    
+    
+      showSwitch(switchIndex);
     }
+    
+    setInterval(nextSwitch, 6000); // Adjust the interval (in milliseconds) for automatic sliding
+  }
 
 })
 

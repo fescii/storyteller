@@ -459,6 +459,12 @@ body > main.main > section.landing > .numbers > span.no.active:nth-of-type(even)
   background-color: rgb(247, 145, 162);
 }
 
+body > main.main > section.landing > .numbers > span.no.active:nth-of-type(2)  > span.pick {
+  background:  rgb(223, 121, 26);
+  background: linear-gradient(0deg, rgb(223, 49, 26) 0%, rgb(240, 83, 78) 100%);
+  background-color: rgb(247, 145, 162);
+}
+
 
 body > main.main > section.landing > .content-one {
   /* border: 1px solid rgb(55, 201, 11); */
@@ -538,13 +544,16 @@ body > main.main > section.landing > .content-one > .text  .actions > .action {
 }
 
 body > main.main > section.landing > .content-one > .text  .actions > .explore { 
-  border: 1px solid #8080805d;
-  background-color: #ffffff;
-  color: #404040;
+  /* border: 1px solid #8080805d; */
+  background-color: #ffffff1f;
+  backdrop-filter: blur(84px);
+  -webkit-backdrop-filter: blur(84px);
+  box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.158);
+  color: #fafafa;
 }
 
 body > main.main > section.landing > .content-one > .text  .actions > .explore svg path {
-  fill: #404040;
+  fill: #fafafa;
 }
 
 body > main.main > section.landing > .content-one > .text  .actions > .action svg {
@@ -561,6 +570,10 @@ body > main.main > section.landing > .content-one > .text  .actions > .action.bo
   background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
   background-color: rgb(247, 145, 162);
   color: #ffffff;
+}
+
+body > main.main > section.landing > .content-one.second > .text  .actions > .action.book { 
+  background: linear-gradient(0deg, rgb(223, 49, 26) 0%, rgb(240, 83, 78) 100%);
 }
 
 body > main.main > section.landing > .content-one > .text  .actions > .action.book svg path {
@@ -586,6 +599,14 @@ body > main.main > section.landing > .content-one > .image > .back-color {
   width: 400px;
   height: 400px;
   border-radius: 100%;
+}
+
+body > main.main > section.landing > .content-one.second > .image > .back-color {
+  background:  rgb(252, 84, 42);
+}
+
+body > main.main > section.landing > .content-one.third > .image > .back-color {
+  background: linear-gradient(#53595f, #627ea0);
 }
 
 body > main.main > section.landing > .content-one > .image > img {

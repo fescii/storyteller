@@ -448,12 +448,6 @@ body > main.main > section.landing > .numbers > span.no > span.pick {
 }
 
 body > main.main > section.landing > .numbers > span.no.active > span.pick {
-  background: #ad5389;
-  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
-  background-color: rgb(247, 145, 162);
-}
-
-body > main.main > section.landing > .numbers > span.no.active:nth-of-type(even)  > span.pick {
   background:  rgb(223, 121, 26);
   background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
   background-color: rgb(247, 145, 162);
@@ -475,6 +469,10 @@ body > main.main > section.landing > .numbers > span.no.active:nth-of-type(4)  >
   background-color: rgb(247, 145, 162);
 }
 
+body > main.main > section.landing > .numbers > span.no.active:nth-of-type(5)  > span.pick {
+  background: linear-gradient(0deg, rgb(193, 236, 241) 0%, rgb(255, 255, 255) 100%);
+  color: rgb(68, 77, 107);
+}
 
 body > main.main > section.landing > .content-one {
   /* border: 1px solid rgb(55, 201, 11); */
@@ -595,6 +593,7 @@ body > main.main > section.landing > .content-one.forth > .text  .actions > .act
   background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
   background-color: rgb(247, 145, 162);
 }
+
 body > main.main > section.landing > .content-one.fifth > .text  .actions > .action.book {
   background: linear-gradient(0deg, rgb(193, 236, 241) 0%, rgb(255, 255, 255) 100%);
   color: rgb(68, 77, 107);

@@ -81,8 +81,6 @@ body {
   background-color: #ffffff93;
 }
 
-
-
 body > main.main {
   /* border: 2px solid #404040; */
   width: 100%;
@@ -309,6 +307,101 @@ body > main.main > section.landing {
   overflow: hidden;
 }
 
+
+.wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #24C6DC; 
+  background: -webkit-linear-gradient(to bottom, #514A9D, #24C6DC);  
+  background: linear-gradient(to bottom, #514A9D, #24C6DC); 
+}
+
+.box div {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 6px solid rgba(255,255,255,0.8);
+}
+
+.box div:nth-child(1) {
+  top: 12%;
+  left: 42%;
+  animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2) {
+  top: 70%;
+  left: 50%;
+  animation: animate 7s linear infinite;
+}
+.box div:nth-child(3) {
+  top: 17%;
+  left: 6%;
+  animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(4) {
+  top: 20%;
+  left: 60%;
+  animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(5) {
+  top: 67%;
+  left: 10%;
+  animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(6) {
+  top: 80%;
+  left: 70%;
+  animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(7) {
+  top: 60%;
+  left: 80%;
+  animation: animate 15s linear infinite;
+}
+
+.box div:nth-child(8) {
+  top: 32%;
+  left: 25%;
+  animation: animate 16s linear infinite;
+}
+
+.box div:nth-child(9) {
+  top: 90%;
+  left: 25%;
+  animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(10) {
+  top: 20%;
+  left: 80%;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(-90px) rotate(360deg);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: scale(1.3) translateY(-90px) rotate(-180deg);
+    border-radius: 50%;
+    opacity: 0;
+  }
+}
+
+
+
+
+
 body > main.main > section.landing > .numbers {
   /* border: 5px solid rgb(199, 21, 199); */
   position: absolute;
@@ -370,7 +463,7 @@ body > main.main > section.landing > .numbers > span.no.active:nth-of-type(even)
 
 body > main.main > section.landing > .content-one {
   /* border: 1px solid rgb(55, 201, 11); */
-  padding: 0 10% 20px 10%;
+  padding: 0 10% 0 10%;
   width: 100%;
   min-width: 100%;
   display: flex;
@@ -2051,9 +2144,21 @@ footer.footer > .links > .right > span {
   padding: 50px 10% 20px 10%;
   display: flex;
   flex-flow: column;
+  align-items: center;
   color: #404040;
   text-align: center;
   gap: 20px;
+}
+
+.about-top > p.head {
+  width: max-content;
+  color: #ffffff;
+  margin: 0;
+  padding: 5px 12px;
+  background:  rgb(223, 121, 26);
+  background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
+  background-color: rgb(247, 145, 162);
+  border-radius: 50px;
 }
 
 .about-top  > h1.title {

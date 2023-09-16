@@ -1548,6 +1548,7 @@ body > main.main > section.content > div.section > div.section-head > h2 {
 
 body > main.main > section.content > div.section > div.section-head > span {
   margin: 0;
+  font-family: var(--font-alt);
   font-size: 0.9rem;
   color: #404040;
 }

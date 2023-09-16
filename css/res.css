@@ -9,7 +9,7 @@ Email: isfescii@gmail.com
 */
 
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1200px) {
   body > main.main > header.header {
     /* border: 2px solid rgb(160, 100, 11); */
     padding: 0 5% 0 5%;
@@ -72,6 +72,15 @@ Email: isfescii@gmail.com
     align-items: center;
     justify-content: center;
   }
+
+  body > main.main > section.content > div.section.curated > div.section-head {
+    /* border: 2px solid #404040; */
+    margin: 10px 0 20px 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 0px;
+  }
   
   body > main.main > section.content > div.section.curated > div.content-items {
     /* border: 1px solid #404040; */
@@ -80,6 +89,7 @@ Email: isfescii@gmail.com
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    row-gap: 35px;
   }
 
 
@@ -89,6 +99,7 @@ Email: isfescii@gmail.com
   
   
 }
+
 
 @media screen and (max-width: 1050px) {
   body > main.main > section.content {

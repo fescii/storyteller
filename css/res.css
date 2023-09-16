@@ -74,6 +74,10 @@ Email: isfescii@gmail.com
     /* border: 5px solid blue;  */
     padding: 50px 20px 70px 20px;
   }
+  body > main.main > section.services.last > .services-head {
+    /* border: 1px solid blue; */
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 950px) {

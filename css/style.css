@@ -972,13 +972,13 @@ body > main.main > section.featured > .reserve .actions > .action.book svg path 
 /* EXPLORE */
 
 body > main.main > section.content {
-  margin: 50px 10% 70px 10%;
+  padding: 50px 10% 70px 10%;
+  margin: 0;
   display: flex;
   flex-flow: column;
   align-items: center;
   gap: 0;
   padding: 0;
-  /* margin: 0 0 70px 0; */
 }
 
 body > main.main > section.content div.head {

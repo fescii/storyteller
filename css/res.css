@@ -14,34 +14,56 @@ Email: isfescii@gmail.com
     /* border: 2px solid rgb(160, 100, 11); */
     padding: 0 5% 0 5%;
   }
+
   body > main.main > section.landing > .content-one {
     /* border: 1px solid rgb(55, 201, 11); */
     padding: 0 5% 0 5%;
   }
+
   body > main.main > section.landing > .numbers {
     /* border: 5px solid rgb(199, 21, 199); */
     left: 5%;
     bottom: 20px;
   }
+
   body > main.main > section.landing > .content-one > .text {
     /* border: 5px solid rgb(199, 21, 199); */
     padding: 0 0 20px 0;
   }
+
   body > main.main > section.landing > .content-one > .image {
     /* border: 1px solid rgb(0, 0, 0); */
     width: 50%;
   }
+
   body > main.main > section.services {
     /* border: 1px solid blue; */
     padding: 50px 5% 70px 5%;
   }
+
   body > main.main > section.featured {
     /* border: 1px solid blue; */
     padding: 50px 5% 70px 5%;
   }
+
   body > main.main > section.services.last {
     /* border: 5px solid blue;  */
     padding: 50px 5% 70px 5%;
+  }
+
+  body > main.main > section.content {
+    border: 5px solid blue;
+    /* margin: 50px 10% 70px 10%; */
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+  }
+
+
+  footer.footer {
+    padding: 50px 5% 30px 5%;
   }
   
   
@@ -77,6 +99,11 @@ Email: isfescii@gmail.com
   body > main.main > section.services.last > .services-head {
     /* border: 1px solid blue; */
     width: 90%;
+  }
+
+
+  footer.footer {
+    padding: 50px 20px 30px 20px;
   }
 }
 

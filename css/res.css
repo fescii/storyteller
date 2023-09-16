@@ -11,17 +11,29 @@ Email: isfescii@gmail.com
 
 @media screen and (max-width: 1150px) {
   body > main.main > header.header {
-    border: 2px solid rgb(160, 100, 11);
+    /* border: 2px solid rgb(160, 100, 11); */
     padding: 0 5% 0 5%;
   }
   body > main.main > section.landing > .content-one {
-    border: 1px solid rgb(55, 201, 11);
-    padding: 0 5% 20px 5%;
+    /* border: 1px solid rgb(55, 201, 11); */
+    padding: 0 5% 0 5%;
   }
   body > main.main > section.landing > .numbers {
     /* border: 5px solid rgb(199, 21, 199); */
     left: 5%;
     bottom: 20px;
+  }
+  body > main.main > section.landing > .content-one > .text {
+    /* border: 5px solid rgb(199, 21, 199); */
+    padding: 0 0 20px 0;
+  }
+  body > main.main > section.landing > .content-one > .image {
+    /* border: 1px solid rgb(0, 0, 0); */
+    width: 50%;
+  }
+  body > main.main > section.services {
+    /* border: 1px solid blue; */
+    padding: 50px 5% 70px 5%;
   }
   
 }
@@ -32,8 +44,18 @@ Email: isfescii@gmail.com
 
 @media screen and (max-width: 1000px) {
   body > main.main > header.header {
-    border: 2px solid rgb(16, 160, 11);
     padding: 0 20px;
+  }
+  body > main.main > section.landing > .content-one {
+    padding: 0 20px;
+  }
+  body > main.main > section.landing > .numbers {
+    left: 20px;
+    bottom: 20px;
+  }
+  body > main.main > section.services {
+    /* border: 3px solid rgb(0, 255, 170); */
+    padding: 50px 20px 70px 20px;
   }
 }
 

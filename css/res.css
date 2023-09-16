@@ -51,9 +51,18 @@ Email: isfescii@gmail.com
     padding: 50px 5% 70px 5%;
   }
 
+  /* 
+    EXPLORE
+  */
+
   body > main.main > section.content {
     /* border: 5px solid blue; */
     padding: 50px 5% 70px 5%;
+  }
+
+  body > main.main > section.content > div.featured {
+    /* border: 1px solid blue; */
+    padding: 70px 5% 50px 5%;
   }
 
 
@@ -64,8 +73,11 @@ Email: isfescii@gmail.com
   
 }
 
-@media screen and (max-width: 1100px) {
-  
+@media screen and (max-width: 1050px) {
+  body > main.main > section.content {
+    /* border: 5px solid blue; */
+    padding: 50px 20px 70px 20px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -95,6 +107,17 @@ Email: isfescii@gmail.com
     /* border: 1px solid blue; */
     width: 90%;
   }
+
+  body > main.main > section.content {
+    /* border: 5px solid blue; */
+    padding: 50px 20px 70px 20px;
+  }
+
+  body > main.main > section.content > div.featured {
+    /* border: 1px solid blue; */
+    padding: 50px 20px 50px 20px;
+  }
+
 
 
   footer.footer {

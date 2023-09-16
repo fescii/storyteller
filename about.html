@@ -10,8 +10,19 @@
 	<link rel="stylesheet" href="css/icon/style.css">
 
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/res.css">
 
 	<title>Storyteller Arts</title>
+
+	<script type="module">
+    //Apps-Modals
+    import ModalBook from "./js/modal.book.js";
+
+    //Apps-modals
+    customElements.define("modal-book", ModalBook);
+
+  </script>
+	
 </head>
 
 <body>
@@ -94,8 +105,8 @@
 					<p class="words">As the world's largest and most far-reaching network of exceptional creative professionals,
 						we are fully equipped to handle your most critical projects with ease.</p>
 					<div class="actions">
-						<a href="" class="book">Book a photographer</a>
-						<a href="" class="learn">Learn about booking</a>
+						<div id="book-now" class="book action">Book a photographer</div>
+						<a href="" class="learn action">Learn about booking</a>
 					</div>
 				</div>
 				<div class="image-side">
@@ -340,7 +351,7 @@
 			</div>
 		</div>
 	</footer>
-	<script src="/js/action.js"></script>
+	<script src="js/action.js"></script>
 </body>
 
 </html>

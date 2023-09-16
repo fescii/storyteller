@@ -11,9 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (bookBtns) {
     bookBtns.forEach(bookBtn => {
       bookBtn.addEventListener('click', (e) => {
+        e.stopPropagation()
         e.preventDefault()
         modalContainer.innerHTML = modal
-        // body.insertAdjacentElement('beforeend', modal)
+        console.log('clicked')
+        // modalContainer.insertAdjacentElement('beforeend', modal)
       })
     });				
   }

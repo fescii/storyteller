@@ -2292,6 +2292,8 @@ footer.footer > .links > .right > span {
 }
 
 
+
+
 /* About */
 .about-top {
   /* border: 1px solid #808080; */
@@ -2328,8 +2330,8 @@ footer.footer > .links > .right > span {
 
 
 body > main.main > section.content > div.section.booking {
-  /* border: 1px solid #404040; */
-  margin: 50px 0 0 0;
+  border: 1px solid #404040;
+  margin: 0;
   display: flex;
   flex-flow: row;
   flex-wrap: nowrap;
@@ -2375,10 +2377,11 @@ body > main.main > section.content > div.section.booking > div.info-side > .acti
   padding: 10px 0 0 0;
 }
 
-body > main.main > section.content > div.section.booking > div.info-side > .actions > a{
+body > main.main > section.content > div.section.booking > div.info-side > .actions > .action {
   /* border: 1px solid #808080; */
   text-decoration: none;
   color: #404040;
+  cursor: pointer;
   font-family: var(--font-alt);
   font-weight: 600;
   padding: 15px 20px;
@@ -2389,11 +2392,11 @@ body > main.main > section.content > div.section.booking > div.info-side > .acti
   -o-border-radius: 50px;
 }
 
-body > main.main > section.content > div.section.booking > div.info-side > .actions > a.learn {
+body > main.main > section.content > div.section.booking > div.info-side > .actions > .learn {
   border: 1px solid #808080;
 }
 
-body > main.main > section.content > div.section.booking > div.info-side > .actions > a.book {
+body > main.main > section.content > div.section.booking > div.info-side > .actions > .book {
   color: #ffffff;
   background:  rgb(223, 121, 26);
   background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);

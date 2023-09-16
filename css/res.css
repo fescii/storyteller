@@ -92,6 +92,11 @@ Email: isfescii@gmail.com
     row-gap: 35px;
   }
 
+  .about-top {
+    /* border: 1px solid #808080; */
+    padding: 50px 5% 40px 5%;
+  }
+
 
   footer.footer {
     padding: 50px 5% 30px 5%;
@@ -149,6 +154,11 @@ Email: isfescii@gmail.com
   body > main.main > section.content > div.section.curated > div.content-items {
     /* border: 1px solid #404040; */
     gap: 25px;
+  }
+
+  .about-top {
+    /* border: 1px solid #808080; */
+    padding: 50px 20px 40px 20px;
   }
 
 

@@ -52,13 +52,8 @@ Email: isfescii@gmail.com
   }
 
   body > main.main > section.content {
-    border: 5px solid blue;
-    /* margin: 50px 10% 70px 10%; */
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    gap: 0;
-    padding: 0;
+    /* border: 5px solid blue; */
+    padding: 50px 5% 70px 5%;
   }
 
 

@@ -978,7 +978,6 @@ body > main.main > section.content {
   flex-flow: column;
   align-items: center;
   gap: 0;
-  padding: 0;
 }
 
 body > main.main > section.content div.head {

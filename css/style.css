@@ -569,7 +569,7 @@ body > main.main > section.services > .guaranteed > .service {
   /* border: 1px solid blue; */
   overflow: hidden;
   position: relative;
-  padding: 25px 20px;
+  padding: 20px 15px;
   background: #fff;
   background-position-x: 0%;
   background-position-y: 0%;
@@ -603,7 +603,7 @@ body > main.main > section.services > .guaranteed > .service.box3 {
 }
 
 body > main.main > section.services > .guaranteed > .service .content-box {
-  padding-left: 75px;
+  padding-left: 59px;
 }
 
 body > main.main > section.services > .guaranteed > .service .content-box h5 {
@@ -618,8 +618,8 @@ body > main.main > section.services > .guaranteed > .service .content-box p {
   margin: 0;
   color: #606060;
   font-family: var(--font-alt);
-  font-size: 1rem;
-  line-height: 1.875;
+  font-size: 0.95rem;
+  line-height: 1.5;
   font-weight: 400;
 }
 

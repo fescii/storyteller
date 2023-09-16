@@ -35,6 +35,15 @@ Email: isfescii@gmail.com
     /* border: 1px solid blue; */
     padding: 50px 5% 70px 5%;
   }
+  body > main.main > section.featured {
+    /* border: 1px solid blue; */
+    padding: 50px 5% 70px 5%;
+  }
+  body > main.main > section.services.last {
+    /* border: 5px solid blue;  */
+    padding: 50px 5% 70px 5%;
+  }
+  
   
 }
 
@@ -55,6 +64,14 @@ Email: isfescii@gmail.com
   }
   body > main.main > section.services {
     /* border: 3px solid rgb(0, 255, 170); */
+    padding: 50px 20px 70px 20px;
+  }
+  body > main.main > section.featured {
+    /* border: 3px solid blue; */
+    padding: 50px 20px 70px 20px;
+  }
+  body > main.main > section.services.last {
+    /* border: 5px solid blue;  */
     padding: 50px 20px 70px 20px;
   }
 }

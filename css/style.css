@@ -1515,6 +1515,22 @@ body > main.main > section.content > div.categories > div.small.wild > div.image
   object-fit: cover;
 }
 
+body > main.main > section.content > div.categories > div.small.video {
+  border: none;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+body > main.main > section.content > div.categories > div.small.video > #background-video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+}
+
 
 /*
 Sections
@@ -1753,7 +1769,7 @@ body > main.main > section.content > div.featured > .reserve {
   flex-flow: column;
   align-items: center;
   text-align: center;
-  width: 80%;
+  width: 100%;
 }
 
 body > main.main > section.content > div.featured > .reserve > p {

@@ -20,6 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });				
   }
 
+  const video = document.querySelector("video#background-video");
+  if (video) {
+    video.playbackRate = 0.5;
+  }
+
+
   // Slider
   const dots = document.querySelectorAll('div.categories > div.category.long > .dots > span.dot');
   let activeDot = document.querySelector('div.categories > div.category.long > .dots > span.dot.active');

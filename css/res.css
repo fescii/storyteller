@@ -65,6 +65,23 @@ Email: isfescii@gmail.com
     padding: 70px 5% 50px 5%;
   }
 
+  body > main.main > section.content > div.section.curated {
+    /* border: 1px solid #404040; */
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  body > main.main > section.content > div.section.curated > div.content-items {
+    /* border: 1px solid #404040; */
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
 
   footer.footer {
     padding: 50px 5% 30px 5%;
@@ -116,6 +133,11 @@ Email: isfescii@gmail.com
   body > main.main > section.content > div.featured {
     /* border: 1px solid blue; */
     padding: 50px 20px 50px 20px;
+  }
+  
+  body > main.main > section.content > div.section.curated > div.content-items {
+    /* border: 1px solid #404040; */
+    gap: 25px;
   }
 
 

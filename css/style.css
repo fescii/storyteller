@@ -1640,97 +1640,6 @@ body > main.main > section.content > div.section > div.content-items > div.shot 
   -o-border-radius: 15px;
 }
 
-body > main.main > section.content > div.section.booking {
-  /* border: 1px solid #404040; */
-  margin: 50px 0 0 0;
-  display: flex;
-  flex-flow: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-body > main.main > section.content > div.section.booking > div.image-side,
-body > main.main > section.content > div.section.booking > div.info-side {
-  width: 50%;
-}
-
-body > main.main > section.content > div.section.booking > div.info-side {
-  display: flex;
-  flex-flow: column;
-  gap: 25px;
-}
-
-body > main.main > section.content > div.section.booking > div.info-side > h2.title {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-alt);
-  color: #25292e;
-  font-weight: 500;
-  font-size: 2.5rem;
-}
-
-body > main.main > section.content > div.section.booking > div.info-side > p {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-alt);
-  color: #25292e;
-  font-weight: 400;
-  font-size: 1.2rem;
-  line-height: 1.5;
-}
-
-body > main.main > section.content > div.section.booking > div.info-side > .actions {
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 30px;
-  padding: 10px 0 0 0;
-}
-
-body > main.main > section.content > div.section.booking > div.info-side > .actions > a{
-  /* border: 1px solid #808080; */
-  text-decoration: none;
-  color: #404040;
-  font-family: var(--font-alt);
-  font-weight: 600;
-  padding: 15px 20px;
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
-}
-
-body > main.main > section.content > div.section.booking > div.info-side > .actions > a.learn {
-  border: 1px solid #808080;
-}
-
-body > main.main > section.content > div.section.booking > div.info-side > .actions > a.book {
-  color: #ffffff;
-  background:  rgb(223, 121, 26);
-  background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
-  background-color: rgb(247, 145, 162);
-}
-
-
-body > main.main > section.content > div.section.booking > div.image-side {
-  /* border: 1px solid #808080; */
-  background:  rgb(250, 199, 32);
-  margin: 50px 0 0 0;
-  position: relative;
-  width: 400px;
-  height: 400px;
-  border-radius: 100%;
-  overflow: hidden;
-}
-
-body > main.main > section.content > div.section.booking > div.image-side img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
 
 
 
@@ -2414,4 +2323,97 @@ footer.footer > .links > .right > span {
   line-height: 1.5;
   font-style: normal;
   text-align: center;
+}
+
+
+body > main.main > section.content > div.section.booking {
+  /* border: 1px solid #404040; */
+  margin: 50px 0 0 0;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body > main.main > section.content > div.section.booking > div.image-side,
+body > main.main > section.content > div.section.booking > div.info-side {
+  width: 50%;
+}
+
+body > main.main > section.content > div.section.booking > div.info-side {
+  display: flex;
+  flex-flow: column;
+  gap: 25px;
+}
+
+body > main.main > section.content > div.section.booking > div.info-side > h2.title {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-alt);
+  color: #25292e;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+body > main.main > section.content > div.section.booking > div.info-side > p {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-alt);
+  color: #25292e;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+body > main.main > section.content > div.section.booking > div.info-side > .actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 30px;
+  padding: 10px 0 0 0;
+}
+
+body > main.main > section.content > div.section.booking > div.info-side > .actions > a{
+  /* border: 1px solid #808080; */
+  text-decoration: none;
+  color: #404040;
+  font-family: var(--font-alt);
+  font-weight: 600;
+  padding: 15px 20px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+body > main.main > section.content > div.section.booking > div.info-side > .actions > a.learn {
+  border: 1px solid #808080;
+}
+
+body > main.main > section.content > div.section.booking > div.info-side > .actions > a.book {
+  color: #ffffff;
+  background:  rgb(223, 121, 26);
+  background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
+  background-color: rgb(247, 145, 162);
+}
+
+
+body > main.main > section.content > div.section.booking > div.image-side {
+  /* border: 1px solid #808080; */
+  background:  rgb(250, 199, 32);
+  margin: 50px 0 0 0;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+body > main.main > section.content > div.section.booking > div.image-side img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation()
         e.preventDefault()
         modalContainer.innerHTML = modal
-        console.log('clicked')
+        // console.log('clicked')
         // modalContainer.insertAdjacentElement('beforeend', modal)
       })
     });				

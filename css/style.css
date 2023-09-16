@@ -2048,7 +2048,7 @@ body > main.main > section.content > div.featured > div.photos {
 }
 
 body > main.main > section.content > div.featured > div.photos > div.photo {
-  border-radius: 25px;
+  border-radius: 30px;
   height: 100%;
   overflow: hidden;
   display: flex;
@@ -2068,7 +2068,7 @@ body > main.main > section.content > div.featured > div.photos > div.photo > img
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 25px;
+  border-radius: 30px;
 }
 
 body > main.main > section.content > div.featured > div.photos > div.photo.first {

@@ -1641,8 +1641,6 @@ body > main.main > section.content > div.section > div.content-items > div.shot 
   -o-border-radius: 15px;
 }
 
-
-
 body > main.main > section.content > div.featured {
   /* border: 1px solid blue; */
   margin: 0;
@@ -2034,7 +2032,7 @@ footer.footer > .links > .right > span {
   /* border: 1px solid #808080; */
   margin: 0;
   width: 100%;
-  padding: 50px 10% 40px 10%;
+  padding: 50px 10% 20px 10%;
   display: flex;
   flex-flow: column;
   color: #404040;

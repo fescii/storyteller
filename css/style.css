@@ -1643,271 +1643,6 @@ body > main.main > section.content > div.section > div.content-items > div.shot 
 
 
 
-
-body > main.main > section.content > div.section.people {
-  /* border: 1px solid #404040; */
-  margin: 50px 0 0 0;
-  display: flex;
-  flex-flow: column;
-  /* align-items: center; */
-  /* justify-content: center; */
-}
-
-body > main.main > section.content > div.section.people > .people-head {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 20px;
-}
-
-body > main.main > section.content > div.section.people > .people-head > h2.title {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-alt);
-  color: #25292e;
-  font-weight: 500;
-  font-size: 2.5rem;
-}
-
-body > main.main > section.content > div.section.people > .people-head > p {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-alt);
-  color: #25292e;
-  font-weight: 400;
-  font-size: 1.2rem;
-  line-height: 1.5;
-}
-
-body > main.main > section.content > div.section.people > div.people {
-  /* border: 1px solid #404040; */
-  display: flex;
-  flex-flow: row;
-  align-items: start;
-  justify-content: space-between;
-}
-
-body > main.main > section.content > div.section.people > div.people > div.person {
-  /* border: 1px solid #404040; */
-  background-color: #eaf4fc;
-  /* box-shadow: 1px 1px 10px rgba(185, 185, 185, 0.3); */
-  display: flex;
-  flex-flow: column;
-  padding: 15px 10px 15px 10px;
-  justify-content: center;
-  width: 350px;
-  gap: 15px;
-  border-radius: 25px;
-  background-position-x: 0%;
-  background-position-y: 0%;
-  background-repeat: repeat;
-  background-image: none;
-  box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.027);
-}
-
-body > main.main > section.content > div.section.people > div.people > div.person > .top {
-  /* border: 1px solid #ca1111; */
-  display: flex;
-  flex-flow: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-body > main.main > section.content > div.section.people > div.people > div.person > .top > .image {
-  /* border: 1px solid #11ca39; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 100px;
-  min-width: 100px;
-  min-height: 100px;
-  border-radius: 100%;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
-  -o-border-radius: 100%;
-}
-
-body > main.main > section.content > div.section.people > div.people > div.person > .top > .image > img {
-  /* border: 1px solid  rgb(238, 162, 92); */
-  background-color: #ffffff;
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  object-fit: cover;
-}
-
-body > main.main > section.content > div.section.people > div.people > div.person > .top > .info {
-  /* border: 1px solid #11ca39; */
-  display: flex;
-  flex-flow: column;
-  align-items: start;
-  justify-content: center;
-  gap: 10px;
-}
-
-body > main.main > section.content > div.section.people > div.people > div.person > .top > .info > div.name {
-  display: flex;
-  flex-flow: column;
-  align-items: start;
-  justify-content: center;
-}
-
-
-body > main.main > section.content > div.section.people > div.people > div.person > .top > .info > div.name h3 {
-  margin: 0;
-  font-family: var(--font-alt);
-  color: #404040;
-  font-weight: 500;
-}
-
-body > main.main > section.content > div.section.people > div.people > div.person > .top > .info > div.name .pro {
-  margin: 0;
-  font-family: var(--font-main);
-  color: #808080;
-  font-size: 0.8rem;
-  font-weight: 400;
-}
-
-body > main.main > section.content > div.section.people > div.people > div.person > .top > .info > div.about {
-  margin: 0;
-  font-family: var(--font-alt);
-  color: #404040;
-  font-size: 0.93rem;
-  font-weight: 400;
-}
-
-body > main.main > section.content > div.section.people > div.people > div.person > .footer {
-  /* border: 1px solid #11ca39; */
-  display: flex;
-  flex-flow: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  /* justify-content: space-between; */
-  gap: 10px;
-}
-
-body > main.main > section.content > div.section.people > div.people > div.person > .footer > .social {
-  /* border: 1px solid #1133ca; */
-  height: max-content;
-  padding: 2px;
-  width: 100px;
-  display: flex;
-  flex-flow: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-
-body > main.main > section.content > div.section.people > div.people > div.person > .footer > .social a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: #808080;
-}
-
-body > main.main > section.content > div.section.people > div.people > div.person > .footer > .social a:hover {
-  color: #374bff;
-}
-
-body > main.main > section.content > div.section.people > div.people > div.person > .footer > .social a  svg{
-  width: 16px;
-  height: 16px;
-}
-
-body > main.main > section.content > div.section.people > div.people > div.person > .footer >  a {
-  display: flex;
-  /* background-color: #374bff; */
-  background-color: rgb(236, 151, 39);
-  padding: 5px 12px;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  text-decoration: none;
-  color: #ffffff;
-  /* color: #808080; */
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
-}
-/* body > main.main > section.content > div.section.people > div.people > div.person > .footer >  a:hover {
-  color: #374bff;
-} */
-
-
-body > main.main > section.content > div.section.people > div.people > div.person > .footer > a  svg{
-  width: 17px;
-  height: 17px;
-  /* rotate: -40deg; */
-}
-
-
-body > main.main > section.content > div.section.people > div.more {
-  /* background-color: #ffffff; */
-  /* background-color: #f8f7f4; */
-  align-self: center;
-  width: 70%;
-  margin: 20px 0;
-  padding: 20px;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 25px;
-}
-
-body > main.main > section.content > div.section.people > div.more >  span.looking {
-  display: flex;
-  /* background-color:  #ffffff; */
-  padding: 5px 12px;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  text-decoration: none;
-  color: #808080;
-  border-radius: 50px;
-}
-
-body > main.main > section.content > div.section.people > div.more >  h2 {
-  margin: 0 0 15px 0;
-  font-family: var(--font-alt);
-  color: #404040;
-  font-weight: 500;
-  line-height: 1.4;
-  font-size: 1.7rem;
-  text-align: center;
-}
-
-body > main.main > section.content > div.section.people > div.more >  p {
-  margin: 0;
-  font-family: var(--font-alt);
-  color: #404040;
-  line-height: 1.4;
-  font-weight: 500;
-}
-
-body > main.main > section.content > div.section.people > div.more >  a.browse {
-  margin: 15px 0 0 0;
-  padding: 10px 20px;
-  /* background-color: #374bff; */
-  background-color: rgb(23, 20, 66);
-  text-decoration: none;
-  font-family: var(--font-alt);
-  color: #ffffff;
-  font-weight: 500;
-  border-radius: 50px;
-}
-
-
 body > main.main > section.content > div.featured {
   /* border: 1px solid blue; */
   margin: 0;
@@ -2330,7 +2065,7 @@ footer.footer > .links > .right > span {
 
 
 body > main.main > section.content > div.section.booking {
-  border: 1px solid #404040;
+  /* border: 1px solid #404040; */
   margin: 0;
   display: flex;
   flex-flow: row;
@@ -2420,4 +2155,271 @@ body > main.main > section.content > div.section.booking > div.image-side img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+
+body > main.main > section.content > div.section.people {
+  /* border: 1px solid #404040; */
+  padding: 70px 0 0 0;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+body > main.main > section.content > div.section.people > .people-head {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+
+body > main.main > section.content > div.section.people > .people-head > h2.title {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-alt);
+  color: #25292e;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+body > main.main > section.content > div.section.people > .people-head > p {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-alt);
+  color: #25292e;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+body > main.main > section.content > div.section.people > div.people {
+  /* border: 1px solid #404040; */
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person {
+  /* border: 1px solid #404040; */
+  background-color: #eaf4fc;
+  /* box-shadow: 1px 1px 10px rgba(185, 185, 185, 0.3); */
+  display: flex;
+  flex-flow: column;
+  padding: 15px 10px 15px 10px;
+  justify-content: center;
+  width: 350px;
+  gap: 15px;
+  border-radius: 25px;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-image: none;
+  box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.027);
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .top {
+  /* border: 1px solid #ca1111; */
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .top > .image {
+  /* border: 1px solid #11ca39; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .top > .image > img {
+  /* border: 1px solid  rgb(238, 162, 92); */
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .top > .info {
+  /* border: 1px solid #11ca39; */
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .top > .info > div.name {
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  justify-content: center;
+}
+
+
+body > main.main > section.content > div.section.people > div.people > div.person > .top > .info > div.name h3 {
+  margin: 0;
+  font-family: var(--font-alt);
+  color: #404040;
+  font-weight: 500;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .top > .info > div.name .pro {
+  margin: 0;
+  font-family: var(--font-main);
+  color: #808080;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .top > .info > div.about {
+  margin: 0;
+  font-family: var(--font-alt);
+  color: #404040;
+  font-size: 0.93rem;
+  font-weight: 400;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .footer {
+  /* border: 1px solid #11ca39; */
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 10px;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .footer > .social {
+  /* border: 1px solid #1133ca; */
+  height: max-content;
+  padding: 2px;
+  width: 100px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .footer > .social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #808080;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .footer > .social a:hover {
+  color: #374bff;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .footer > .social a  svg{
+  width: 16px;
+  height: 16px;
+}
+
+body > main.main > section.content > div.section.people > div.people > div.person > .footer >  a {
+  display: flex;
+  /* background-color: #374bff; */
+  background-color: rgb(236, 151, 39);
+  padding: 5px 12px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  /* color: #808080; */
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+/* body > main.main > section.content > div.section.people > div.people > div.person > .footer >  a:hover {
+  color: #374bff;
+} */
+
+
+body > main.main > section.content > div.section.people > div.people > div.person > .footer > a  svg{
+  width: 17px;
+  height: 17px;
+  /* rotate: -40deg; */
+}
+
+
+body > main.main > section.content > div.section.people > div.more {
+  /* background-color: #ffffff; */
+  /* background-color: #f8f7f4; */
+  align-self: center;
+  width: 70%;
+  margin: 20px 0;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+
+body > main.main > section.content > div.section.people > div.more >  span.looking {
+  display: flex;
+  /* background-color:  #ffffff; */
+  padding: 5px 12px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #808080;
+  border-radius: 50px;
+}
+
+body > main.main > section.content > div.section.people > div.more >  h2 {
+  margin: 0 0 15px 0;
+  font-family: var(--font-alt);
+  color: #404040;
+  font-weight: 500;
+  line-height: 1.4;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+body > main.main > section.content > div.section.people > div.more >  p {
+  margin: 0;
+  font-family: var(--font-alt);
+  color: #404040;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+body > main.main > section.content > div.section.people > div.more >  a.browse {
+  margin: 15px 0 0 0;
+  padding: 10px 20px;
+  /* background-color: #374bff; */
+  background-color: rgb(23, 20, 66);
+  text-decoration: none;
+  font-family: var(--font-alt);
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 50px;
 }

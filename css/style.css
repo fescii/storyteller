@@ -54,6 +54,10 @@
 }
 
 html {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   font-family: var(--font-main);
   width: 100%;
@@ -366,7 +370,7 @@ body > main.main > section.landing > .numbers > span.no.active:nth-of-type(even)
 
 body > main.main > section.landing > .content-one {
   /* border: 1px solid rgb(55, 201, 11); */
-  padding: 0 10% 0 10%;
+  padding: 0 10% 20px 10%;
   width: 100%;
   min-width: 100%;
   display: flex;

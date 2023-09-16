@@ -8,21 +8,28 @@ Email: isfescii@gmail.com
 
 */
 
-@media screen and (min-width: 1250px) {
-  
-}
-
-
-@media screen and (max-width: 1250px) {
- 
-}
 
 @media screen and (max-width: 1150px) {
- 
+  body > main.main > header.header {
+    border: 2px solid rgb(160, 100, 11);
+    padding: 0 5% 0 5%;
+  }
+  body > main.main > section.landing > .content-one {
+    border: 1px solid rgb(55, 201, 11);
+    padding: 0 5% 20px 5%;
+  }
+  
 }
 
 @media screen and (max-width: 1100px) {
   
+}
+
+@media screen and (max-width: 1000px) {
+  body > main.main > header.header {
+    border: 2px solid rgb(16, 160, 11);
+    padding: 0 20px;
+  }
 }
 
 @media screen and (max-width: 950px) {

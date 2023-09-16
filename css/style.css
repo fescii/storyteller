@@ -382,7 +382,7 @@ body > main.main > section.landing > .content-one {
 
 body > main.main > section.landing > .content-one > .text {
   /* border: 1px solid rgb(241, 3, 95); */
-  width: 45%;
+  width: 50%;
   display: flex;
   flex-flow: column;
   /* align-items: center; */

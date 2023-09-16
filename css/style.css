@@ -1595,7 +1595,7 @@ body > main.main > section.content > div.section > div.content-items > div.shot 
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   font-weight: 500;
   background: linear-gradient(180deg, #00000002, #00000018, #00000048, #000000a6);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: start;
   gap: 5px;
@@ -1998,6 +1998,7 @@ body > main.main > section.content > div.section.people > div.more >  a.browse {
 body > main.main > section.content > div.featured {
   /* border: 1px solid blue; */
   margin: 0;
+  width: 100%;
   display: flex;
   flex-flow: column;
   justify-content: space-between;

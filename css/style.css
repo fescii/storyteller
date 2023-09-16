@@ -459,8 +459,8 @@ body > main.main > section.landing > .numbers > span.no.active:nth-of-type(3)  >
 
 body > main.main > section.landing > .numbers > span.no.active:nth-of-type(2)  > span.pick {
   background:  rgb(223, 121, 26);
-  background: linear-gradient(0deg, rgb(223, 49, 26) 0%, rgb(240, 83, 78) 100%);
-  background-color: rgb(247, 145, 162);
+  background: linear-gradient(0deg, rgb(226, 71, 50) 0%, rgb(245, 113, 109) 100%);
+  background-color: rgb(192, 108, 122);
 }
 
 body > main.main > section.landing > .numbers > span.no.active:nth-of-type(4)  > span.pick {
@@ -581,7 +581,9 @@ body > main.main > section.landing > .content-one > .text  .actions > .action.bo
 }
 
 body > main.main > section.landing > .content-one.second > .text  .actions > .action.book { 
-  background: linear-gradient(0deg, rgb(223, 49, 26) 0%, rgb(240, 83, 78) 100%);
+  background:  rgb(223, 121, 26);
+  background: linear-gradient(0deg, rgb(226, 71, 50) 0%, rgb(245, 113, 109) 100%);
+  background-color: rgb(192, 108, 122);
 }
 
 body > main.main > section.landing > .content-one.third > .text  .actions > .action.book {
@@ -629,7 +631,9 @@ body > main.main > section.landing > .content-one > .image > .back-color {
 }
 
 body > main.main > section.landing > .content-one.second > .image > .back-color {
-  background:  rgb(252, 84, 42);
+  background:  rgb(223, 121, 26);
+  background: linear-gradient(0deg, rgb(226, 71, 50) 0%, rgb(245, 113, 109) 100%);
+  background-color: rgb(192, 108, 122);
 }
 
 body > main.main > section.landing > .content-one.third > .image > .back-color {

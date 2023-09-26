@@ -90,9 +90,9 @@ body > main.main > section.sidebar > .head > .collapse > span.house {
 
 body > main.main > section.sidebar > .head > .collapse > span.house > span.line {
   /* border: 1px solid rgb(20, 115, 224); */
-  display: inline-block;
+  display: none;
   line-height: 1;
-  min-height: 3px;
+  min-height: 2px;
   width: 15px;
   border-radius: 5px;
   background-color: #808080;

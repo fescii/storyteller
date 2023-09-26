@@ -47,7 +47,7 @@ body > main.main {
 
 
 body > main.main > section.sidebar {
-  border-right: 1px solid #80808027;
+  /* border-right: 1px solid #80808027; */
   padding: 20px 0 0 0;
   min-width: 150px;
   max-width: 150px;
@@ -209,7 +209,7 @@ body > main.main > section.sidebar > .menu > ul.menu-items > li.item.active svg 
 }
 
 body > main.main > section.content {
-  /* border-right: 1px solid #80808027; */
+  /* border: 1px solid #80808027; */
   min-width: calc(100% - 150px);
   padding: 0 20px;
   min-height: 100vh;
@@ -220,7 +220,6 @@ body > main.main > section.content {
 }
 
 body > main.main > section.content > .head {
-  border-bottom: 1px solid #80808017;
   margin: 0;
   padding: 20px 20px 15px 0;
   display: flex;
@@ -228,10 +227,10 @@ body > main.main > section.content > .head {
   justify-content: space-between;
   gap: 0;
   z-index: 10;
-  backdrop-filter: blur(3px);
-  /* background-color: #ffffffa4; */
-  -webkit-backdrop-filter: blur(84px);
-  backdrop-filter: blur(84px);
+  /* backdrop-filter: blur(3px); */
+  background-color: #ffffff;
+  /* -webkit-backdrop-filter: blur(84px); */
+  /* backdrop-filter: blur(84px); */
   position: sticky;
   top: 0;
 }
@@ -407,7 +406,9 @@ body > main.main > section.content > .head > .profile > .photo span.name > span.
 }
 
 body > main.main > section.content > .content-container {
-  /* border: 1px solid #808080; */
+  border: 1px solid #80808017;
+  border-right: none;
+  min-height: 100vh;
   margin: 0;
   padding: 20px 20px 50px 20px;
   display: flex;
@@ -415,6 +416,7 @@ body > main.main > section.content > .content-container {
   align-items: start;
   justify-content: start;
   gap: 0;
+  border-top-left-radius: 25px;
 }
 
 body > main.main > section.content > .content-container > .activities {
@@ -1030,7 +1032,7 @@ body > main.main > section.content > .content-container > .bookings .booking > .
   margin: 16px 0 0 0;
   padding: 10px 0 0 0;
   width: 100%;
-  display: none;
+  display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: space-between;

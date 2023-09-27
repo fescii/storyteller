@@ -78,7 +78,7 @@ export default class bookingContainer extends HTMLElement {
     return `
       <div class="head">
         <div class="left">
-          <div class="date">
+          <div class="date ${this.getAttribute('status')}">
             <span class="day">${this.getAttribute('date-day')}</span>
             <span class="no">${this.getAttribute('date-date')}</span>
           </div>
@@ -222,6 +222,18 @@ export default class bookingContainer extends HTMLElement {
         border-radius: 15px;
       }
 
+      .head > .left > .date.cancelled {
+        background-color: #fb482c19;
+      }
+
+      .head > .left > .date.pending {
+        background-color: #ffcc004c;
+      }
+
+      .head > .left > .date.finished {
+        background-color: #099eef18;
+      }
+
       .head > .left > .date > span.day {
         margin: 0;
         color: #808080;
@@ -229,6 +241,7 @@ export default class bookingContainer extends HTMLElement {
         font-size: 0.85rem;
         line-height: 1;
       }
+      
 
       .head > .left > .date >  span.no {
         margin: 0;
@@ -240,6 +253,18 @@ export default class bookingContainer extends HTMLElement {
         line-height: 1;
       }
 
+      .head > .left > .date.cancelled > span.no{
+        color: #f84125;
+      }
+
+      .head > .left > .date.pending > span.no{
+        color: #ff9500;
+      }
+
+      .head > .left > .date.finished > span.no{
+        color: #08b86f;
+      }
+      
       .head > .left .quick-info {
         /* border: 1px solid #808080; */
         margin: -3px 0 0 0;

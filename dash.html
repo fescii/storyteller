@@ -8,6 +8,16 @@
   <link rel="stylesheet" href="css/dash.css">
 
   <title>Storyteller Arts</title>
+
+  <script type="module">
+    //Apps-Modals
+    import BookingContainer from "./js/booking.js";
+
+    //Apps-modals
+    customElements.define("book-container", BookingContainer);
+
+  </script>
+
 </head>
 
 <body>
@@ -354,64 +364,15 @@
         </p>
       </div>
       <div class="bookings">
-        <div class="booking">
-          <div class="head">
-            <div class="left">
-              <div class="date">
-                <span class="day">Mon</span>
-                <span class="no">20</span>
-              </div>
-              <div class="quick-info">
-                  <span class="top">
-                    <span class="month">Jul</span>
-                    <span class="dot"></span>
-                    <span class="service">Wedding</span>
-                  </span>
-                <p class="location">Nairobi area, near city park</p>
-              </div>
-            </div>
-            <div class="right">
-              <span class="text">Expand</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="content">
-            <div class="section bio">
-              <div class="infos">
-                <div class="info name">
-                  <h3 class="label">Name</h3>
-                  <p class="text">Fredrick Ochieng</p>
-                </div>
-                <div class="info email">
-                  <h3 class="label">Phone</h3>
-                  <p class="text">+254713253018</p>
-                </div>
-                <div class="info number">
-                  <h3 class="label">Email</h3>
-                  <p class="text">isfescii@gmail.com</p>
-                </div>
-                <div class="info package">
-                  <h3 class="label">Package</h3>
-                  <p class="text">Package II</p>
-                </div>
-                <div class="info other">
-                  <h3 class="label">Other</h3>
-                  <p class="text">Lorem ipsum dolor sit amet consecrate, adipisicing elit. Fuga, reprehenderit iusto! Quidem earum distinctio, tenetur nesciunt sed aperiam libero beatae sequi?</p>
-                </div>
-              </div>
-            </div>
-            <div class="section coverage">
-              <div class="infos">
-                <div class="info coverage">
-                  <h3 class="label">Coverage</h3>
-                  <p class="info">About 50 - 100 people to be covered</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <book-container
+          date-day="Mon" date-date="20" date-month="Sep" service="Graduation"
+          location="Nairobi area, near city park"
+          full-name="Fredrick Ochieng" phone="+254713253018" email="isfescii@gmail.com"
+          package="Package II" 
+          other="Lorem ipsum dolor sit amet consecrate, adipisicing elit. Fuga, reprehenderit iusto! Quidem earum distinctio, tenetur nesciunt sed aperiam libero beatae sequi?"
+          coverage="About 50 - 100 people to be covered"
+        >
+        </book-container>
       </div>
     </div>
   </section>

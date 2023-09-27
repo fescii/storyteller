@@ -28,8 +28,8 @@ export default class bookingContainer extends HTMLElement {
 
     const arrowUp = `
       <span class="text">Collapse</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
       </svg>
     `
 
@@ -151,7 +151,7 @@ export default class bookingContainer extends HTMLElement {
         /* border: 1px solid #ce0404; */
         border-bottom: 1px solid #80808027;
         position: relative;
-        padding: 10px 5px;
+        padding: 0 5px;
         width: 100%;
         display: flex;
         flex-flow: column;
@@ -163,7 +163,7 @@ export default class bookingContainer extends HTMLElement {
 
       .head {
         /* border: 1px solid #81ce04; */
-        padding: 0;
+        padding: 15px 0;
         width: 100%;
         display: flex;
         align-items: center;
@@ -293,8 +293,8 @@ export default class bookingContainer extends HTMLElement {
 
       .content {
         border-top: 1px dashed #80808047;
-        margin: 16px 0 0 0;
-        padding: 10px 0 0 0;
+        margin: 0;
+        padding: 15px 0 0 0;
         width: 100%;
         display: none;
         flex-flow: column;
@@ -339,7 +339,7 @@ export default class bookingContainer extends HTMLElement {
         margin: 0;
         color: #404040;
         font-family: var(--font-alt);
-        font-size: 1.09rem;
+        font-size: 1rem;
         font-weight: 500;
       }
 
@@ -347,7 +347,7 @@ export default class bookingContainer extends HTMLElement {
         margin: 0;
         color: #404040;
         font-family: var(--font-alt);
-        font-size: 1rem;
+        font-size: 0.95rem;
         font-weight: 400;
         line-height: 1.4;
       }

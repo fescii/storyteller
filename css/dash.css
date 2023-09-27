@@ -64,10 +64,10 @@ body > main.main > section.sidebar {
 
 body > main.main > section.sidebar > .head {
   /* border: 1px solid #404040; */
-  margin: 0 0 20px 0;
+  margin: 0 0 25px 0;
   display: flex; 
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
   gap: 0;
 }
 
@@ -109,6 +109,8 @@ body > main.main > section.sidebar > .head > .logo {
   padding: 0;
   display: flex;
   flex-flow: column;
+  align-items: center;
+  /* justify-content: start; */
 }
 
 body > main.main > section.sidebar > .head > .logo  span.bar{
@@ -142,7 +144,7 @@ body > main.main > section.sidebar > .head > .logo  span.art{
   font-family: var(--font-alt);
   letter-spacing: 4px;
   font-weight: 500;
-  text-align: center;
+  /* text-align: center; */
 }
 
 body > main.main > section.sidebar > .menu {

@@ -19,20 +19,49 @@ export default class bookingContainer extends HTMLElement {
 
   connectedCallback() {
     // console.log('We are inside connectedCallback');
-
-    let content  = this.shadowObj.querySelector('.item');
-
-    if (content) {
-      content.addEventListener('click', () => {
-        this.openDetails();
-      });
-    }
-
+    
+    this.openDetails()
   }
 
   openDetails() {
     // updating the state
-   
+
+    const arrowUp = `
+      <span class="text">Collapse</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+      </svg>
+    `
+
+    const arrowDown = `
+      <span class="text">Expand</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+      </svg>
+    `
+
+    const expand  = this.shadowObj.querySelector('.head > .right');
+    const content  = this.shadowObj.querySelector('.content');
+
+    if (content && expand) {
+      expand.addEventListener('click', () => {
+        // console.log('Clicked!')
+        switch (expand.dataset.expanded) {
+          case 'false':
+            content.style.display = 'flex'
+            expand.dataset.expanded = 'true'
+            expand.innerHTML = arrowUp
+            break;
+          case 'true':
+            content.style.display = 'none'
+            expand.dataset.expanded = 'false'
+            expand.innerHTML = arrowDown
+            break;
+          default:
+            break;
+        }
+      });
+    }
   }
 
   getTemplate() {
@@ -62,7 +91,7 @@ export default class bookingContainer extends HTMLElement {
             <p class="location">${this.getAttribute('location')}</p>
           </div>
         </div>
-        <div class="right">
+        <div class="right" data-expanded="false">
           <span class="text">Expand</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -238,7 +267,6 @@ export default class bookingContainer extends HTMLElement {
       }
 
       .head > .right {
-        /* border: 1px solid #80808027; */
         padding: 5px 8px 5px 10px;
         display: flex;
         align-items: center;

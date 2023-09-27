@@ -87,6 +87,8 @@ export default class bookingContainer extends HTMLElement {
               <span class="month">${this.getAttribute('date-month')}</span>
               <span class="dot"></span>
               <span class="service">${this.getAttribute('service')}</span>
+              <span class="dot"></span>
+              <span class="status ${this.getAttribute('status')}">${this.getStatus(this.getAttribute('status'))}</span>
             </span>
             <p class="location">${this.getAttribute('location')}</p>
           </div>
@@ -168,6 +170,23 @@ export default class bookingContainer extends HTMLElement {
         </div>
       </div>
     `
+  }
+
+  getStatus(status){
+    switch (status) {
+      case 'not-started':
+        return 'Not started'
+      case 'started':
+        return 'Started'
+      case 'finished':
+        return 'Finished'
+      case 'pending':
+        return 'Pending'
+      case 'cancelled':
+        return 'Cancelled'
+      default:
+        return 'Not started'
+    }
   }
 
   getStyles() {
@@ -300,6 +319,24 @@ export default class bookingContainer extends HTMLElement {
         font-family: inherit;
       }
 
+      .head > .left .quick-info > .top .status {
+        /* color: #08b86f; */
+        color: #606060;
+        /* font-size: 0.8rem; */
+        font-family: inherit;
+      }
+
+      .head > .left .quick-info > .top .status.finished {
+        color: #08b86f;
+      }
+
+      .head > .left .quick-info > .top .status.pending {
+        color: #ff9500;
+      }
+      .head > .left .quick-info > .top .status.cancelled {
+        color: #f84125;
+      }
+
       .head > .left .quick-info > .top .dot {
         padding: 0;
         margin: 2px 0 0 0;
@@ -427,12 +464,12 @@ export default class bookingContainer extends HTMLElement {
         text-decoration: none;
         color: #666666;
         cursor: pointer;
-        padding: 5px 12px;
+        padding: 5px 16px 5px 12px;
         display: flex;
         flex-flow: row;
         align-items: center;
         justify-content: center;
-        gap: 5px;
+        gap: 7px;
         border-radius: 25px;
       }
 

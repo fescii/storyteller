@@ -951,7 +951,7 @@ body > main.main > section.content > .content-container > .bookings {
   width: 100%;
   display: flex;
   flex-flow: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   gap: 10px;
 }

@@ -310,9 +310,12 @@ export default class bookingContainer extends HTMLElement {
 
       .head > .right > span.text {
         color: inherit;
+        font-size: 0.9rem;
       }
 
       .head > .right > svg {
+        width: 14px;
+        height: 14px;
         fill: inherit;
       }
 

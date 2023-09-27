@@ -479,7 +479,7 @@ body > main.main > section.content > .content-container {
   /* border-left: 1px solid #80808017; */
   min-height: 100vh;
   margin: 0;
-  padding: 20px 20px 50px 20px;
+  padding: 20px 10px 50px 10px;
   display: flex;
   flex-flow: column;
   align-items: start;
@@ -945,7 +945,8 @@ body > main.main > section.content > .content-container > .coming-soon  p {
 
 body > main.main > section.content > .content-container > .bookings {
   /* border: 1px solid #808080; */
-  position: relative;
+  /* position: relative; */
+  margin: 0;
   padding: 0;
   width: 100%;
   display: flex;
@@ -959,7 +960,7 @@ body > main.main > section.content > .content-container > .bookings .booking {
   /* border: 1px solid #ce0404; */
   border-bottom: 1px solid #80808027;
   position: relative;
-  padding: 10px 15px 10px 15px;
+  padding: 10px 5px;
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -1039,8 +1040,18 @@ body > main.main > section.content > .content-container > .bookings .booking > .
   color: #808080;
 }
 
-body > main.main > section.content > .content-container > .bookings .booking > .head > .left .quick-info > .top .status {
-  color: #08b86f;
+body > main.main > section.content > .content-container > .bookings .booking > .head > .left .quick-info > .top .month {
+  /* color: #08b86f; */
+  color: #808080;
+  /* font-family: inherit; */
+  font-size: 1rem;
+}
+
+
+body > main.main > section.content > .content-container > .bookings .booking > .head > .left .quick-info > .top .service {
+  /* color: #08b86f; */
+  color: #606060;
+  font-family: inherit;
 }
 
 body > main.main > section.content > .content-container > .bookings .booking > .head > .left .quick-info > .top .dot {
@@ -1133,6 +1144,7 @@ body > main.main > section.content > .content-container > .bookings .booking > .
   margin: 0;
   color: #404040;
   font-family: var(--font-alt);
+  font-size: 1.09rem;
   font-weight: 500;
 }
 
@@ -1140,43 +1152,7 @@ body > main.main > section.content > .content-container > .bookings .booking > .
   margin: 0;
   color: #404040;
   font-family: var(--font-alt);
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
-}
-
-body > main.main > section.content > .content-container > .bookings .booking > .content > .section.tags {
-  border-top: 1px solid #80808017;
-  margin: 15px 0 0 0;
-  padding: 15px 0 0 0;
-  display: flex;
-  flex-flow: column;
-  gap: 8px;
-  width: 100%;
-}
-
-body > main.main > section.content > .content-container > .bookings .booking > .content > .section.tags .infos > .info {
-  gap: 12px;
-  width: 400px;
-}
-
-body > main.main > section.content > .content-container > .bookings .booking > .content > .section .infos > .info > .options {
-  /*border: 1px solid #808080;*/
-  width: 100%;
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  /* justify-content: center; */
-  align-items: start;
-  gap: 12px;
-}
-
-body > main.main > section.content > .content-container > .bookings .booking > .content > .section .infos > .info > .options > .option {
-  border: 1px solid #80808037;
-  font-size: 1rem;
-  padding: 5px 20px;
-  border-radius: 50px;
-  color: #666666;
-  cursor: pointer;
-  font-family: var(--font-alt);
-  line-height: 1;
 }

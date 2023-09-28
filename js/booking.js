@@ -71,7 +71,7 @@ export default class bookingContainer extends HTMLElement {
       ${this.getBody()}
       ${this.getStyles()}
     
-    `;
+    `
   }
 
   getHeader(){

@@ -8,7 +8,6 @@ export default class bookingContainer extends HTMLElement {
     this.shadowObj = this.attachShadow({mode: 'open'});
 
     this.render();
-
   }
 
 

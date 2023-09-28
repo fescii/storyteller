@@ -493,7 +493,7 @@ body > main.main > section.content > .content-container > .activities {
   width: 100%;
   margin: 0;
   padding: 0;
-  display: none;
+  display: flex;
   flex-flow: column;
   /* align-items: center; */
   justify-content: start;

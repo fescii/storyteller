@@ -504,9 +504,9 @@ body > main.main > section.content > .content-container > .bookings {
 }
 
 body > main.main > section.content > .content-container > .people-container {
-  border: 1px solid #808080;
+  /* border: 1px solid #808080; */
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -516,13 +516,51 @@ body > main.main > section.content > .content-container > .people-container {
 }
 
 body > main.main > section.content > .content-container > .people-container > .header {
-  border: 1px solid #b81313;
+  border-bottom: 1px solid #80808017;
   margin: 0;
-  padding: 0;
+  padding: 20px 0;
   width: 100%;
   display: flex;
   flex-flow: row;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+}
+
+body > main.main > section.content > .content-container > .people-container > .header > .left > p {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-alt);
+  color: #404040;
+  font-size: 1.1rem;
+}
+
+body > main.main > section.content > .content-container > .people-container > .header > .right {
+  /* border: 1px solid #80808017; */
+  /* background-color: #08b86f; */
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  background-color: rgb(247, 145, 162);
+  padding: 5px 15px 6px 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+body > main.main > section.content > .content-container > .people-container > .header > .right svg {
+  /* border: 1px solid #80808017; */
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body > main.main > section.content > .content-container > .people-container > .header > .right span {
+  font-family: var(--font-alt);
+  font-weight: 500;
 }

@@ -798,3 +798,78 @@ body > main.main > section.content > .content-container > .people-container > .c
 .people-container > .add > .field > input:focus {
   border: 1px solid #08b86f60;
 }
+
+
+
+body > main.main > section.content > .content-container > .schedules-container {
+  /* border: 1px solid #808080; */
+  margin: 0;
+  padding: 0 10px;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 10px;
+}
+
+body > main.main > section.content > .content-container > .schedules-container > .header {
+  border-bottom: 1px solid #80808017;
+  margin: 0;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+body > main.main > section.content > .content-container > .schedules-container > .header > .left > p {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-alt);
+  color: #404040;
+  font-family: 500;
+  font-size: 1.2rem;
+}
+
+body > main.main > section.content > .content-container > .schedules-container > .header > .right {
+  /* border: 1px solid #80808017; */
+  background-color: rgba(20,167,62,1);
+  padding: 5px 20px 6px 15px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+body > main.main > section.content > .content-container > .schedules-container > .header > .right svg {
+  /* border: 1px solid #80808017; */
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body > main.main > section.content > .content-container > .schedules-container > .header > .right span {
+  font-family: var(--font-alt);
+  font-weight: 500;
+}
+
+body > main.main > section.content > .content-container > .schedules-container > .content {
+  border: 1px solid #808080;
+  margin: 0;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}

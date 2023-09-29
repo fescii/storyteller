@@ -11,8 +11,8 @@
 
   <script type="module">
     //Apps-Modals
-    import BookingContainer from "./js/booking.js";
-    import StatContainer from "./js/stats.js";
+    import BookingContainer from "./js/component.booking.js";
+    import StatContainer from "./js/component.stats.js";
 
     //Apps-modals
     customElements.define("book-container", BookingContainer);
@@ -197,7 +197,11 @@
       </div>
     </div>
     <div class="content-container" id="content-container">
-      <stat-container></stat-container>
+      <stat-container bookings="163" date="Sep 23" completed="57" upcoming="33"
+       cancelled="8" visitors="1,400" interactions="1,360"
+      >
+      </stat-container>
+
       <div class="bookings">
         <book-container
           date-day="Sun" date-date="12" date-month="May" service="Graduation"

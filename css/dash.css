@@ -873,3 +873,16 @@ body > main.main > section.content > .content-container > .schedules-container >
   justify-content: start;
   gap: 20px;
 }
+
+.schedules-container > .content > .day{
+  border: 1px solid #808080;
+  margin: 0;
+  padding: 10px 0;
+  width: max-content;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}

@@ -489,6 +489,7 @@ body > main.main > section.content > .content-container {
 }
 
 
+
 body > main.main > section.content > .content-container > .bookings {
   /* border: 1px solid #808080; */
   /* position: relative; */
@@ -499,5 +500,29 @@ body > main.main > section.content > .content-container > .bookings {
   flex-flow: column;
   /* align-items: center; */
   justify-content: center;
+  gap: 10px;
+}
+
+body > main.main > section.content > .content-container > .people-container {
+  border: 1px solid #808080;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 10px;
+}
+
+body > main.main > section.content > .content-container > .people-container > .header {
+  border: 1px solid #b81313;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
   gap: 10px;
 }

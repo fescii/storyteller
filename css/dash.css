@@ -604,6 +604,11 @@ body > main.main > section.content > .content-container > .people-container > .c
   width: 100px;
   height: 100px;
   gap: 0;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-image: none;
+  box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.034);
   border-radius: 50px;
 }
 
@@ -665,6 +670,7 @@ body > main.main > section.content > .content-container > .people-container > .c
   text-decoration: none;
   color: #808080;
   border-radius: 50px;
+
 }
 
 .people-container > .content > .person > .socials > a:hover svg path { 

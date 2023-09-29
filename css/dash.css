@@ -910,6 +910,7 @@ body > main.main > section.content > .content-container > .schedules-container >
 
 .schedules-container > .content > .day .options >.option {
   background-color: #f5f5f5;
+  color: #666666;
   padding: 5px 15px 5px 10px;
   display: flex;
   flex-flow: row;
@@ -927,5 +928,5 @@ body > main.main > section.content > .content-container > .schedules-container >
 }
 
 .schedules-container > .content > .day .options > .option svg path {
-  fill: #404040;
+  fill: #666666;
 }

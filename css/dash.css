@@ -884,5 +884,14 @@ body > main.main > section.content > .content-container > .schedules-container >
   flex-wrap: wrap;
   align-items: center;
   justify-content: start;
-  gap: 20px;
+  gap: 30px;
+}
+
+.schedules-container > .content > .day * {
+  font-family: var(--font-alt);
+}
+.schedules-container > .content > .day .date {
+  border: 1px solid #808080;
+  color: #808080;
+  font-size: 0.95rem;
 }

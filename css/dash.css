@@ -578,7 +578,7 @@ body > main.main > section.content > .content-container > .people-container > .c
 body > main.main > section.content > .content-container > .people-container > .content > .person {
   border: 1px solid #80808017;
   margin: 0;
-  padding: 20px;
+  padding: 15px;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -621,7 +621,7 @@ body > main.main > section.content > .content-container > .people-container > .c
 
 .people-container > .content > .person > .head > .info {
   /* border: 1px solid #808080; */
-  padding: 12px 0 20px 0;
+  padding: 8px 0 18px 0;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -642,7 +642,7 @@ body > main.main > section.content > .content-container > .people-container > .c
   font-family: var(--font-alt);
   font-weight: 400;
   color: #808080;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .people-container > .content > .person > .socials {

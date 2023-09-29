@@ -537,12 +537,9 @@ body > main.main > section.content > .content-container > .people-container > .h
 
 body > main.main > section.content > .content-container > .people-container > .header > .right {
   /* border: 1px solid #80808017; */
-  /* background-color: #08b86f; */
-  background: #ad5389;
-  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
-  background-color: rgb(247, 145, 162);
-  padding: 5px 15px 6px 10px;
-  border-radius: 15px;
+  background-color: rgba(20,167,62,1);
+  padding: 5px 20px 6px 15px;
+  border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -563,4 +560,115 @@ body > main.main > section.content > .content-container > .people-container > .h
 body > main.main > section.content > .content-container > .people-container > .header > .right span {
   font-family: var(--font-alt);
   font-weight: 500;
+}
+
+body > main.main > section.content > .content-container > .people-container > .content {
+  /* border: 1px solid #808080; */
+  margin: 0;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}
+
+body > main.main > section.content > .content-container > .people-container > .content > .person {
+  border: 1px solid #80808017;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.people-container > .content > .person > .head {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.people-container > .content > .person > .head > .profile {
+  /* border: 1px solid #808080; */
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  gap: 0;
+  border-radius: 50px;
+}
+
+.people-container > .content > .person > .head > .profile > img {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 0;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+.people-container > .content > .person > .head > .info {
+  /* border: 1px solid #808080; */
+  padding: 12px 0 20px 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.people-container > .content > .person > .head > .info > h4 {
+  margin: 0;
+  font-family: var(--font-alt);
+  font-weight: 500;
+  color: #404040;
+  font-size: 1.1rem;
+}
+
+.people-container > .content > .person > .head > .info > span.role {
+  margin: 0;
+  font-family: var(--font-alt);
+  font-weight: 400;
+  color: #808080;
+  font-size: 0.9rem;
+}
+
+.people-container > .content > .person > .socials {
+  /* border: 1px solid #808080; */
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.people-container > .content > .person > .socials > a {
+  /* border: 1px solid #808080; */
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #808080;
+}
+
+.people-container > .content > .person > .socials > a:hover { 
+  color: #08b86f;
+}
+
+.people-container > .content > .person > .socials > a svg {
+  width: 20px;
+  height: 20px;
 }

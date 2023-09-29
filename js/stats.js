@@ -1,4 +1,4 @@
-export default class statContainer extends HTMLElement {
+export default class StatContainer extends HTMLElement {
   constructor() {
 
     // We are not even going to touch this.
@@ -26,7 +26,7 @@ export default class statContainer extends HTMLElement {
     // Show HTML Here
     return `
       ${this.getBody()}
-    
+      ${this.getStyles()}
     `
   }
 
@@ -47,8 +47,6 @@ export default class statContainer extends HTMLElement {
             <span class="total">124 Bookings</span>
           </div>      
           ${this.getCards()}
-
-          ${this.getOptions()} 
         </div>
         <div class="right">
           ${this.getAnalytics()}
@@ -176,40 +174,6 @@ export default class statContainer extends HTMLElement {
           <span class="time">10:00</span>
         </div>
         <div class="up">Up next</div>
-      </div>
-    `
-  }
-
-  getOptions(){
-    return `
-      <div class="options">
-				<span class="option" data-value="event">
-					<span class="text">Event</span>
-				</span>
-        <span class="option" data-value="hiking">
-					<span class="text">Hiking</span>
-				</span>
-        <span class="option" data-value="outdoor">
-					<span class="text">Outdoor</span>
-				</span>
-        <span class="option" data-value="party">
-					<span class="text">Party</span>
-			  </span>
-        <span class="option" data-value="advertising">
-					<span class="text">Advertising</span>
-				</span>
-        <span class="option" data-value="wedding">
-					<span class="text">Wedding</span>
-				</span>
-        <span class="option" data-value="videography">
-					<span class="text">Videography</span>
-				</span>
-        <span class="option" data-value="editing">
-					<span class="text">Editing</span>
-				</span>
-        <span class="option" data-value="product">
-					<span class="text">Product</span>
-				</span>
       </div>
     `
   }
@@ -572,6 +536,64 @@ export default class statContainer extends HTMLElement {
         gap: 0;
       }
 
+      .upcoming > .bookings .booking > .info  p {
+        margin: 0;
+        color: #404040;
+        font-family: var(--font-alt);
+        font-weight: 500;
+        /* font-size: 1.1rem; */
+      }
+
+      .upcoming > .bookings .booking > .info  span {
+        margin: 0;
+        color: #808080;
+        font-family: var(--font-alt);
+        font-size: 0.85rem;
+      }
+
+      .upcoming > .bookings .booking > .info  span.time {
+        font-size: 0.8rem;
+      }
+
+      .upcoming > .bookings .booking > .date {
+        /* border: 1px solid #808080; */
+        background-color: #099eef18;
+        padding: 10px 15px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        border-radius: 15px;
+      }
+
+      .upcoming > .bookings .booking > .date > span.day {
+        margin: 0;
+        color: #808080;
+        font-family: var(--font-alt);
+        font-size: 0.9rem;
+        line-height: 1;
+      }
+
+      .upcoming > .bookings .booking > .date >  span.no {
+        margin: 0;
+        display: inline-block;
+        color:  #08b86f;
+        font-family: var(--font-alt);
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1;
+      }
+
+
+      .upcoming > .bookings .booking > .up {
+        position: absolute;
+        right: 20px;
+        color: #808080;
+        font-family: var(--font-alt);
+        font-size: 1rem;
+        line-height: 1;
+      }
     
       
     </style>

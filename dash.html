@@ -12,10 +12,11 @@
   <script type="module">
     //Apps-Modals
     import BookingContainer from "./js/booking.js";
+    import StatContainer from "./js/stats.js";
 
     //Apps-modals
     customElements.define("book-container", BookingContainer);
-
+    customElements.define("stat-container", StatContainer)
   </script>
 
 </head>
@@ -196,6 +197,7 @@
       </div>
     </div>
     <div class="content-container" id="content-container">
+      <stat-container></stat-container>
       <div class="bookings">
         <book-container
           date-day="Sun" date-date="12" date-month="May" service="Graduation"

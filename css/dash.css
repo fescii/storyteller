@@ -745,6 +745,7 @@ body > main.main > section.content > .content-container > .people-container > .c
 
 .people-container > .add > .field > label {
   font-family: var(--font-alt);
+  padding: 5px 2px;
   color: #404040;
   font-weight: 400;
   font-size: 1.1rem;

@@ -18,8 +18,6 @@ export default class StatContainer extends HTMLElement {
 
   connectedCallback() {
     // console.log('We are inside connectedCallback');
-
-
   }
 
   getTemplate() {

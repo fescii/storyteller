@@ -708,6 +708,7 @@ body > main.main > section.content > .content-container > .people-container > .c
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   gap: 2px;
   border-radius: 25px;
 }
@@ -732,7 +733,7 @@ body > main.main > section.content > .content-container > .people-container > .c
 .people-container > .add > .field > label {
   font-family: var(--font-alt);
   color: #404040;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.1rem;
 }
 

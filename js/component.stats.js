@@ -32,17 +32,17 @@ export default class StatContainer extends HTMLElement {
   getBody() {
     return `
       <div class="top">
-        <h1 class="number">163</h1>
+        <h1 class="number">${this.getAttribute('bookings')}</h1>
         <div class="other">
           <p class="name">Bookings</p>
-          <span class="text">Since Sep '23</span>
+          <span class="text">Since ${this.getAttribute('date')}</span>
         </div>
       </div>
       <div class="body">
         <div class="left">
           <div class="head">
             <h3 class="title">Bookings</h3>
-            <span class="total">124 Bookings</span>
+            <span class="total">${this.getAttribute('bookings')} Bookings</span>
           </div>      
           ${this.getCards()}
         </div>
@@ -70,8 +70,8 @@ export default class StatContainer extends HTMLElement {
           </span>
           <p class="title">Completed</p>
           <div class="date">
-            <span class="no">37</span>
-            <span class="date">3 sep</span>
+            <span class="no">${this.getAttribute('completed')}</span>
+            <span class="date">${this.getAttribute('date')}</span>
           </div>
         </div>
         <div class="card upcoming">
@@ -91,8 +91,8 @@ export default class StatContainer extends HTMLElement {
           </span>
           <p class="title">Upcoming</p>
           <div class="date">
-            <span class="no">37</span>
-            <span class="date">3 sep</span>
+            <span class="no">${this.getAttribute('upcoming')}</span>
+            <span class="date">${this.getAttribute('date')}</span>
           </div>
         </div>
         <div class="card cancelled">
@@ -105,8 +105,8 @@ export default class StatContainer extends HTMLElement {
           </span>
           <p class="title">Cancelled</p>
           <div class="date">
-            <span class="no">37</span>
-            <span class="date">3 sep</span>
+            <span class="no">${this.getAttribute('cancelled')}</span>
+            <span class="date">${this.getAttribute('date')}</span>
           </div>
         </div>
       </div>
@@ -125,7 +125,7 @@ export default class StatContainer extends HTMLElement {
           </svg>
         </span>
         <div class="data">
-          <p class="no">4,890</p>
+          <p class="no">${this.getAttribute('visitors')}</p>
           <span class="info">Total visitors</span>
         </div>
       </div>
@@ -138,7 +138,7 @@ export default class StatContainer extends HTMLElement {
           </svg>
         </span>
         <div class="data">
-          <p class="no">4,890</p>
+          <p class="no">${this.getAttribute('interactions')}</p>
           <span class="info">New interactions</span>
         </div>
       </div>
@@ -152,7 +152,7 @@ export default class StatContainer extends HTMLElement {
           </svg>
         </span>
         <div class="data">
-          <p class="no">4,890</p>
+          <p class="no">${this.getAttribute('visitors')}</p>
           <span class="info">New visitors</span>
         </div>
       </div>

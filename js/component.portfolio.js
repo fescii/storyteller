@@ -22,7 +22,7 @@ export default class PortfolioContainer extends HTMLElement {
     this.switchTabs()
   }
 
-  switchTabs(){
+  switchTabs() {
     const tabs = this.shadowObj.querySelectorAll('.header > span.option')
     let activeTab = this.shadowObj.querySelector('.header > span.option.active')
     const contentContainer = this.shadowObj.querySelector('#content-container')
@@ -45,13 +45,14 @@ export default class PortfolioContainer extends HTMLElement {
               break;
             case 'password':
               contentContainer.innerHTML = this.getPassword()
-              break; 
+              break;
             case 'profile':
               contentContainer.innerHTML = this.getProfile()
+              this.activateImageSelect()
               break;
             case 'images':
               contentContainer.innerHTML = 'No data'
-              break; 
+              break;
             default:
               contentContainer.innerHTML = this.getBio()
               break;
@@ -59,6 +60,35 @@ export default class PortfolioContainer extends HTMLElement {
         })
       });
     }
+  }
+
+  activateImageSelect() {
+    const image = this.shadowObj.querySelector('.image-preview-container input')
+    if (image) {
+      image.addEventListener('onchange', (event) => {
+          // Get the selected files.
+        const imageFiles = event.target.files;
+        
+        // Count the number of files selected.
+        const imageFilesLength = imageFiles.length;
+
+        //If at least one image is selected, then proceed to display the preview.
+        if (imageFilesLength > 0) {
+          // Get the image path.
+          const imageSrc = URL.createObjectURL(imageFiles[0]);
+
+          // Select the image preview element.
+          const imagePreviewElement = this.shadowObj.querySelector("#preview-selected-image");
+
+          // Assign the path to the image preview element.
+          imagePreviewElement.src = imageSrc;
+          
+          // Show the element by changing the display value to "block".
+            imagePreviewElement.style.display = "block";
+        }
+      })
+    }
+  
   }
 
   getTemplate() {
@@ -126,7 +156,7 @@ export default class PortfolioContainer extends HTMLElement {
     `
   }
 
-  getBio(){
+  getBio() {
     return `
       <div class="section bio">
         <div class="field">
@@ -152,7 +182,7 @@ export default class PortfolioContainer extends HTMLElement {
     `
   }
 
-  getContact(){
+  getContact() {
     return `
       <div class="section contact">
         <div class="field">
@@ -182,7 +212,7 @@ export default class PortfolioContainer extends HTMLElement {
     `
   }
 
-  getPassword(){
+  getPassword() {
     return `
       <div class="section password">
         <div class="field">
@@ -204,7 +234,7 @@ export default class PortfolioContainer extends HTMLElement {
     `
   }
 
-  getProfile(){
+  getProfile() {
     return `
       <div class="section profile">
         <div class="image-preview-container">
@@ -212,7 +242,7 @@ export default class PortfolioContainer extends HTMLElement {
             <img id="preview-selected-image" />
           </div>
           <label for="file-upload">Select Image</label>
-          <input type="file" id="file-upload" accept="image/*" onchange="previewImage(event);" />
+          <input type="file" id="file-upload" accept="image/*" />
         </div>
         <div class="action">
           <button type="button">Update image</button>

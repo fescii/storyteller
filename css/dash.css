@@ -930,3 +930,191 @@ body > main.main > section.content > .content-container > .schedules-container >
 .schedules-container > .content > .day .options > .option svg path {
   fill: #666666;
 }
+
+
+
+.portfolio-container {
+  /* border: 1px solid #808080; */
+  margin: 0;
+  padding: 0 10px;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 10px;
+}
+
+.portfolio-container > .header {
+  border-bottom: 1px solid #80808017;
+  margin: 0;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.portfolio-container > .header > .left > p {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-alt);
+  color: #404040;
+  font-size: 1.1rem;
+}
+
+.portfolio-container > .header > .right {
+  /* border: 1px solid #80808017; */
+  background-color: rgba(20,167,62,1);
+  padding: 5px 20px 6px 15px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.portfolio-container > .header > .right svg {
+  /* border: 1px solid #80808017; */
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-container > .header > .right span {
+  font-family: var(--font-alt);
+  font-weight: 500;
+}
+
+.portfolio-container > .content {
+  /* border: 1px solid #808080; */
+  margin: 0;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  gap: 30px;
+}
+
+.portfolio-container > .add {
+  margin: 0 0 20px 0;
+  width: 90%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: start;
+  gap: 15px;
+}
+
+
+.portfolio-container > .add > .action {
+  /* border: 1px solid black; */
+  padding: 20px 0 30px 0;
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.portfolio-container > .add > .action > button {
+  border: none;
+  outline: none;
+  background-color: rgba(20,167,62,1);
+  padding: 10px 25px;
+  font-family: var(--font-alt);
+  font-weight: 500;
+  font-size: 1rem;
+  color: #ffffff;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 2px;
+  border-radius: 25px;
+}
+
+
+.portfolio-container > .add > .field {
+  /*border: 1px solid black;*/
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: start;
+  gap: 2px;
+}
+
+.portfolio-container > .add > .field > span.error {
+  color: #ee7752;
+  font-size: 0.8rem;
+  display: none;
+}
+
+.portfolio-container > .add > .field > label {
+  font-family: var(--font-alt);
+  padding: 5px 2px;
+  color: #404040;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.portfolio-container > .add > .field > span.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+}
+
+.portfolio-container > .add > .field > span.wrapper > span {
+  border: 1px solid #80808037;
+  border-right: none;
+  font-size: 1rem;
+  width: 60px;
+  padding: 10px 12px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  color: #08b86f;
+  display: flex;
+  align-items: center;
+}
+
+.portfolio-container > .add > .field > span.wrapper > input {
+  border: 1px solid #80808037;
+  font-size: 1rem;
+  width: calc(100% - 60px);
+  outline: none;
+  padding: 10px 12px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  color: #404040;
+}
+
+.portfolio-container > .add > .field >  span.wrapper > input:focus {
+  border: 1px solid #08b86f60;
+}
+
+.portfolio-container > .add > .field > input {
+  border: 1px solid #80808037;
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: #404040;
+}
+
+.portfolio-container > .add > .field > input:focus {
+  border: 1px solid #08b86f60;
+}

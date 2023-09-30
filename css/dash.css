@@ -948,6 +948,7 @@ body > main.main > section.content > .content-container > .schedules-container >
 .portfolio-container > .header {
   border-bottom: 1px solid #80808017;
   background-color: #ffffff;
+  z-index: 5;
   margin: 0;
   padding: 30px 0 12px 0;
   width: 100%;
@@ -1014,7 +1015,7 @@ body > main.main > section.content > .content-container > .schedules-container >
 .portfolio-container > .content {
   /* border: 1px solid #808080; */
   margin: 0;
-  /* padding: 20px 0; */
+  padding: 20px 0;
   width: 100%;
   display: flex;
   flex-flow: row;

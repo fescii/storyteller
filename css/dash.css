@@ -973,6 +973,7 @@ body > main.main > section.content > .content-container > .schedules-container >
 .portfolio-container > .header > span.option.active {
   background-color: #f5f5f5;
   color: #404040;
+  font-weight: 500;
 }
 
 .portfolio-container > .header > span.option:hover {

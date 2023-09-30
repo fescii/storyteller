@@ -959,18 +959,28 @@ body > main.main > section.content > .content-container > .schedules-container >
 
 .portfolio-container > .header > span.option {
   /* border: 1px solid #80808017; */
-  background-color: rgba(20,167,62,1);
+  /* background-color: rgba(20,167,62,1); */
   padding: 5px 20px 6px 15px;
   border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
-  color: white;
+  color: #808080;
   cursor: pointer;
 }
 
-.portfolio-container > .header > .right svg {
+.portfolio-container > .header > span.option.active {
+  background-color: #f5f5f5;
+  color: #404040;
+}
+
+.portfolio-container > .header > span.option:hover {
+  color: #404040;
+  font-weight: 500;
+}
+
+.portfolio-container > .header > span.option svg {
   /* border: 1px solid #80808017; */
   width: 24px;
   height: 24px;
@@ -979,9 +989,22 @@ body > main.main > section.content > .content-container > .schedules-container >
   justify-content: center;
 }
 
-.portfolio-container > .header > .right span {
+
+.portfolio-container > .header > span.option svg path {
+  fill: #808080;
+}
+
+.portfolio-container > .header > span.option:hover svg path {
+  fill: #404040;
+}
+
+.portfolio-container > .header > span.option.active svg path {
+  fill: #404040;
+}
+
+.portfolio-container > .header > span.option span {
   font-family: var(--font-alt);
-  font-weight: 500;
+  font-weight: inherit;
 }
 
 .portfolio-container > .content {

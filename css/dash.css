@@ -1055,7 +1055,7 @@ body > main.main > section.content > .content-container > .schedules-container >
   padding: 10px 30px;
   font-family: var(--font-alt);
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #ffffff;
   display: flex;
   flex-flow: column;

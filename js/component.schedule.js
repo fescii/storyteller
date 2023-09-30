@@ -19,6 +19,22 @@ export default class SchedulesContainer extends HTMLElement {
   connectedCallback() {
     // console.log('We are inside connectedCallback');
 
+    this.openCreate()
+  }
+
+  openCreate(){
+    const body = document.querySelector('body');
+    const button = this.shadowObj.querySelector('.header > .right')
+    const element = document.createElement('modal-schedule')
+    element.setAttribute('url', 'some-url')
+    if (body && button) {
+      button.addEventListener('click', (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+
+        body.insertAdjacentElement('beforeend', element)
+      })
+    }
   }
 
 

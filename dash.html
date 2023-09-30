@@ -12,11 +12,13 @@
   <script type="module">
     //Apps-Modals
     import BookingContainer from "./js/component.booking.js";
+    import PortfolioContainer from "./js/component.portfolio.js";
     import StatContainer from "./js/component.stats.js";
     import ScheduleModal from "./js/modal.schedule.js"
 
     //Apps-modals
     customElements.define("book-container", BookingContainer);
+    customElements.define("portfolio-container", PortfolioContainer);
     customElements.define("stat-container", StatContainer)
     customElements.define("modal-schedule", ScheduleModal)
   </script>
@@ -278,7 +280,9 @@
       </div>
       <div class="content-container" id="content-container">
 
-        
+        <portfolio-container url="some-link" 
+          >
+        </portfolio-container>
 
 
         <div class="schedules-container">

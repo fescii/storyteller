@@ -1025,7 +1025,7 @@ body > main.main > section.content > .content-container > .schedules-container >
   gap: 0;
 }
 
-.portfolio-container > .content > .bio {
+.portfolio-container > .content > .section {
   /* border: 1px solid black; */
   margin: 0 0 50px 0;
   width: 90%;
@@ -1037,7 +1037,7 @@ body > main.main > section.content > .content-container > .schedules-container >
 }
 
 
-.portfolio-container > .content > .bio > .action {
+.portfolio-container > .content > .section > .action {
   /* border: 1px solid black; */
   padding: 20px 0 30px 0;
   width: 80%;
@@ -1048,7 +1048,7 @@ body > main.main > section.content > .content-container > .schedules-container >
   gap: 2px;
 }
 
-.portfolio-container > .content > .bio > .action > button {
+.portfolio-container > .content > .section > .action > button {
   border: none;
   outline: none;
   background-color: rgba(20,167,62,1);
@@ -1067,7 +1067,7 @@ body > main.main > section.content > .content-container > .schedules-container >
 }
 
 
-.portfolio-container > .content > .bio > .field {
+.portfolio-container > .content > .section > .field {
   /*border: 1px solid black;*/
   width: 80%;
   display: flex;
@@ -1077,13 +1077,13 @@ body > main.main > section.content > .content-container > .schedules-container >
   gap: 2px;
 }
 
-.portfolio-container > .content > .bio > .field > span.error {
+.portfolio-container > .content > .section > .field > span.error {
   color: #ee7752;
   font-size: 0.8rem;
   display: none;
 }
 
-.portfolio-container > .content > .bio > .field > label {
+.portfolio-container > .content > .section > .field > label {
   font-family: var(--font-alt);
   padding: 5px 2px;
   color: #404040;
@@ -1091,14 +1091,14 @@ body > main.main > section.content > .content-container > .schedules-container >
   font-size: 1.1rem;
 }
 
-.portfolio-container > .content > .bio > .field > span.wrapper {
+.portfolio-container > .content > .section > .field > span.wrapper {
   display: flex;
   align-items: center;
   gap: 0;
   width: 100%;
 }
 
-.portfolio-container > .content > .bio > .field > span.wrapper > span {
+.portfolio-container > .content > .section > .field > span.wrapper > span {
   border: 1px solid #80808037;
   border-right: none;
   font-size: 1rem;
@@ -1111,7 +1111,7 @@ body > main.main > section.content > .content-container > .schedules-container >
   align-items: center;
 }
 
-.portfolio-container > .content > .bio > .field > span.wrapper > input {
+.portfolio-container > .content > .section > .field > span.wrapper > input {
   border: 1px solid #80808037;
   font-size: 1rem;
   width: calc(100% - 60px);
@@ -1122,11 +1122,11 @@ body > main.main > section.content > .content-container > .schedules-container >
   color: #404040;
 }
 
-.portfolio-container > .content > .bio > .field >  span.wrapper > input:focus {
+.portfolio-container > .content > .section > .field >  span.wrapper > input:focus {
   border: 1px solid #08b86f60;
 }
 
-.portfolio-container > .content > .bio > .field > textarea {
+.portfolio-container > .content > .section > .field > textarea {
   border: 1px solid #80808037;
   font-size: 1rem;
   width: 100%;
@@ -1142,11 +1142,11 @@ body > main.main > section.content > .content-container > .schedules-container >
   height: 140px;
 }
 
-.portfolio-container > .content > .bio > .field > textarea:focus {
+.portfolio-container > .content > .section > .field > textarea:focus {
   border: 1px solid #08b86f60;
 }
 
-.portfolio-container > .content > .bio > .field > input {
+.portfolio-container > .content > .section > .field > input {
   border: 1px solid #80808037;
   font-size: 1rem;
   width: 100%;
@@ -1156,6 +1156,6 @@ body > main.main > section.content > .content-container > .schedules-container >
   color: #404040;
 }
 
-.portfolio-container > .content > .bio > .field > input:focus {
+.portfolio-container > .content > .section > .field > input:focus {
   border: 1px solid #08b86f60;
 }

@@ -995,18 +995,19 @@ body > main.main > section.content > .content-container > .schedules-container >
 .portfolio-container > .content {
   /* border: 1px solid #808080; */
   margin: 0;
-  padding: 20px 0;
+  /* padding: 20px 0; */
   width: 100%;
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: start;
-  gap: 30px;
+  gap: 0;
 }
 
-.portfolio-container > .add {
-  margin: 0 0 20px 0;
+.portfolio-container > .content > .bio {
+  /* border: 1px solid black; */
+  margin: 0 0 50px 0;
   width: 90%;
   display: flex;
   flex-flow: column;
@@ -1016,7 +1017,7 @@ body > main.main > section.content > .content-container > .schedules-container >
 }
 
 
-.portfolio-container > .add > .action {
+.portfolio-container > .content > .bio > .action {
   /* border: 1px solid black; */
   padding: 20px 0 30px 0;
   width: 80%;
@@ -1027,7 +1028,7 @@ body > main.main > section.content > .content-container > .schedules-container >
   gap: 2px;
 }
 
-.portfolio-container > .add > .action > button {
+.portfolio-container > .content > .bio > .action > button {
   border: none;
   outline: none;
   background-color: rgba(20,167,62,1);
@@ -1046,7 +1047,7 @@ body > main.main > section.content > .content-container > .schedules-container >
 }
 
 
-.portfolio-container > .add > .field {
+.portfolio-container > .content > .bio > .field {
   /*border: 1px solid black;*/
   width: 80%;
   display: flex;
@@ -1056,13 +1057,13 @@ body > main.main > section.content > .content-container > .schedules-container >
   gap: 2px;
 }
 
-.portfolio-container > .add > .field > span.error {
+.portfolio-container > .content > .bio > .field > span.error {
   color: #ee7752;
   font-size: 0.8rem;
   display: none;
 }
 
-.portfolio-container > .add > .field > label {
+.portfolio-container > .content > .bio > .field > label {
   font-family: var(--font-alt);
   padding: 5px 2px;
   color: #404040;
@@ -1070,14 +1071,14 @@ body > main.main > section.content > .content-container > .schedules-container >
   font-size: 1.1rem;
 }
 
-.portfolio-container > .add > .field > span.wrapper {
+.portfolio-container > .content > .bio > .field > span.wrapper {
   display: flex;
   align-items: center;
   gap: 0;
   width: 100%;
 }
 
-.portfolio-container > .add > .field > span.wrapper > span {
+.portfolio-container > .content > .bio > .field > span.wrapper > span {
   border: 1px solid #80808037;
   border-right: none;
   font-size: 1rem;
@@ -1090,7 +1091,7 @@ body > main.main > section.content > .content-container > .schedules-container >
   align-items: center;
 }
 
-.portfolio-container > .add > .field > span.wrapper > input {
+.portfolio-container > .content > .bio > .field > span.wrapper > input {
   border: 1px solid #80808037;
   font-size: 1rem;
   width: calc(100% - 60px);
@@ -1101,11 +1102,11 @@ body > main.main > section.content > .content-container > .schedules-container >
   color: #404040;
 }
 
-.portfolio-container > .add > .field >  span.wrapper > input:focus {
+.portfolio-container > .content > .bio > .field >  span.wrapper > input:focus {
   border: 1px solid #08b86f60;
 }
 
-.portfolio-container > .add > .field > input {
+.portfolio-container > .content > .bio > .field > input {
   border: 1px solid #80808037;
   font-size: 1rem;
   width: 100%;
@@ -1115,6 +1116,6 @@ body > main.main > section.content > .content-container > .schedules-container >
   color: #404040;
 }
 
-.portfolio-container > .add > .field > input:focus {
+.portfolio-container > .content > .bio > .field > input:focus {
   border: 1px solid #08b86f60;
 }

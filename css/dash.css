@@ -1032,7 +1032,7 @@ body > main.main > section.content > .content-container > .schedules-container >
   border: none;
   outline: none;
   background-color: rgba(20,167,62,1);
-  padding: 10px 25px;
+  padding: 10px 30px;
   font-family: var(--font-alt);
   font-weight: 500;
   font-size: 1rem;
@@ -1043,7 +1043,7 @@ body > main.main > section.content > .content-container > .schedules-container >
   align-items: center;
   cursor: pointer;
   gap: 2px;
-  border-radius: 25px;
+  border-radius: 12px;
 }
 
 

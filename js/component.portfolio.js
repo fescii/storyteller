@@ -65,8 +65,9 @@ export default class PortfolioContainer extends HTMLElement {
   activateImageSelect() {
     const image = this.shadowObj.querySelector('.image-preview-container input')
     if (image) {
-      image.addEventListener('onchange', (event) => {
-          // Get the selected files.
+      image.addEventListener('change', (event) => {
+        // console.log('Changed')
+        // Get the selected files.
         const imageFiles = event.target.files;
         
         // Count the number of files selected.

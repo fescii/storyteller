@@ -487,28 +487,10 @@ export default class ModalSchedule extends HTMLElement {
         border: 1px solid #08b86f60;
       }
 
-      section#content > .container > .fields > .field > textarea {
-        border: 1px solid #80808037;
-        font-size: 1rem;
-        width: 100%;
-        outline: none;
-        padding: 10px 12px;
-        border-radius: 12px;
-        color: #404040;
-        max-width: 100%;
-        min-width: 100%;
-        width: 100%;
-        max-height: 70px;
-        min-height: 70px;
-        height: 70px;
-      }
-      section#content > .container > .fields > .field > textarea:focus{
-        border: 1px solid #08b86f60;
-      }
-
       section#content > .container > .services {
         /*border: 1px solid #808080;*/
         width: 90%;
+        padding: 0 0 25px 0;
         display: flex;
         flex-flow: column;
         justify-content: center;

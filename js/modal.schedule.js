@@ -169,9 +169,9 @@ export default class ModalSchedule extends HTMLElement {
   getContent() {
     return `
       <div class="head">
-        <h2 class="step-title">Make your selections</h2>
+        <h2 class="step-title">Make your schedule</h2>
         <p class="description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Create or edit schedules, select date and people.
         </p>
       </div>
       <div class="fields">

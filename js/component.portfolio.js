@@ -343,6 +343,14 @@ export default class PortfolioContainer extends HTMLElement {
         gap: 2px;
       }
 
+      .content > .section.profile > .action {
+        width: 300px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+      }
+
       .content > .section > .action > button {
         border: none;
         outline: none;
@@ -465,7 +473,7 @@ export default class PortfolioContainer extends HTMLElement {
         min-height: 300px;
         max-height: 300px;
         height: 300px;
-        margin: 0 auto;
+        /* margin: 0 auto; */
         border: 1px solid rgba(0, 0, 0, 0.1);
         padding: 0;
         border-radius: 20px;

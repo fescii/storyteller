@@ -147,10 +147,7 @@ export default class ModalSchedule extends HTMLElement {
               </svg>
             </span>
             <span class="steps">
-              <span class="text">Step</span>
-              <span class="step">1</span>
-              <span class="slash">/</span>
-              <span class="all">5</span>
+              <span class="text">Scheduling</span>
             </span>
           </div>
         </div>
@@ -159,7 +156,7 @@ export default class ModalSchedule extends HTMLElement {
         </div>
         <div class="footer">
           <div class="action next">
-            <span class="text">Next</span>
+            <span class="text">Schedule</span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8.50076 19.7504C8.63076 19.7504 8.76176 19.7174 8.88176 19.6464C9.63576 19.1994 16.2498 15.1914 16.2498 12.0004C16.2498 8.81043 9.63676 4.80143 8.88176 4.35443C8.52676 4.14343 8.06476 4.26143 7.85476 4.61843C7.64375 4.97543 7.76176 5.43543 8.11776 5.64643C10.6818 7.16543 14.7498 10.2334 14.7498 12.0004C14.7498 13.7704 10.6818 16.8374 8.11776 18.3544C7.76176 18.5654 7.64375 19.0254 7.85476 19.3824C7.99476 19.6184 8.24376 19.7504 8.50076 19.7504Z" fill="black"/>
             </svg>
@@ -179,72 +176,24 @@ export default class ModalSchedule extends HTMLElement {
       </div>
       <div class="fields">
         <div class="field name">
-          <input type="text" name="name" id="name" placeholder="Your name" required>
-          <span class="error">Name is required</span>
-        </div>
-        <div class="field phone">
-          <span class="wrapper">
-            <span class="country">+254</span>
-            <input type="text" name="number" id="number" placeholder="Phone number" required>
-          </span>
-          <span class="error">Phone is required</span>
-        </div>
-        <div class="field email">
-          <input type="text" name="email" id="email" placeholder="Your email" required>
-          <span class="error">Email is required</span>
-        </div>
-        <div class="field other">
-          <textarea name="other" id="other" cols="auto" rows="auto" placeholder="Additional informatiom"></textarea>
+          <input type="date" name="name" id="name" placeholder="Your name" required>
+          <span class="error">Date is required</span>
         </div>
       </div>
       <div class="services">
         <div class="options">
           <span class="option" data-value="event">
-            <span class="text">Event</span>
+            <span class="text">Mathias</span>
           </span>
           <span class="option" data-value="hicking">
-            <span class="text">Hicking</span>
+            <span class="text">Sheldon</span>
           </span>
           <span class="option" data-value="outdoor">
-            <span class="text">Outdoor</span>
+            <span class="text">Malcolm</span>
           </span>
           <span class="option" data-value="party">
-            <span class="text">Party</span>
+            <span class="text">Femar</span>
           </span>
-          <span class="option" data-value="advertising">
-            <span class="text">Advertising</span>
-          </span>
-          <span class="option" data-value="wedding">
-            <span class="text">Wedding</span>
-          </span>
-          <span class="option" data-value="videography">
-            <span class="text">Videography</span>
-          </span>
-          <span class="option" data-value="editing">
-            <span class="text">Editing</span>
-          </span>
-          <span class="option" data-value="product">
-            <span class="text">Product</span>
-          </span>
-          <span class="option" data-value="cultural">
-            <span class="text">Cultural</span>
-          </span>
-          <span class="option" data-value="professional">
-            <span class="text">Professional</span>
-          </span>
-          <span class="option" data-value="graduation">
-            <span class="text">Graduation</span>
-          </span>
-          <span class="option" data-value="wildlife">
-            <span class="text">Wildlife</span>
-          </span>
-          <span class="option" data-value="traditional">
-            <span class="text">Traditional</span>
-          </span>
-        </div>
-        <div class="other">
-          <span class="text">Others, Please specify</span>
-          <input type="text" name="other" id="other" placeholder="Enter others">
         </div>
       </div>
     `

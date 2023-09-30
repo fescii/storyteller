@@ -19,78 +19,8 @@ export default class SchedulesContainer extends HTMLElement {
   connectedCallback() {
     // console.log('We are inside connectedCallback');
 
-    this.switchTabs()
   }
 
-  switchTabs() {
-    const tabs = this.shadowObj.querySelectorAll('.header > span.option')
-    let activeTab = this.shadowObj.querySelector('.header > span.option.active')
-    const contentContainer = this.shadowObj.querySelector('#content-container')
-    if (tabs && contentContainer) {
-      tabs.forEach(tab => {
-        tab.addEventListener('click', (e) => {
-          e.preventDefault()
-          e.stopPropagation()
-
-          activeTab.classList.remove('active')
-          tab.classList.add('active')
-          activeTab = tab
-
-          switch (tab.dataset.name) {
-            case 'bio':
-              contentContainer.innerHTML = this.getBio()
-              break;
-            case 'contact':
-              contentContainer.innerHTML = this.getContact()
-              break;
-            case 'password':
-              contentContainer.innerHTML = this.getPassword()
-              break;
-            case 'profile':
-              contentContainer.innerHTML = this.getProfile()
-              this.activateImageSelect()
-              break;
-            case 'images':
-              contentContainer.innerHTML = 'No data'
-              break;
-            default:
-              contentContainer.innerHTML = this.getBio()
-              break;
-          }
-        })
-      });
-    }
-  }
-
-  activateImageSelect() {
-    const image = this.shadowObj.querySelector('.image-preview-container input')
-    if (image) {
-      image.addEventListener('change', (event) => {
-        // console.log('Changed')
-        // Get the selected files.
-        const imageFiles = event.target.files;
-        
-        // Count the number of files selected.
-        const imageFilesLength = imageFiles.length;
-
-        //If at least one image is selected, then proceed to display the preview.
-        if (imageFilesLength > 0) {
-          // Get the image path.
-          const imageSrc = URL.createObjectURL(imageFiles[0]);
-
-          // Select the image preview element.
-          const imagePreviewElement = this.shadowObj.querySelector("#preview-selected-image");
-
-          // Assign the path to the image preview element.
-          imagePreviewElement.src = imageSrc;
-          
-          // Show the element by changing the display value to "block".
-            imagePreviewElement.style.display = "block";
-        }
-      })
-    }
-  
-  }
 
   getTemplate() {
     // Show HTML Here
@@ -105,7 +35,7 @@ export default class SchedulesContainer extends HTMLElement {
       ${this.getHeader()}
         
       <div id="content-container" class="content">
-        ${this.getBio()}
+        ${this.getSchedules()}
       </div>
      
     `
@@ -339,9 +269,127 @@ export default class SchedulesContainer extends HTMLElement {
         width: 100%;
         display: flex;
         flex-flow: column;
-        align-items: center;
+        /* align-items: center; */
         justify-content: center;
         gap: 10px;
+      }
+
+      .header {
+        border-bottom: 1px solid #80808017;
+        margin: 0;
+        padding: 20px 0;
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .header > .left > p {
+        margin: 0;
+        padding: 0;
+        font-family: var(--font-alt);
+        color: #404040;
+        font-family: 500;
+        font-size: 1.2rem;
+      }
+
+      .header > .right {
+        /* border: 1px solid #80808017; */
+        background-color: rgba(20,167,62,1);
+        padding: 5px 20px 6px 15px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .header > .right svg {
+        /* border: 1px solid #80808017; */
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .header > .right span {
+        font-family: var(--font-alt);
+        font-weight: 500;
+      }
+
+      .content {
+        /* border: 1px solid #808080; */
+        margin: 0;
+        padding: 20px 0;
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: start;
+        gap: 30px;
+      }
+
+      .content > .day {
+        border: 1px solid #80808017;
+        margin: 0;
+        padding: 15px;
+        max-width: 250px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: start;
+        gap: 20px;
+        background-position-x: 0%;
+        background-position-y: 0%;
+        background-repeat: repeat;
+        background-image: none;
+        box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.034);
+        border-radius: 15px;
+      }
+
+      .content > .day * {
+        font-family: var(--font-alt);
+        color: #404040;
+        text-align: center;
+      }
+      .content > .day .date {
+        /* border: 1px solid #808080; */
+        color: #808080;
+        font-size: 0.95rem;
+      }
+
+      .content > .day .options {
+        display: flex;
+        gap: 30px;
+      }
+
+      .content > .day .options >.option {
+        background-color: #f5f5f5;
+        color: #666666;
+        padding: 5px 15px 5px 10px;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        font-size: 0.9rem;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+
+      .content > .day .options > .option svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .content > .day .options > .option svg path {
+        fill: #666666;
       }
       
     </style>

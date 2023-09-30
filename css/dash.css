@@ -956,7 +956,7 @@ body > main.main > section.content > .content-container > .schedules-container >
   flex-flow: row;
   align-items: center;
   justify-content: start;
-  gap: 30px;
+  gap: 20px;
   position: sticky;
   top: 80px;
 }
@@ -1015,7 +1015,7 @@ body > main.main > section.content > .content-container > .schedules-container >
 .portfolio-container > .content {
   /* border: 1px solid #808080; */
   margin: 0;
-  padding: 20px 0;
+  padding: 15px 0;
   width: 100%;
   display: flex;
   flex-flow: row;

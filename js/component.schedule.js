@@ -79,35 +79,35 @@ export default class SchedulesContainer extends HTMLElement {
         photographers="mathias,malcolm,femar" photographers-no="3"
       >
       </schedule-item>
-      <schedule-item date-en="12 Sep, 2023" date="9/12/2023" 
+      <schedule-item date-en="12 Sep, 2023"  date="2023-10-01"
         photographers="mathias,malcolm,femar" photographers-no="3"
       >
       </schedule-item>
-      <schedule-item date-en="12 Sep, 2023" date="9/12/2023" 
+      <schedule-item date-en="12 Sep, 2023"  date="2023-10-01" 
         photographers="mathias,malcolm,femar" photographers-no="3"
       >
       </schedule-item>
-      <schedule-item date-en="12 Sep, 2023" date="9/12/2023" 
+      <schedule-item date-en="12 Sep, 2023"  date="2023-10-01"
         photographers="mathias,malcolm,femar" photographers-no="3"
       >
       </schedule-item>
-      <schedule-item date-en="12 Sep, 2023" date="9/12/2023" 
+      <schedule-item date-en="12 Sep, 2023"  date="2023-10-01" 
         photographers="mathias,malcolm,femar" photographers-no="3"
       >
       </schedule-item>
-      <schedule-item date-en="12 Sep, 2023" date="9/12/2023" 
+      <schedule-item date-en="12 Sep, 2023"  date="2023-10-01" 
         photographers="mathias,malcolm,femar" photographers-no="3"
       >
       </schedule-item>
-      <schedule-item date-en="12 Sep, 2023" date="9/12/2023" 
+      <schedule-item date-en="12 Sep, 2023"  date="2023-10-01" 
         photographers="mathias,malcolm,femar" photographers-no="3"
       >
       </schedule-item>
-      <schedule-item date-en="12 Sep, 2023" date="9/12/2023" 
+      <schedule-item date-en="12 Sep, 2023"  date="2023-10-01"
         photographers="mathias,malcolm,femar" photographers-no="3"
       >
       </schedule-item>
-      <schedule-item date-en="12 Sep, 2023" date="9/12/2023" 
+      <schedule-item date-en="12 Sep, 2023"  date="2023-10-01" 
         photographers="mathias,malcolm,femar" photographers-no="3"
       >
       </schedule-item>

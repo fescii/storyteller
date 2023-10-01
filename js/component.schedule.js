@@ -23,18 +23,22 @@ export default class ScheduleContainer extends HTMLElement {
   }
 
   openCreate(){
-    const body = document.querySelector('body');
+    const modalContainer = document.querySelector('body > section#modal')
     const button = this.shadowObj.querySelector('.header > .right')
-    const element = document.createElement('modal-schedule')
-    element.setAttribute('url', 'some-url')
-    element.setAttribute('edit', 'false')
 
-    if (body && button) {
+    // const element = document.createElement('modal-schedule')
+
+    const modal = `
+      <modal-schedule url="some-url" edit="false" date="${button.dataset.dat}">
+      </modal-schedule>
+    `
+
+    if (modalContainer && button) {
       button.addEventListener('click', (e) => {
         e.preventDefault()
         e.stopPropagation()
 
-        body.insertAdjacentElement('beforeend', element)
+        modalContainer.innerHTML = modal
       })
     }
   }

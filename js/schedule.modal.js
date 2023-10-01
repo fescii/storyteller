@@ -126,7 +126,7 @@ export default class ScheduleModal extends HTMLElement {
 
   getContent() {
     return `
-      ${this.getHeader(this.getAttribute('edit'))}
+      ${this.getTop(this.getAttribute('edit'))}
       <div class="fields">
         <div class="field name">
           ${this.getInput(this.getAttribute('edit'))}
@@ -180,7 +180,7 @@ export default class ScheduleModal extends HTMLElement {
   }
 
 
-  getHeader(edit){
+  getTop(edit){
     if (edit === 'true') {
       return `
         <div class="head">

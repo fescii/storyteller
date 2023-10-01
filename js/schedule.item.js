@@ -27,17 +27,18 @@ export default class ScheduleItem extends HTMLElement {
     const modalContainer = document.querySelector('body > section#modal')
     const button = this.shadowObj.querySelector('.options > .option.edit')
 
-    const element = document.createElement('modal-schedule')
-    element.setAttribute('url', 'some-url')
-    element.setAttribute('edit', 'true')
-    element.setAttribute('date', button.dataset.date)
-    element.setAttribute('photographers', this.getAttribute('photographers'))
-    if (body && button) {
+    const modal = `
+      <modal-schedule url="some-url" edit="true" date="${button.dataset.date}" photographers="${this.getAttribute('photographers')}">
+      </modal-schedule>
+    `
+
+    if (modalContainer && button) {
       button.addEventListener('click', (e) => {
         e.preventDefault()
         e.stopPropagation()
 
-        body.insertAdjacentElement('beforeend', element)
+        // body.insertAdjacentElement('beforeend', element)
+        modalContainer.innerHTML = modal
       })
     }
   }

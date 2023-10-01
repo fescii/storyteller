@@ -187,7 +187,7 @@ section.logon {
   background-position: 100%;
   background-size: cover;
   background-size: 1rem 1rem;
-  background-color: rgba(248, 249, 250, 0.555);
+  background-color: #eaf3ff;
   background-image: radial-gradient(circle, rgb(222, 226, 230) 1px, rgba(0, 0, 0, 0) 1px);
 }
 
@@ -356,6 +356,7 @@ section.logon > form > .field.focused > label {
   top: -10px;
   font-size: 0.9rem;
   /* background-color: #ffffff; */
+  background-color: #eaf3ff;
   padding: 0 5px;
 }
 

@@ -1,4 +1,4 @@
-export default class SchedulesContainer extends HTMLElement {
+export default class ScheduleContainer extends HTMLElement {
   constructor() {
 
     // We are not even going to touch this.

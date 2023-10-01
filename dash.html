@@ -13,7 +13,7 @@
     //Apps-Modals
     import BookingContainer from "./js/component.booking.js";
     import PortfolioContainer from "./js/component.portfolio.js";
-    import SchedulesContainer from "./js/component.schedule.js";
+    import ScheduleContainer from "./js/component.schedule.js";
     import PeopleContainer from "./js/component.people.js";
 
     import ScheduleItem from "./js/schedule.item.js"
@@ -29,7 +29,7 @@
 
     customElements.define("booking-container", BookingContainer);
     customElements.define("portfolio-container", PortfolioContainer);
-    customElements.define("schedule-container", SchedulesContainer);
+    customElements.define("schedule-container", ScheduleContainer);
     customElements.define("people-container", PeopleContainer);
 
     customElements.define("stat-container", StatContainer)
@@ -291,6 +291,10 @@
         <stat-container bookings="163" date="Sep 23" completed="57" upcoming="33" cancelled="8" visitors="1,400"
           interactions="1,360">
         </stat-container>
+
+        <schedule-container url="some-link">
+        </schedule-container>
+        
       </div>
     </section>
   </main>

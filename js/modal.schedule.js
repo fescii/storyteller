@@ -65,8 +65,8 @@ export default class ModalSchedule extends HTMLElement {
     window.onscroll = function () { };
   }
 
-
   activateContent(){
+    // console.log('Inside')
     const options = this.shadowObj.querySelectorAll("section#content > .container > .services > .options > .option")
     options.forEach(option => {
       option.addEventListener('click', (e) => {
@@ -163,6 +163,7 @@ export default class ModalSchedule extends HTMLElement {
       return html
     }
     else {
+      console.log('Not available')
       return ''
     }
     

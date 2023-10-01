@@ -21,6 +21,7 @@ export default class ScheduleItem extends HTMLElement {
 
     this.editSchedule()
   }
+  
 
   editSchedule(){
     const body = document.querySelector('body');

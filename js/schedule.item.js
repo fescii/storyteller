@@ -19,15 +19,16 @@ export default class ScheduleItem extends HTMLElement {
   connectedCallback() {
     // console.log('We are inside connectedCallback');
 
-    // this.openCreate()
+    this.editSchedule()
   }
 
-  openCreate(){
+  editSchedule(){
     const body = document.querySelector('body');
     const button = this.shadowObj.querySelector('.options >.option.edit')
     const element = document.createElement('modal-schedule')
     element.setAttribute('url', 'some-url')
     element.setAttribute('date', button.dataset.date)
+    element.setAttribute('photographers', this.getAttribute('photographers'))
     if (body && button) {
       button.addEventListener('click', (e) => {
         e.preventDefault()
@@ -51,7 +52,7 @@ export default class ScheduleItem extends HTMLElement {
     return `
       <span class="date">${this.getAttribute('date-en')}</span>
       <div class="people">
-        ${this.getPhotographers(this.getAttribute('photographers'))}
+        ${this.getPhotographers(this.getAttribute('photographers-no'))}
       </div>
       <span class="options">
         <span class="option edit" data-date="${this.getAttribute('date')}">
@@ -69,20 +70,19 @@ export default class ScheduleItem extends HTMLElement {
           <span class="text">Remove</span>
         </span>
       </span>
-     
     `
   }
 
   getPhotographers(num){
     if (parseInt(num) > 1) {
       return `
-        <span class="no">${this.getAttribute('photographers')}</span>
+        <span class="no">${this.getAttribute('photographers-no')}</span>
         <span class="text">Photographers are booked/occupied this day</span>
       `
     }
     else {
       return `
-      <span class="no">${this.getAttribute('photographers')}</span>
+      <span class="no">${this.getAttribute('photographers-no')}</span>
       <span class="text">Photographer is booked/occupied this day</span>
     `
     }

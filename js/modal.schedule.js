@@ -143,21 +143,24 @@ export default class ModalSchedule extends HTMLElement {
       </div>
       <div class="services">
         <div class="options">
-          <span class="option" data-value="event">
-            <span class="text">Mathias</span>
-          </span>
-          <span class="option" data-value="hicking">
-            <span class="text">Sheldon</span>
-          </span>
-          <span class="option" data-value="outdoor">
-            <span class="text">Malcolm</span>
-          </span>
-          <span class="option" data-value="party">
-            <span class="text">Femar</span>
-          </span>
+          ${this.getOptions()}
         </div>
       </div>
     `
+  }
+
+  getOptions(){
+    const photographers = this.getAttribute('photographers').split(',')
+
+    let html = ''
+
+    photographers.forEach(item => {
+      html + `
+        <span class="option selected" data-value="event">
+          <span class="text">${item}</span>
+        </span>
+      `
+    })
   }
 
 

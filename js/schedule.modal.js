@@ -43,7 +43,7 @@ export default class ModalSchedule extends HTMLElement {
   }
 
   disconnectedCallback() {
-    // console.log('We are inside disconnectedCallback');
+    console.log('We are inside disconnectedCallback');
     this.enableScroll()
   }
 
@@ -113,7 +113,7 @@ export default class ModalSchedule extends HTMLElement {
           </div>
         </div>
         <div id="container" class="container">
-          ${this.getContent()}
+          ${this.getBody()}
         </div>
         <div class="footer">
           <div class="action next">
@@ -127,7 +127,7 @@ export default class ModalSchedule extends HTMLElement {
     ${this.getStyles()}`;
   }
 
-  getContent() {
+  getBody() {
     return `
       ${this.getHeader(this.getAttribute('edit'))}
       <div class="fields">
@@ -138,17 +138,17 @@ export default class ModalSchedule extends HTMLElement {
       </div>
       <div class="services">
         <div class="options">
-          ${this.getOptions()}
+          ${this.getPhotographers()}
         </div>
       </div>
     `
   }
   
 
-  getOptions(){
+  getPhotographers(){
     if (this.getAttribute('photographers')) {
       const photographers = this.getAttribute('photographers').split(',')
-      // console.log(photographers)
+      console.log(photographers)
       let html = ``
 
       photographers.forEach(item => {

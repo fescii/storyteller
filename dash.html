@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="css/dash.css">
+  <link rel="stylesheet" href="css/dash.css" />
 
   <title>Storyteller Arts</title>
 
@@ -16,30 +16,26 @@
     import ScheduleContainer from "./js/component.schedule.js";
     import PeopleContainer from "./js/component.people.js";
 
-    import ScheduleItem from "./js/schedule.item.js"
-    import BookingItem from "./js/booking.item.js"
-
+    import ScheduleItem from "./js/schedule.item.js";
+    import BookingItem from "./js/booking.item.js";
 
     import StatContainer from "./js/component.stats.js";
-    import ScheduleModal from "./js/modal.schedule.js"
+    import ScheduleModal from "./js/schedule.modal.js";
 
-    
+    customElements.define("stat-container", StatContainer);
+    customElements.define("modal-schedule", ScheduleModal);
+
     customElements.define("booking-item", BookingItem);
-    customElements.define("schedule-item", ScheduleItem)
+    customElements.define("schedule-item", ScheduleItem);
 
     customElements.define("booking-container", BookingContainer);
     customElements.define("portfolio-container", PortfolioContainer);
     customElements.define("schedule-container", ScheduleContainer);
     customElements.define("people-container", PeopleContainer);
-
-    customElements.define("stat-container", StatContainer)
-    customElements.define("modal-schedule", ScheduleModal)
   </script>
-
 </head>
 
 <body>
-
   <main class="main">
     <section class="sidebar">
       <div class="head">
@@ -278,7 +274,7 @@
               <span class="dot">
                 <span></span>
               </span>
-              <img src="img/explore/by/femar.jpg" alt="Profile Photo" srcset="">
+              <img src="img/explore/by/femar.jpg" alt="Profile Photo" srcset="" />
             </div>
             <span class="name">
               <span class="username">Fredrick</span>
@@ -292,9 +288,7 @@
           interactions="1,360">
         </stat-container>
 
-        <schedule-container url="some-link">
-        </schedule-container>
-        
+        <schedule-container url="some-link"> </schedule-container>
       </div>
     </section>
   </main>

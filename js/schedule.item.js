@@ -19,9 +19,9 @@ export default class ScheduleItem extends HTMLElement {
   connectedCallback() {
     // console.log('We are inside connectedCallback');
 
-    this.editSchedule()
+    // this.editSchedule()
   }
-  
+
 
   editSchedule(){
     const body = document.querySelector('body');

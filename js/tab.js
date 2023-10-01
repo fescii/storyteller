@@ -43,6 +43,8 @@ if (tabs && contentContainer && activeTab) {
       activeTab.classList.remove('active')
       tab.classList.add('active')
       activeTab = tab
+
+      populateContent(contentContainer, content[tab.dataset.name])
     })
   })
 }

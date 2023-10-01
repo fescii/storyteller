@@ -1,4 +1,4 @@
-export default class ModalSchedule extends HTMLElement {
+export default class ScheduleModal extends HTMLElement {
   constructor() {
 
     // We are not even going to touch this.
@@ -18,7 +18,10 @@ export default class ModalSchedule extends HTMLElement {
   }
 
   connectedCallback() {
-    // console.log('We are inside connectedCallback');
+    console.log('We are inside connectedCallback');
+    
+    console.log('duhcudcucuygryc');
+    
     this.disableScroll()
 
 
@@ -43,7 +46,7 @@ export default class ModalSchedule extends HTMLElement {
   }
 
   disconnectedCallback() {
-    console.log('We are inside disconnectedCallback');
+    // console.log('We are inside disconnectedCallback');
     this.enableScroll()
   }
 
@@ -76,44 +79,19 @@ export default class ModalSchedule extends HTMLElement {
     });
   }
 
-  validateStepTwo(data, stepValue, contentContainer, nextBtn){
-    const options = this.shadowObj.querySelectorAll("section#content > .container > .services > .options > .option.selected")
-    const other = this.shadowObj.querySelector("section#content > .container > .services > .other > input")
-    let services  = []
-    if (options) {
-      options.forEach(option => {
-        services.push(option.dataset.value)
-      });
-
-      data.Services = services
-      data.OtherServices = other.value
-
-      stepValue.textContent = 3;
-      contentContainer.innerHTML = this.getStepThree()
-      nextBtn.classList.toggle('disabled')
-      this.populateDate(nextBtn)
-    }
-  }
-
   getTemplate() {
+    if (!this.shadowObj) {
+      // The shadow DOM is not created yet, return an empty string or handle it as needed.
+      return '';
+    }
+  
     // Show HTML Here
     return `
       <div class="overlay"></div>
       <section id="content" class="content">
-        <div class="content-head">
-          <div class="actions">
-            <span class="control">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-              </svg>
-            </span>
-            <span class="steps">
-              <span class="text">Scheduling</span>
-            </span>
-          </div>
-        </div>
+        ${this.getHeader()}
         <div id="container" class="container">
-          ${this.getBody()}
+          ${this.getContent()}
         </div>
         <div class="footer">
           <div class="action next">
@@ -124,10 +102,29 @@ export default class ModalSchedule extends HTMLElement {
           </div>
         </div>
       </section>
-    ${this.getStyles()}`;
+      ${this.getStyles()}
+    `
   }
 
-  getBody() {
+
+  getHeader(){
+    return `
+      <div class="content-head">
+        <div class="actions">
+          <span class="control">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </span>
+          <span class="steps">
+            <span class="text">Scheduling</span>
+          </span>
+        </div>
+      </div>
+    `
+  }
+
+  getContent() {
     return `
       ${this.getHeader(this.getAttribute('edit'))}
       <div class="fields">
@@ -138,36 +135,13 @@ export default class ModalSchedule extends HTMLElement {
       </div>
       <div class="services">
         <div class="options">
-          ${this.getPhotographers()}
+          ${this.getOptions(this.getAttribute('edit'))}
         </div>
       </div>
     `
   }
   
-
-  getPhotographers(){
-    if (this.getAttribute('photographers')) {
-      const photographers = this.getAttribute('photographers').split(',')
-      console.log(photographers)
-      let html = ``
-
-      photographers.forEach(item => {
-        html += `
-          <span class="option selected" data-value="event">
-            <span class="text">${item}</span>
-          </span>
-        `
-        // console.log(html)
-      })
-
-      return html
-    }
-    else {
-      console.log('Not available')
-      return ''
-    }
-    
-  }
+ 
 
   getInput(edit){
     if (edit === 'true') {
@@ -181,6 +155,30 @@ export default class ModalSchedule extends HTMLElement {
       `
     }
   }
+
+  getOptions = (edit) => {
+    let html = ''
+    if (edit === 'true') {
+      const photographers = this.getAttribute('photographers').split(',')
+      console.log(photographers)
+
+      photographers.forEach(item => {
+        html += `
+          <span class="option selected" data-value="event">
+            <span class="text">${item}</span>
+          </span>
+        `
+      })
+
+      return html
+    } 
+    else {
+      console.log('No data available')
+    }
+
+    return html
+  }
+
 
   getHeader(edit){
     if (edit === 'true') {
@@ -207,6 +205,7 @@ export default class ModalSchedule extends HTMLElement {
 
 
   getStyles() {
+    console.log('No data available')
     return `
     <style>
       * {

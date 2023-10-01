@@ -27,6 +27,8 @@ export default class ScheduleContainer extends HTMLElement {
     const button = this.shadowObj.querySelector('.header > .right')
     const element = document.createElement('modal-schedule')
     element.setAttribute('url', 'some-url')
+    element.setAttribute('edit', 'false')
+
     if (body && button) {
       button.addEventListener('click', (e) => {
         e.preventDefault()
@@ -51,7 +53,7 @@ export default class ScheduleContainer extends HTMLElement {
       ${this.getHeader()}
         
       <div id="content-container" class="content">
-        <!-- ${this.getSchedules()} -->
+        ${this.getSchedules()}
       </div>
      
     `

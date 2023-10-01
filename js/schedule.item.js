@@ -19,13 +19,14 @@ export default class ScheduleItem extends HTMLElement {
   connectedCallback() {
     // console.log('We are inside connectedCallback');
 
-    // this.editSchedule()
+    this.editSchedule()
   }
 
 
   editSchedule(){
-    const body = document.querySelector('body');
-    const button = this.shadowObj.querySelector('.options >.option.edit')
+    const modalContainer = document.querySelector('body > section#modal')
+    const button = this.shadowObj.querySelector('.options > .option.edit')
+
     const element = document.createElement('modal-schedule')
     element.setAttribute('url', 'some-url')
     element.setAttribute('edit', 'true')

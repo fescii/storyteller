@@ -22,6 +22,18 @@ content.bookings = `
   </booking-container>
 `
 
+content.portfolio = `
+  <portfolio-container url="some-link" 
+  >
+  </portfolio-container>
+`
+
+content.people = `
+  <people-container url="some-link" 
+  >
+  </people-container>
+`
+
 if (tabs && contentContainer && activeTab) {
   tabs.forEach(tab => {
     tab.addEventListener('click', (event) => {

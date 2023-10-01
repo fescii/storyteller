@@ -51,7 +51,7 @@ export default class ScheduleContainer extends HTMLElement {
       ${this.getHeader()}
         
       <div id="content-container" class="content">
-        ${this.getSchedules()}
+        <!-- ${this.getSchedules()} -->
       </div>
      
     `

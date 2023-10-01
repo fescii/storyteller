@@ -17,8 +17,9 @@ content.schedules = `
 `
 
 content.bookings = `
-  
-
+  <booking-container url="some-link" 
+  >
+  </booking-container>
 `
 
 if (tabs && contentContainer && activeTab) {

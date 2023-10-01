@@ -129,12 +129,7 @@ export default class ModalSchedule extends HTMLElement {
 
   getContent() {
     return `
-      <div class="head">
-        <h2 class="step-title">Make your schedule</h2>
-        <p class="description">
-          Create or edit schedules, select date and people.
-        </p>
-      </div>
+      ${this.getHeader(this.getAttribute('edit'))}
       <div class="fields">
         <div class="field name">
           ${this.getInput(this.getAttribute('edit'))}
@@ -148,22 +143,29 @@ export default class ModalSchedule extends HTMLElement {
       </div>
     `
   }
+  
 
   getOptions(){
-    const photographers = this.getAttribute('photographers').split(',')
-    // console.log(photographers)
-    let html = ``
+    if (this.getAttribute('photographers')) {
+      const photographers = this.getAttribute('photographers').split(',')
+      // console.log(photographers)
+      let html = ``
 
-    photographers.forEach(item => {
-      html += `
-        <span class="option selected" data-value="event">
-          <span class="text">${item}</span>
-        </span>
-      `
-      // console.log(html)
-    })
+      photographers.forEach(item => {
+        html += `
+          <span class="option selected" data-value="event">
+            <span class="text">${item}</span>
+          </span>
+        `
+        // console.log(html)
+      })
 
-    return html
+      return html
+    }
+    else {
+      return ''
+    }
+    
   }
 
   getInput(edit){

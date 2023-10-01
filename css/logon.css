@@ -38,5 +38,107 @@ body {
   align-items: center;
   justify-content: center;
   /* background-color: transparent; */
-  background-color: #ffffff93;
+  background-color: #ffffff69;
+}
+
+section.logon {
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 20px;
+  width: 500px;
+  height: 400px;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-image: none;
+  box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.058);
+  border-radius: 15px;
+}
+
+section.logon > .head {
+  /* border: 1px solid #404040; */
+  margin: 0 0 25px 5px;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+section.logon > .head > .collapse {
+  /* border: 2px solid rgb(175, 84, 84); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.logon > .head > .collapse > span.house {
+  /* border: 2px solid rgb(175, 84, 84); */
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+
+section.logon > .head > .collapse > span.house > span.line {
+  /* border: 1px solid rgb(20, 115, 224); */
+  display: none;
+  line-height: 1;
+  min-height: 2px;
+  width: 15px;
+  border-radius: 5px;
+  background-color: #808080;
+}
+
+section.logon > .head > .collapse > span.house > span.line.long {
+  width: 23px;
+}
+
+section.logon > .head > .logo {
+  /* border: 2px solid rgb(175, 84, 84); */
+  max-height: max-content;
+  position: relative;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  /* justify-content: start; */
+}
+
+section.logon > .head > .logo  span.bar{
+  display: none;
+  position: absolute;
+  top: calc(50% - 10px);
+  /* bottom: 0; */
+  right: 0;
+  width: 5px;
+  height: 20px;
+  background:  rgb(223, 121, 26);
+  background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
+  background-color: rgb(247, 145, 162);
+  border-radius: 15px;
+}
+
+section.logon > .head > .logo  h2{
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #404040;
+  font-family: var(--font-alt);
+}
+
+section.logon > .head > .logo  span.art{
+  margin: 0;
+  width: 100%;
+  color: #808080;
+  line-height: 1.2;
+  font-family: var(--font-alt);
+  letter-spacing: 4px;
+  font-weight: 500;
+  text-align: center;
 }

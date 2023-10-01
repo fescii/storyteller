@@ -7,6 +7,14 @@
   <link rel="stylesheet" href="css/logon.css">
 </head>
 <body>
+  <div class="area" >
+    <ul class="circles">
+      <li></li><li></li><li></li>
+      <li></li><li></li>
+      <li></li><li></li>
+      <li></li><li></li><li></li>
+    </ul>
+  </div >
   <section class="logon">
     <div class="head">
       <div class="logo">
@@ -24,14 +32,33 @@
     </div>
     <form action="" method="post">
       <div class="field username">
-        <input type="username" name="username" id="username" required>
+        <input type="text" id="username" name="username" required>
+        <label for="username">Username</label>
         <span class="error">Username is required</span>
       </div>
       <div class="field password">
         <input type="password" name="password" id="password" required>
+        <label for="password">Password</label>
         <span class="error">Password is required</span>
       </div>
+      <button type="submit">Login</button>
     </form>
   </section>
+  <script>
+    const inputElements = document.querySelectorAll('section.logon > form > .field > input');
+  
+    inputElements.forEach((input) => {
+      input.addEventListener("focus", () => {
+        input.parentElement.classList.add("focused");
+      });
+  
+      input.addEventListener("blur", () => {
+        if (!input.value) {
+          input.parentElement.classList.remove("focused");
+        }
+      })
+    })
+  </script>
+  
 </body>
 </html>

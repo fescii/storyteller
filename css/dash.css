@@ -488,21 +488,6 @@ body > main.main > section.content > .content-container {
   /* border-top-left-radius: 25px; */
 }
 
-
-
-body > main.main > section.content > .content-container > .bookings {
-  /* border: 1px solid #808080; */
-  /* position: relative; */
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: flex;
-  flex-flow: column;
-  /* align-items: center; */
-  justify-content: center;
-  gap: 10px;
-}
-
 body > main.main > section.content > .content-container > .people-container {
   /* border: 1px solid #808080; */
   margin: 0;

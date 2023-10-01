@@ -14,15 +14,21 @@
     import BookingContainer from "./js/component.booking.js";
     import PortfolioContainer from "./js/component.portfolio.js";
     import SchedulesContainer from "./js/component.schedule.js";
+
     import ScheduleItem from "./js/schedule.item.js"
+    import BookingItem from "./js/booking.item.js"
+
+
     import StatContainer from "./js/component.stats.js";
     import ScheduleModal from "./js/modal.schedule.js"
 
-    //Apps-modals
-    customElements.define("book-container", BookingContainer);
+    
+    customElements.define("booking-item", BookingItem);
+    customElements.define("schedule-item", ScheduleItem)
+
+    customElements.define("booking-container", BookingContainer);
     customElements.define("portfolio-container", PortfolioContainer);
     customElements.define("schedule-container", SchedulesContainer);
-    customElements.define("schedule-item", ScheduleItem)
     customElements.define("stat-container", StatContainer)
     customElements.define("modal-schedule", ScheduleModal)
   </script>
@@ -280,8 +286,6 @@
       </div>
       <div class="content-container" id="content-container">
 
-       
-
         <portfolio-container url="some-link" 
           >
         </portfolio-container>
@@ -448,63 +452,10 @@
           interactions="1,360">
         </stat-container>
 
-        <div class="bookings">
-          <book-container date-day="Sun" date-date="12" date-month="May" service="Graduation"
-            location="Nairobi area, near city park" status="finished" full-name="Fredrick Ochieng" phone="+254713253018"
-            email="isfescii@gmail.com" package="Package II"
-            other="Lorem ipsum dolor sit amet consecrate, adipisicing elit. Fuga, reprehenderit iusto! Quidem earum distinctio, tenetur nesciunt sed aperiam libero beatae sequi?"
-            coverage="About 50 - 100 people to be covered">
-          </book-container>
+        <booking-container url="some-link" 
+          >
+        </booking-container>
 
-          <book-container date-day="Sun" date-date="12" date-month="May" service="Graduation"
-            location="Nairobi area, near city park" status="cancelled" full-name="Fredrick Ochieng"
-            phone="+254713253018" email="isfescii@gmail.com" package="Package II"
-            other="Lorem ipsum dolor sit amet consecrate, adipisicing elit. Fuga, reprehenderit iusto! Quidem earum distinctio, tenetur nesciunt sed aperiam libero beatae sequi?"
-            coverage="About 50 - 100 people to be covered">
-          </book-container>
-
-          <book-container date-day="Fri" date-date="03" date-month="Aug" service="Graduation"
-            location="Nairobi area, near city park" status="started" full-name="Fredrick Ochieng" phone="+254713253018"
-            email="isfescii@gmail.com" package="Package II"
-            other="Lorem ipsum dolor sit amet consecrate, adipisicing elit. Fuga, reprehenderit iusto! Quidem earum distinctio, tenetur nesciunt sed aperiam libero beatae sequi?"
-            coverage="About 50 - 100 people to be covered">
-          </book-container>
-
-          <book-container date-day="Mon" date-date="20" date-month="Sep" service="Graduation"
-            location="Nairobi area, near city park" status="pending" full-name="Fredrick Ochieng" phone="+254713253018"
-            email="isfescii@gmail.com" package="Package II"
-            other="Lorem ipsum dolor sit amet consecrate, adipisicing elit. Fuga, reprehenderit iusto! Quidem earum distinctio, tenetur nesciunt sed aperiam libero beatae sequi?"
-            coverage="About 50 - 100 people to be covered">
-          </book-container>
-
-          <book-container date-day="Tue" date-date="21" date-month="Sep" service="Graduation"
-            location="Nairobi area, near city park" status="not-started" full-name="Fredrick Ochieng"
-            phone="+254713253018" email="isfescii@gmail.com" package="Package II"
-            other="Lorem ipsum dolor sit amet consecrate, adipisicing elit. Fuga, reprehenderit iusto! Quidem earum distinctio, tenetur nesciunt sed aperiam libero beatae sequi?"
-            coverage="About 50 - 100 people to be covered">
-          </book-container>
-
-          <book-container date-day="Wed" date-date="23" date-month="Sep" service="Graduation"
-            location="Nairobi area, near city park" status="not-started" full-name="Fredrick Ochieng"
-            phone="+254713253018" email="isfescii@gmail.com" package="Package II"
-            other="Lorem ipsum dolor sit amet consecrate, adipisicing elit. Fuga, reprehenderit iusto! Quidem earum distinctio, tenetur nesciunt sed aperiam libero beatae sequi?"
-            coverage="About 50 - 100 people to be covered">
-          </book-container>
-
-          <book-container date-day="Thu" date-date="24" date-month="Sep" service="Graduation"
-            location="Nairobi area, near city park" status="not-started" full-name="Fredrick Ochieng"
-            phone="+254713253018" email="isfescii@gmail.com" package="Package II"
-            other="Lorem ipsum dolor sit amet consecrate, adipisicing elit. Fuga, reprehenderit iusto! Quidem earum distinctio, tenetur nesciunt sed aperiam libero beatae sequi?"
-            coverage="About 50 - 100 people to be covered">
-          </book-container>
-
-          <book-container date-day="Mon" date-date="20" date-month="2023, Sep" service="Graduation"
-            location="Nairobi area, near city park" status="not-started" full-name="Fredrick Ochieng"
-            phone="+254713253018" email="isfescii@gmail.com" package="Package II"
-            other="Lorem ipsum dolor sit amet consecrate, adipisicing elit. Fuga, reprehenderit iusto! Quidem earum distinctio, tenetur nesciunt sed aperiam libero beatae sequi?"
-            coverage="About 50 - 100 people to be covered">
-          </book-container>
-        </div>
       </div>
     </section>
   </main>

@@ -27,6 +27,7 @@ export default class ScheduleItem extends HTMLElement {
     const button = this.shadowObj.querySelector('.options >.option.edit')
     const element = document.createElement('modal-schedule')
     element.setAttribute('url', 'some-url')
+    element.setAttribute('edit', 'true')
     element.setAttribute('date', button.dataset.date)
     element.setAttribute('photographers', this.getAttribute('photographers'))
     if (body && button) {

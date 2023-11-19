@@ -2303,7 +2303,9 @@ label.cbx {
 .orb-home-2 .orb-content .orb-slide-caption .orb-main-title .h1,
 .orb-home-2 .orb-content .orb-slide-caption .orb-main-title h1 {
   margin-left: 10%;
-  font-size: 72px;
+  margin-bottom: 25px;
+  margin-top: 0;
+  font-size: 48px;
   color: #FFF;
   text-transform: uppercase;
 }
@@ -2336,7 +2338,7 @@ label.cbx {
 
 .orb-home-2 .orb-content .orb-slide-caption .orb-button-and-descr .orb-description span {
   padding-right: 40px;
-  width: 220px;
+  /* width: 220px; */
   color: #DDDDD7;
 }
 

@@ -7519,7 +7519,7 @@ label.cbx {
   padding: 0;
   line-height: 1.2;
   color: #442A24;
-  font-family: var(--font-alt);
+  /* font-family: var(--font-alt); */
 }
 
 .logo span.art {

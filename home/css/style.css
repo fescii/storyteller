@@ -299,7 +299,7 @@ ul li {
 @media (max-width: 768px) {
   .orb-top-bar-frame .orb-top-bar {
     height: 80px;
-    padding: 0 20px;
+    padding: 0 20px 20px 0;
   }
 
   .orb-top-bar-frame .orb-menu-frame {
@@ -1312,6 +1312,10 @@ ul li {
   transition: 0.6s ease-in-out;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+}
+
+#portfolio .orb-photo-frame img {
+  height: 300px;
 }
 
 .orb-photo-frame .orb-zoom {

@@ -5323,6 +5323,7 @@ label.cbx {
 }
 
 .orb-contact-2 .orb-content .orb-form-frame {
+  margin-top: 30px;
   height: calc(var(--vh, 1vh) * 100);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5337,8 +5338,8 @@ label.cbx {
 .orb-contact-2 .orb-content .orb-form-frame .orb-form-content {
   width: 100%;
   background-color: #F1EBE5;
-  z-index: 2;
-  padding: 60px;
+  z-index: 3;
+  padding: 15px 30px;
 }
 
 .orb-contact-2 .orb-content .orb-form-frame .orb-form-content .orb-form-bottom {
@@ -5411,7 +5412,8 @@ label.cbx {
 
 .orb-contact-2 .orb-content .orb-position-fix h1 {
   margin-left: -80px;
-  padding: 55px 20px;
+  margin-bottom: 0;
+  padding: 30px 18px;
   text-align: center;
   position: relative;
   z-index: 2;

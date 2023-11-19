@@ -50,9 +50,13 @@ Author URL: https://themeforest.net/user/ultimatewebsolutions/
 ==================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Sen:wght@400;500;600;700;800&display=swap');
 
 /* Normalize
 ==================================== */
+:root {
+  --font-alt: 'Plus Jakarta Sans', sans-serif;
+}
 
 *,
 *:after,
@@ -233,6 +237,7 @@ ul li {
   -webkit-transition-delay: 1.2s;
   transition-delay: 1.2s;
 }
+
 
 .orb-top-bar-frame .orb-top-bar .orb-right-side {
   display: -webkit-box;
@@ -2227,6 +2232,7 @@ label.cbx {
 .orb-home-2 .orb-top-bar-frame .orb-top-bar .orb-logo-frame img path,
 .orb-home-2 .orb-top-bar-frame .orb-top-bar .orb-logo-frame svg path {
   fill: #FFF;
+  color: #fff;
 }
 
 .orb-home-2 .orb-top-bar-frame .orb-top-bar .orb-menu li a {
@@ -2565,6 +2571,7 @@ label.cbx {
 .orb-home-3 .orb-top-bar-frame .orb-top-bar .orb-logo-frame img path,
 .orb-home-3 .orb-top-bar-frame .orb-top-bar .orb-logo-frame svg path {
   fill: #FFF;
+  color: #FFF;
 }
 
 .orb-home-3 .orb-top-bar-frame .orb-top-bar .orb-menu li a {
@@ -3035,6 +3042,7 @@ label.cbx {
 .orb-home-5 .orb-top-bar-frame .orb-top-bar .orb-logo-frame img path,
 .orb-home-5 .orb-top-bar-frame .orb-top-bar .orb-logo-frame svg path {
   fill: #FFF;
+  color: #fff;
 }
 
 .orb-home-5 .orb-top-bar-frame .orb-top-bar .orb-menu li a {
@@ -3615,6 +3623,7 @@ label.cbx {
 .orb-portfolio-2 .orb-top-bar-frame .orb-top-bar .orb-logo-frame img path,
 .orb-portfolio-2 .orb-top-bar-frame .orb-top-bar .orb-logo-frame svg path {
   fill: #FFF;
+  color: #FFF;
 }
 
 .orb-portfolio-2 .orb-top-bar-frame .orb-top-bar .orb-menu li a {
@@ -4224,6 +4233,7 @@ label.cbx {
 .orb-portfolio-4 .orb-top-bar-frame .orb-top-bar .orb-logo-frame img path,
 .orb-portfolio-4 .orb-top-bar-frame .orb-top-bar .orb-logo-frame svg path {
   fill: #FFF;
+  color: #FFF;
 }
 
 .orb-portfolio-4 .orb-top-bar-frame .orb-top-bar .orb-menu li a {
@@ -5274,6 +5284,7 @@ label.cbx {
 .orb-contact-2 .orb-top-bar-frame .orb-top-bar .orb-logo-frame img path,
 .orb-contact-2 .orb-top-bar-frame .orb-top-bar .orb-logo-frame svg path {
   fill: #FFF;
+  color: #FFF;
 }
 
 .orb-contact-2 .orb-top-bar-frame .orb-top-bar .orb-menu li a {
@@ -5785,6 +5796,7 @@ label.cbx {
 .orb-blog-1 .orb-top-bar-frame .orb-top-bar .orb-logo-frame img path,
 .orb-blog-1 .orb-top-bar-frame .orb-top-bar .orb-logo-frame svg path {
   fill: #FFF;
+  color: #FFF;
 }
 
 .orb-blog-1 .orb-top-bar-frame .orb-top-bar .orb-menu li a {
@@ -6708,6 +6720,7 @@ label.cbx {
 .orb-about-1 .orb-top-bar-frame .orb-top-bar .orb-logo-frame img path,
 .orb-about-1 .orb-top-bar-frame .orb-top-bar .orb-logo-frame svg path {
   fill: #FFF;
+  color: #fff;
 }
 
 .orb-about-1 .orb-top-bar-frame .orb-top-bar .orb-menu li a {
@@ -7471,4 +7484,55 @@ label.cbx {
   background: #C57642;
   color: #FFF;
   padding: 15px;
+}
+
+/* lOGO */ 
+.logo {
+  /* border: 2px solid rgb(175, 84, 84); */
+  max-height: max-content;
+  position: relative;
+  padding: 0 20px;
+  display: flex;
+  flex-flow: column;
+}
+
+.logo span.bar {
+  display: none;
+  position: absolute;
+  top: calc(50% - 10px);
+  /* bottom: 0; */
+  right: 0;
+  width: 5px;
+  height: 20px;
+  background: rgb(223, 121, 26);
+  background: linear-gradient(0deg, rgb(223, 121, 26) 0%, rgb(240, 156, 78) 100%);
+  background-color: rgb(247, 145, 162);
+  border-radius: 15px;
+}
+
+.logo h2 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  color: #442A24;
+  font-family: var(--font-alt);
+}
+
+.logo span.art {
+  margin: 0;
+  width: 100%;
+  color: #442A24;
+  line-height: 1.2;
+  font-family: var(--font-alt);
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#home .logo h2 {
+  color: #ffffff;
+}
+
+#home .logo span.art {
+  color: #d3d1d1;
 }

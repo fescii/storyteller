@@ -69,7 +69,6 @@ body > main.main > section.sidebar > .head {
 }
 
 body > main.main > section.sidebar > .head > .collapse {
-  /* border: 2px solid rgb(175, 84, 84); */
   display: flex;
   align-items: center;
   justify-content: center;

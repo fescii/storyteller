@@ -75,7 +75,6 @@ body > main.main > section.sidebar > .head > .collapse {
 }
 
 body > main.main > section.sidebar > .head > .collapse > span.house {
-  /* border: 2px solid rgb(175, 84, 84); */
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -85,7 +84,6 @@ body > main.main > section.sidebar > .head > .collapse > span.house {
 
 
 body > main.main > section.sidebar > .head > .collapse > span.house > span.line {
-  /* border: 1px solid rgb(20, 115, 224); */
   display: none;
   line-height: 1;
   min-height: 2px;

@@ -165,7 +165,6 @@ body > main.main > section.sidebar > .menu > span.title {
 }
 
 body > main.main > section.sidebar > .menu > ul.menu-items {
-  /* border: 2px solid rgb(175, 84, 84); */
   margin: 0;
   width: 100%;
   padding: 0;

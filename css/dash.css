@@ -175,7 +175,6 @@ body > main.main > section.sidebar > .menu > ul.menu-items {
 }
 
 body > main.main > section.sidebar > .menu > ul.menu-items > li.item {
-  /* border: 1px solid rgb(175, 84, 84); */
   margin: 0;
   padding: 0 10px;
   width: 100%;

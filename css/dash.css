@@ -273,7 +273,6 @@ body > main.main > section.content {
 
 body > main.main > section.content > .head {
   border-bottom: 1px solid #80808017;
-  /* margin: 0 0 0 20px; */
   padding: 20px 20px 15px 0;
   display: flex;
   align-items: center;
@@ -286,7 +285,6 @@ body > main.main > section.content > .head {
 }
 
 body > main.main > section.content > .head > .bookings {
-  /* border: 1px solid #404040; */
   padding: 0 0 0 20px;
   display: flex;
   align-items: center;

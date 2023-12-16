@@ -337,7 +337,6 @@ body > main.main > section.content > .head > .profile {
 }
 
 body > main.main > section.content > .head > .profile > span.action {
-  /* border: 1px solid #80808027; */
   margin: 0 0 0 25px;
   padding: 0;
   display: flex;

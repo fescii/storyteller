@@ -437,7 +437,6 @@ body > main.main > section.content > .head > .profile > .photo > .image > img {
 }
 
 body > main.main > section.content > .head > .profile > .photo span.name {
-  /* border: 1px solid #404040; */
   display: flex;
   flex-flow: column;
   align-items: start;
@@ -468,5 +467,4 @@ body > main.main > section.content > .content-container {
   align-items: start;
   justify-content: start;
   gap: 0;
-  /* border-top-left-radius: 25px; */
 }

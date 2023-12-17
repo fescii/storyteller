@@ -368,9 +368,6 @@ body > main.main > section.content > .head > .profile > span.action > span.dot s
   height: 6px;
   border-radius: 50px;
   background-color: #fb482c;
-  /* background: #ad5389;
-  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
-  background-color: rgb(247, 145, 162); */
 }
 
 body > main.main > section.content > .head > .profile > span.action > svg {
@@ -378,7 +375,6 @@ body > main.main > section.content > .head > .profile > span.action > svg {
   height: 27px;
   fill: #808080;
   margin: 3px 0 0 0;
-  /* rotate: 7.5deg; */
 }
 
 body > main.main > section.content > .head > .profile > span.action > svg path {

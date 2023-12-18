@@ -451,14 +451,12 @@ body > main.main > section.content > .head > .profile > .photo span.name > span.
 }
 
 body > main.main > section.content > .head > .profile > .photo span.name > span.status {
-  /* border: 1px solid #808080; */
   color: #808080;
   font-family: var(--font-alt);
   font-size: 0.8rem;
 }
 
 body > main.main > section.content > .content-container {
-  /* border-left: 1px solid #80808017; */
   min-height: 100vh;
   margin: 0;
   padding: 0;

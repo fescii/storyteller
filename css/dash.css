@@ -418,7 +418,6 @@ body > main.main > section.content > .head > .profile > .photo > .image > span.d
 }
 
 body > main.main > section.content > .head > .profile > .photo > .image > span.dot span {
-  /* border: 1px solid #404040; */
   display: inline-block;
   width: 7px;
   height: 7px;
@@ -445,7 +444,6 @@ body > main.main > section.content > .head > .profile > .photo span.name {
 }
 
 body > main.main > section.content > .head > .profile > .photo span.name > span.username {
-  /* border: 1px solid #404040; */
   color: #404040;
   font-family: var(--font-alt);
 }
